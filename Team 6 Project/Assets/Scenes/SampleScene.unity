@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b03bd7b29de17b940a62874844e170e4, type: 2}
 --- !u!1001 &9343107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &23280059 stripped
@@ -301,6 +309,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -364,6 +380,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &33208467 stripped
@@ -426,6 +450,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &33390148 stripped
@@ -487,6 +519,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -757,6 +797,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &53419197 stripped
@@ -956,6 +1004,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &55739312 stripped
@@ -1017,6 +1073,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -1097,6 +1161,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -1203,6 +1275,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -1328,6 +1408,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &95757665 stripped
@@ -1389,6 +1477,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -1469,6 +1565,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -1576,6 +1680,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &107579253 stripped
@@ -1655,6 +1767,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -1761,6 +1881,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -1886,6 +2014,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &126787681 stripped
@@ -1947,6 +2083,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -2072,6 +2216,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &151546555 stripped
@@ -2151,6 +2303,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -2258,6 +2418,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &187228085 stripped
@@ -2319,6 +2487,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -2382,6 +2558,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &197113759 stripped
@@ -2443,6 +2627,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -2599,6 +2791,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -2660,6 +2860,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -2767,6 +2975,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &212206600 stripped
@@ -2829,6 +3045,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &244556205 stripped
@@ -2846,6 +3070,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -2908,6 +3140,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -3015,6 +3255,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &259731854 stripped
@@ -3076,6 +3324,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -3139,6 +3395,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &282679902 stripped
@@ -3200,6 +3464,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -3280,6 +3552,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -3387,6 +3667,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &291347254 stripped
@@ -3448,6 +3736,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -3511,6 +3807,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &295716337 stripped
@@ -3573,6 +3877,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &295837729 stripped
@@ -3590,6 +3902,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -3697,6 +4017,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &296578798 stripped
@@ -3714,6 +4042,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -3839,6 +4175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -3945,6 +4289,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &309549665 stripped
@@ -3962,6 +4314,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -4068,6 +4428,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -4193,6 +4561,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &330061051 stripped
@@ -4210,6 +4586,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -4316,6 +4700,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -4440,6 +4832,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -4658,6 +5058,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: cottage_11
       objectReference: {fileID: 0}
+    - target: {fileID: 8816282341396182593, guid: 60fb4d81fe48ef44e9e01f10a9b49708, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816282341396182593, guid: 60fb4d81fe48ef44e9e01f10a9b49708, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60fb4d81fe48ef44e9e01f10a9b49708, type: 3}
 --- !u!1001 &382357509
@@ -4714,6 +5122,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -4839,6 +5255,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &388051897 stripped
@@ -4901,6 +5325,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &392584951 stripped
@@ -4918,6 +5350,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -5087,6 +5527,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &417479828 stripped
@@ -5148,6 +5596,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -5211,6 +5667,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &427195316 stripped
@@ -5272,6 +5736,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -5335,6 +5807,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &443635601 stripped
@@ -5396,6 +5876,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -5582,6 +6070,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -5835,6 +6331,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -6115,6 +6619,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -6220,6 +6732,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -6345,6 +6865,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &528342625 stripped
@@ -6362,6 +6890,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -6531,6 +7067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &534650452 stripped
@@ -6593,6 +7137,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &536526777 stripped
@@ -6610,6 +7162,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -6779,6 +7339,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &565606201 stripped
@@ -6840,6 +7408,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -6903,6 +7479,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &566682969 stripped
@@ -6964,6 +7548,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -7027,6 +7619,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &579573958 stripped
@@ -7088,6 +7688,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -7213,6 +7821,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &608453055 stripped
@@ -7337,6 +7953,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &620174785 stripped
@@ -7354,6 +7978,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -7585,6 +8217,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &651221374 stripped
@@ -7646,6 +8286,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -7709,6 +8357,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &654435830 stripped
@@ -7770,6 +8426,14 @@ PrefabInstance:
     - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
       propertyPath: m_Name
       value: FenceEnd (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
@@ -8322,6 +8986,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -8428,6 +9100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &690349557 stripped
@@ -8489,6 +9169,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -8601,6 +9289,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -8904,6 +9600,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (108)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &715432678 stripped
@@ -9028,6 +9732,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &718146774 stripped
@@ -9090,6 +9802,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &721186646 stripped
@@ -9107,6 +9827,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -9410,6 +10138,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &753622975 stripped
@@ -9427,6 +10163,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -9534,6 +10278,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &755099568 stripped
@@ -9595,6 +10347,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -9658,6 +10418,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &762696211 stripped
@@ -9720,6 +10488,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &762837062 stripped
@@ -9737,6 +10513,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -9986,6 +10770,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10091,6 +10883,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -10215,6 +11015,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -10482,6 +11290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &850834073 stripped
@@ -10543,6 +11359,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -10792,6 +11616,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &873947150 stripped
@@ -10854,6 +11686,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &874293893 stripped
@@ -10915,6 +11755,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -11206,6 +12054,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &901883501 stripped
@@ -11267,6 +12123,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -11330,6 +12194,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &909778764 stripped
@@ -11391,6 +12263,14 @@ PrefabInstance:
     - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
       propertyPath: m_Name
       value: FenceEnd (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
@@ -11471,6 +12351,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -11578,6 +12466,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &933818715 stripped
@@ -11595,6 +12491,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -11701,6 +12605,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -11826,6 +12738,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &955385135 stripped
@@ -11949,6 +12869,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -12282,6 +13210,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -12343,6 +13279,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -12512,6 +13456,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &990021378 stripped
@@ -12636,6 +13588,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &996547189 stripped
@@ -12698,6 +13658,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &997249763 stripped
@@ -12715,6 +13683,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -12884,6 +13860,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1010437950 stripped
@@ -12945,6 +13929,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -13070,6 +14062,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1041971954 stripped
@@ -13131,6 +14131,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -13194,6 +14202,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1045606202 stripped
@@ -13211,6 +14227,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -13380,6 +14404,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1075315733 stripped
@@ -13442,6 +14474,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1080834954 stripped
@@ -13497,6 +14537,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -13604,6 +14652,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1091431660 stripped
@@ -13665,6 +14721,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -13728,6 +14792,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &1097456350 stripped
@@ -13789,6 +14861,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -13913,6 +14993,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -14036,6 +15124,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -14267,6 +15363,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1132899426 stripped
@@ -14391,6 +15495,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1143300618 stripped
@@ -14514,6 +15626,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -14701,6 +15821,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1166932060 stripped
@@ -14763,6 +15891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1170318364 stripped
@@ -14780,6 +15916,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -14842,6 +15986,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -15011,6 +16163,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1195691036 stripped
@@ -15097,7 +16257,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1212960644
 Transform:
@@ -15295,6 +16455,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1217874292 stripped
@@ -15357,6 +16525,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1220667365 stripped
@@ -15418,6 +16594,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -15615,6 +16799,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1227465042 stripped
@@ -15632,6 +16824,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -15756,6 +16956,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -16111,6 +17319,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &1260532155 stripped
@@ -16234,6 +17450,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -16583,6 +17807,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1277082389 stripped
@@ -16663,6 +17895,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16724,6 +17964,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -17057,6 +18305,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -17118,6 +18374,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -17287,6 +18551,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1348573924 stripped
@@ -17304,6 +18576,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -17410,6 +18690,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -17535,6 +18823,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1363223058 stripped
@@ -17596,6 +18892,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -17659,6 +18963,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1369120478 stripped
@@ -17676,6 +18988,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -17844,6 +19164,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -18165,6 +19493,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1409164190 stripped
@@ -18227,6 +19563,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1409695343 stripped
@@ -18288,6 +19632,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -18488,6 +19840,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1436038707 stripped
@@ -18549,6 +19909,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -18629,6 +19997,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -18736,6 +20112,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1452742754 stripped
@@ -18756,6 +20140,7 @@ GameObject:
   - component: {fileID: 1459823490}
   - component: {fileID: 1459823489}
   - component: {fileID: 1459823488}
+  - component: {fileID: 1459823493}
   m_Layer: 6
   m_Name: Enemy(CropDestroyer)
   m_TagString: Untagged
@@ -18834,7 +20219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459823487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: 0.5, z: -4}
+  m_LocalPosition: {x: 39.51, y: 0.5, z: -16.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18850,11 +20235,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459823487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ced5ea685790c54095fa945f50ac70c, type: 3}
+  m_Script: {fileID: 11500000, guid: abecb64010b03474a89b97541fe4933d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 1459823489}
   HP: 3
+  faceTargetSpeed: 0
+  bullet: {fileID: 0}
+  shootPos: {fileID: 0}
+  headPos: {fileID: 0}
+  shootRate: 1
+  attackRange: 3
+  targetCrop: {fileID: 1621437228}
+--- !u!195 &1459823493
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459823487}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1462911760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18909,6 +20322,14 @@ PrefabInstance:
     - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
       propertyPath: m_Name
       value: FenceEnd (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
@@ -18972,6 +20393,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1469311263 stripped
@@ -18989,6 +20418,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -19220,6 +20657,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1499809266 stripped
@@ -19281,6 +20726,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -19406,6 +20859,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1509520749 stripped
@@ -19467,6 +20928,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -19609,6 +21078,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -19806,6 +21283,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -19912,6 +21397,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1568613534 stripped
@@ -19973,6 +21466,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -20222,6 +21723,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1586108004 stripped
@@ -20345,6 +21854,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -20594,12 +22111,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1620583370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3107808065315445, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
   m_PrefabInstance: {fileID: 1620583369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1621437228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6133415621640478050, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
+  m_PrefabInstance: {fileID: 6133415621293209975}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1624348513
 PrefabInstance:
@@ -20655,6 +22185,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -20808,6 +22346,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -20869,6 +22415,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -21056,6 +22610,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -21162,6 +22724,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1649248836 stripped
@@ -21223,6 +22793,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -21286,6 +22864,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1654243577 stripped
@@ -21347,6 +22933,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -21410,6 +23004,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1664227281 stripped
@@ -21471,6 +23073,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -21720,6 +23330,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1697107778 stripped
@@ -21737,6 +23355,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -21844,6 +23470,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1720394933 stripped
@@ -21861,6 +23495,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -22029,6 +23671,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -22230,6 +23880,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1754780105 stripped
@@ -22292,6 +23950,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1760131230 stripped
@@ -22353,6 +24019,14 @@ PrefabInstance:
     - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
       propertyPath: m_Name
       value: FenceEnd (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
@@ -22477,6 +24151,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -22620,6 +24302,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1779548228 stripped
@@ -22681,6 +24371,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -22988,6 +24686,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1802380751 stripped
@@ -23005,6 +24711,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -23112,6 +24826,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1829937427 stripped
@@ -23174,6 +24896,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1833171554 stripped
@@ -23235,6 +24965,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -23501,6 +25239,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1848580450 stripped
@@ -23562,6 +25308,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -23625,6 +25379,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FenceEnd (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172488176096865065, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c945ed39718148bb60ed85563190c, type: 3}
 --- !u!4 &1854576795 stripped
@@ -23687,6 +25449,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1855360241 stripped
@@ -23748,6 +25518,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -23854,6 +25632,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -23979,6 +25765,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1882014956 stripped
@@ -24103,6 +25897,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1895102667 stripped
@@ -24165,6 +25967,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1900406748 stripped
@@ -24182,6 +25992,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -24289,6 +26107,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1901724408 stripped
@@ -24351,6 +26177,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1902280812 stripped
@@ -24412,6 +26246,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -24537,6 +26379,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1908464407 stripped
@@ -24554,6 +26404,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -24617,6 +26475,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -24678,6 +26544,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -24784,6 +26658,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -24940,6 +26822,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -25002,6 +26892,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -25063,6 +26961,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -25169,6 +27075,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -25374,6 +27288,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_Middle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -25542,6 +27464,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &1988341755 stripped
@@ -25604,6 +27534,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &1993099551 stripped
@@ -25665,6 +27603,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -25796,6 +27742,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &2038877479 stripped
@@ -25858,6 +27812,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &2039322421 stripped
@@ -25875,6 +27837,14 @@ PrefabInstance:
     - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_Name
       value: Fence_Middle (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892236256743270193, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7485619146387964101, guid: a7d1dd9522bb084498975fd966bbcb09, type: 3}
       propertyPath: m_RootOrder
@@ -26044,6 +28014,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &2054985876 stripped
@@ -26105,6 +28083,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
@@ -26168,6 +28154,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &2085943829 stripped
@@ -26230,6 +28224,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &2088515805 stripped
@@ -26291,6 +28293,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -26540,6 +28550,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerimeterWall (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
 --- !u!4 &2120531177 stripped
@@ -26726,6 +28744,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
 --- !u!4 &2128160285 stripped
@@ -26787,6 +28813,14 @@ PrefabInstance:
     - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
       propertyPath: m_Name
       value: Tree (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601720606034981805, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
@@ -26911,6 +28945,14 @@ PrefabInstance:
     - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
       propertyPath: m_Name
       value: PerimeterWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205577725343269007, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
