@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] float lockVertMax;
     [SerializeField] bool invertY;
 
-    float rotateX;
+    private float rotateX;
 
     // Start is called before the first frame update
     void Start()
@@ -28,21 +28,33 @@ public class CameraMovement : MonoBehaviour
 
         if (invertY)
         {
-            rotateX += mouseY;
+            SetRotateX(GetRotateX() + mouseX);
         }
         else
         {
-            rotateX -= mouseY;
+            SetRotateX(GetRotateX() - mouseY);
         }
 
         // Clamp the cameras X rotation
-        rotateX = Mathf.Clamp(rotateX, lockVertMin, lockVertMax);
+        SetRotateX(Mathf.Clamp(GetRotateX(), lockVertMin, lockVertMax));
 
         // Rotate camera on the X axis
-        transform.localRotation = Quaternion.Euler(rotateX, 0, 0);
+        transform.localRotation = Quaternion.Euler(GetRotateX(), 0, 0);
 
         // Rotate the player on the Y axis
         transform.parent.Rotate(Vector3.up * mouseX);
             
+    }
+
+    // Setter for rotateX private variable
+    void SetRotateX(float r)
+    {
+        rotateX = r;
+    }
+
+    // Getter for rotateX private variable
+    float GetRotateX()
+    {
+        return rotateX;
     }
 }

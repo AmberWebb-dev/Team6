@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int jumpSpeed;
     [SerializeField] int gravity;
 
-    int jumpCount;
+    private int jumpCount;
 
     bool isSprinting;
     bool isJumping;
@@ -33,11 +33,23 @@ public class PlayerController : MonoBehaviour
         Sprint();
     }
 
+    // Setter for jumpCount private variable
+    void SetJumpCount(int jump)
+    {
+        jumpCount = jump;
+    }
+
+    // Getter for jumpCount private variable
+    int GetJumpCount()
+    { 
+        return jumpCount; 
+    }
+
     void Movement()
     {
         if(pController.isGrounded)
         {
-            jumpCount = 0;
+            SetJumpCount(0);
             playerVelocity = Vector3.zero;
         }
 
@@ -54,9 +66,9 @@ public class PlayerController : MonoBehaviour
     
     void Jump()
     {
-        if(Input.GetButtonDown("Jump") && jumpCount < jumpMax)
+        if(Input.GetButtonDown("Jump") && GetJumpCount() < jumpMax)
         {
-            jumpCount++;
+            SetJumpCount(GetJumpCount() + 1);
             playerVelocity.y = jumpSpeed;
         }
     }
