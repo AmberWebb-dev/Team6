@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     float timeScaleOrig;
 
+    int enemyCount;
+
     void Awake()
     {
         Instance = this;
