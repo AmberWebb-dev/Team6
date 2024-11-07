@@ -1,3 +1,4 @@
+// GameManager.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,11 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance; //Singleton Class
+    public static GameManager Instance; // Singleton Instance
 
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
+    // Screen Effects
+    [SerializeField] GameObject effectBlind;
 
     public bool isPaused;
     float timeScaleOrig;
@@ -67,13 +70,22 @@ public class GameManager : MonoBehaviour
     {
         enemyCount += amount;
 
-        if(enemyCount == 0)
+        if (enemyCount == 0)
         {
             statePause();
             menuActive = menuWin;
             menuActive.SetActive(true);
         }
     }
+
+    // Coroutine to apply blinding effect
+    public IEnumerator ApplyBlindEffect()
+    {
+        if (effectBlind != null)
+        {
+            effectBlind.SetActive(true);
+            yield return new WaitForSeconds(2f); // Blinding effect duration
+            effectBlind.SetActive(false);
+        }
+    }
 }
-
-
