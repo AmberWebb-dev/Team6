@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     float timeScaleOrig;
 
+    public Image playerHPBar;
+    public GameObject playerDamageScreen;
+
     public GameObject crops;
     public CropDamage cropDamageScript;
 
