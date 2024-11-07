@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public Image playerHPBar;
     public GameObject playerDamageScreen;
 
-    public GameObject crops;
+    public GameObject[] cropsArray;
     public CropDamage cropDamageScript;
 
     int enemyCount;
@@ -31,12 +31,45 @@ public class GameManager : MonoBehaviour
         Instance = this;
         timeScaleOrig = Time.timeScale;
 
-        crops = GameObject.FindWithTag("Crop");
-        cropDamageScript = crops.GetComponent<CropDamage>();
+        cropsArray = GameObject.FindGameObjectsWithTag("Crop");
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
 
+    }
+
+    public void UnregisterCrop(GameObject crop)
+    {
+        // Mark crop as null in the array when destroyed
+        for (int i = 0; i < cropsArray.Length; i++)
+        {
+            if (cropsArray[i] == crop)
+            {
+                cropsArray[i] = null;
+                break;
+            }
+        }
+    }
+
+    public GameObject GetNearestCrop(Vector3 position)
+    {
+        GameObject nearestCrop = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (GameObject crop in cropsArray)
+        {
+            if (crop != null) // Only consider active crops
+            {
+                float distance = Vector3.Distance(position, crop.transform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestCrop = crop;
+                }
+            }
+        }
+
+        return nearestCrop;
     }
 
     void Update()
