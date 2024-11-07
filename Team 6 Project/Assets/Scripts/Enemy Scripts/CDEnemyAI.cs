@@ -62,11 +62,11 @@ public class CDEnemyAI : MonoBehaviour, IDamage
         currentTargetCrop = GameManager.Instance.GetNearestCrop(transform.position);
         if (currentTargetCrop != null)
         {
-            Debug.Log("New target crop assigned: " + currentTargetCrop.name);
+            //Debug.Log("New target crop assigned: " + currentTargetCrop.name);
         }
         else
         {
-            Debug.Log("No crops left to target.");
+            //Debug.Log("No crops left to target.");
             // no More crops, you lose
             GameManager.Instance.YouLose();
         }
