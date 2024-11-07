@@ -7,11 +7,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance; // Singleton Instance
+    public static GameManager Instance;
 
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
     [SerializeField] TMP_Text enemyCountText;
-    // Screen Effects
     [SerializeField] GameObject effectBlind;
     public GameObject player;
     public PlayerController playerScript;
@@ -22,26 +21,24 @@ public class GameManager : MonoBehaviour
     public GameObject playerDamageScreen;
 
     public GameObject[] cropsArray;
-    public CropDamage cropDamageScript;
-
     int enemyCount;
     int cropCount;
 
     void Awake()
     {
         Instance = this;
+        Time.timeScale = 1;
         timeScaleOrig = Time.timeScale;
 
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
+        cropCount = cropsArray.Length;
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
-
     }
 
     public void UnregisterCrop(GameObject crop)
     {
-        // Mark crop as null in the array when destroyed
         for (int i = 0; i < cropsArray.Length; i++)
         {
             if (cropsArray[i] == crop)
@@ -50,6 +47,7 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+        UpdateCrop(-1);
     }
 
     public GameObject GetNearestCrop(Vector3 position)
@@ -59,7 +57,7 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject crop in cropsArray)
         {
-            if (crop != null) // Only consider active crops
+            if (crop != null)
             {
                 float distance = Vector3.Distance(position, crop.transform.position);
                 if (distance < minDistance)
@@ -92,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void statePause()
     {
-        isPaused = !isPaused;
+        isPaused = true;
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
@@ -100,12 +98,15 @@ public class GameManager : MonoBehaviour
 
     public void stateUnpause()
     {
-        isPaused = !isPaused;
+        isPaused = false;
         Time.timeScale = timeScaleOrig;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        menuActive.SetActive(false);
-        menuActive = null;
+        if (menuActive != null)
+        {
+            menuActive.SetActive(false);
+            menuActive = null;
+        }
     }
 
     public void YouLose()
@@ -128,26 +129,23 @@ public class GameManager : MonoBehaviour
             menuActive.SetActive(true);
         }
     }
+
     public void UpdateCrop(int amount)
     {
         cropCount += amount;
 
-        //enemyCountText.text = enemyCount.ToString("F0");
-
-        if (cropCount == 0)
+        if (cropCount <= 0)
         {
             YouLose();
         }
     }
 
-
-    // Coroutine to apply blinding effect
     public IEnumerator ApplyBlindEffect()
     {
         if (effectBlind != null)
         {
             effectBlind.SetActive(true);
-            yield return new WaitForSeconds(2f); // Blinding effect duration
+            yield return new WaitForSeconds(2f);
             effectBlind.SetActive(false);
         }
     }
