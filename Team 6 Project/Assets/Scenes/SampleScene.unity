@@ -16541,7 +16541,7 @@ GameObject:
   - component: {fileID: 1212960647}
   - component: {fileID: 1212960646}
   - component: {fileID: 1212960645}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20433,7 +20433,6 @@ GameObject:
   - component: {fileID: 1459823494}
   - component: {fileID: 1459823493}
   - component: {fileID: 1459823489}
-  - component: {fileID: 1459823488}
   - component: {fileID: 1459823495}
   m_Layer: 6
   m_Name: Enemy(CropDestroyer)
@@ -20442,19 +20441,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1459823488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459823487}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1459823489
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20560,7 +20546,7 @@ MonoBehaviour:
   agent: {fileID: 1459823493}
   headPosition: {fileID: 651344205}
   attackPosition: {fileID: 192561680}
-  faceTargetSpeed: 1
+  faceTargetSpeed: 20
   HP: 3
   attackObj: {fileID: 1000678003479077656, guid: c7f5b4157da0d9045bc6a889269cf72e, type: 3}
   attackRate: 1
@@ -20576,7 +20562,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1462911760
 PrefabInstance:
@@ -26125,7 +26111,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5

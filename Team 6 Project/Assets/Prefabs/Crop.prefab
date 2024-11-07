@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6133415621640478063}
   - component: {fileID: 6133415621640478048}
   - component: {fileID: 6133415621640478049}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Crop
   m_TagString: Crop
   m_Icon: {fileID: 0}

@@ -31,26 +31,40 @@ public class CDEnemyAI : MonoBehaviour, IDamage
     {
         agent = GetComponent<NavMeshAgent>();
         colourOriginal = model.material.color;
+        GameManager.Instance.GameGoal(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target != null)
-        {
-            agent.SetDestination(target.transform.position);
-            cropDirection = (target.transform.position - transform.position).normalized;
+        cropDirection = GameManager.Instance.crops.transform.position - headPosition.position;
+        agent.SetDestination(GameManager.Instance.crops.transform.position);
 
-            if(!isAttacking && cropInRange)
+        Debug.DrawRay(headPosition.position, cropDirection);
+
+        RaycastHit hit;
+        //if(target != null)
+        if (Physics.Raycast(headPosition.position, cropDirection, out hit))
+        {
+            if (hit.collider.CompareTag("Crop"))
             {
-                StartCoroutine(Attack());
+
+                if (agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    faceTarget();
+                }
+
+                if (!isAttacking && cropInRange)
+                {
+                    StartCoroutine(Attack());
+                }
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Crops"))
+        if (other.CompareTag("Crop"))
         {
             cropInRange = true;
         }
@@ -58,10 +72,16 @@ public class CDEnemyAI : MonoBehaviour, IDamage
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Crops"))
+        if (other.CompareTag("Crop"))
         {
             cropInRange = false;
         }
+    }
+
+    void faceTarget()
+    {
+        Quaternion rot = Quaternion.LookRotation(cropDirection);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * faceTargetSpeed);
     }
 
     public void TakeDamage(int amount)
