@@ -67,6 +67,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage
         else
         {
             Debug.Log("No crops left to target.");
+            // no More crops, you lose
+            GameManager.Instance.YouLose();
         }
     }
 
