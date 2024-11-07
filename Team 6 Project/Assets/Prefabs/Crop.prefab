@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6133415621640478049}
   m_Layer: 3
   m_Name: Crop
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

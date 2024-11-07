@@ -16,12 +16,18 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     float timeScaleOrig;
 
+    public GameObject crops;
+    public CropDamage cropDamageScript;
+
     int enemyCount;
 
     void Awake()
     {
         Instance = this;
         timeScaleOrig = Time.timeScale;
+
+        crops = GameObject.FindWithTag("Crop");
+        cropDamageScript = crops.GetComponent<CropDamage>();
     }
 
     void Update()
