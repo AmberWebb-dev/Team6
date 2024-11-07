@@ -17476,6 +17476,7 @@ MonoBehaviour:
   menuWin: {fileID: 835451561}
   menuLose: {fileID: 1843079304}
   effectBlind: {fileID: 765116875}
+  player: {fileID: 373450610}
   isPaused: 0
 --- !u!4 &1258553784
 Transform:
@@ -26007,15 +26008,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1884776026}
+  - component: {fileID: 1884776027}
   - component: {fileID: 1884776025}
   - component: {fileID: 1884776023}
   - component: {fileID: 1884776022}
   - component: {fileID: 1884776021}
-  - component: {fileID: 1884776027}
   - component: {fileID: 1884776028}
+  - component: {fileID: 1884776029}
   m_Layer: 6
   m_Name: Special Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26113,10 +26115,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884776020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.02, y: 0.5, z: -2.73}
+  m_LocalPosition: {x: 40.91, y: 0.5, z: -21.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2034489691}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26133,6 +26136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1884776023}
+  agent: {fileID: 1884776021}
+  headPos: {fileID: 2034489691}
+  faceTargetSpeed: 600
+  viewAngle: 120
   HP: 2
   explosionRadius: 10
   explosionDamage: 0
@@ -26239,6 +26246,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &1884776029
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884776020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1887975075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28146,6 +28166,37 @@ Transform:
   m_Father: {fileID: 1799307979}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2034489690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034489691}
+  m_Layer: 6
+  m_Name: HeadPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2034489691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034489690}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.52, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1884776026}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &2038877478
 PrefabInstance:
   m_ObjectHideFlags: 0
