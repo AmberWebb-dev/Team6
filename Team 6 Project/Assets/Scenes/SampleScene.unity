@@ -10382,10 +10382,11 @@ GameObject:
   m_Component:
   - component: {fileID: 730404868}
   - component: {fileID: 730404867}
+  - component: {fileID: 730404869}
   - component: {fileID: 730404866}
   - component: {fileID: 730404865}
   - component: {fileID: 730404864}
-  - component: {fileID: 730404869}
+  - component: {fileID: 730404870}
   m_Layer: 6
   m_Name: Range Enemy
   m_TagString: Enemy
@@ -10468,15 +10469,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70ef8342579d8447b747ba38fc6e997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 730404869}
+  model: {fileID: 730404865}
+  shootPos: {fileID: 720143617}
+  headPos: {fileID: 1160888386}
   HP: 3
   faceTargetSpeed: 5
   bullet: {fileID: 702030445480753381, guid: 36ffff98175b7c6459e0b6b2221e0662, type: 3}
-  shootPos: {fileID: 720143617}
-  headPos: {fileID: 1160888386}
   shootRate: 1
-  attackRange: 11
-  stoppingDis: 10
-  targetCrop: {fileID: 795720416}
+  target: {fileID: 0}
 --- !u!4 &730404868
 Transform:
   m_ObjectHideFlags: 0
@@ -10508,14 +10509,27 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 15
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &730404870
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730404863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &730668182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11646,11 +11660,6 @@ PrefabInstance:
 --- !u!4 &795720415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6133415621640478062, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
-  m_PrefabInstance: {fileID: 795720414}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &795720416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6133415621640478050, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
   m_PrefabInstance: {fileID: 795720414}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &802549577
@@ -18253,6 +18262,7 @@ MonoBehaviour:
   enemyCountText: {fileID: 653027103}
   effectBlind: {fileID: 765116875}
   player: {fileID: 373450610}
+  playerScript: {fileID: 0}
   isPaused: 0
   playerHPBar: {fileID: 844891767}
   playerDamageScreen: {fileID: 486848690}

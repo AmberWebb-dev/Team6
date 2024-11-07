@@ -26,6 +26,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         colorOrig = model.material.color;
         GameManager.Instance.GameGoal(1);
     }
@@ -33,11 +34,14 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     // Update is called once per frame
     void Update()
     {
+
         if (playerInRange)
         {
-            playerDir = GameManager.Instance.transform.position - headPos.position;
+            playerDir = GameManager.Instance.player.transform.position - headPos.position;
 
             agent.SetDestination(GameManager.Instance.player.transform.position);
+
+
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -48,7 +52,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
             {
                 StartCoroutine(shoot());
             }
-        }
+       }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,14 +71,13 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         }
     }
 
-    public void takeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         HP -= amount;
+
         StartCoroutine(flashRed());
 
-        agent.SetDestination(GameManager.Instance.player.transform.position);
-
-        if (HP <= 0)
+        if(HP <= 0)
         {
             GameManager.Instance.GameGoal(-1);
             Destroy(gameObject);
@@ -101,10 +104,5 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     {
         Quaternion rot = Quaternion.LookRotation(playerDir);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot.normalized, Time.deltaTime * faceTargetSpeed);
-    }
-
-    public void TakeDamage(int amount)
-    {
-        
     }
 }

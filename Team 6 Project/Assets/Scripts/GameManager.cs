@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     // Screen Effects
     [SerializeField] GameObject effectBlind;
     public GameObject player;
+    public PlayerController playerScript;
     public bool isPaused;
     float timeScaleOrig;
 
@@ -32,6 +33,10 @@ public class GameManager : MonoBehaviour
 
         crops = GameObject.FindWithTag("Crop");
         cropDamageScript = crops.GetComponent<CropDamage>();
+
+        player = GameObject.FindWithTag("Player");
+        playerScript = player.GetComponent<PlayerController>();
+
     }
 
     void Update()
