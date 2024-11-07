@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TankEnemy : MonoBehaviour
+public class RangeEnemyAi : MonoBehaviour
 {
     //setting up basic things here, will make the methods soon.
     bool isShooting;
@@ -12,7 +12,7 @@ public class TankEnemy : MonoBehaviour
     [SerializeField] int HP;
     [SerializeField] int faceTargetSpeed;
     [SerializeField] GameObject bullet;
-    
+
     [SerializeField] Transform shootPos;
     [SerializeField] Transform headPos;
     [SerializeField] float shootRate;
@@ -35,7 +35,7 @@ public class TankEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(targetCrop != null)
+        if (targetCrop != null)
         {
             agent.SetDestination(targetCrop.transform.position);
 
@@ -45,28 +45,28 @@ public class TankEnemy : MonoBehaviour
 
         if (targetInRange && !isShooting)
         {
-            StartCoroutine(shoot() );
+            StartCoroutine(shoot());
         }
     }
 
 
     //we are doing the range
 
-    //private void onTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject == targetCrop)
-    //    {
-    //        targetInRange = true;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == targetCrop)
+        {
+            targetInRange = true;
+        }
+    }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if(other.CompareTag("Player"))
-    //    {
-    //        targetInRange = false;
-    //    }
-    //}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            targetInRange = false;
+        }
+    }
 
     //dmg method
     public void takeDamage(int amount)
@@ -74,7 +74,7 @@ public class TankEnemy : MonoBehaviour
         HP -= amount;
         //color change here
 
-        if(HP <=0)
+        if (HP <= 0)
         {
             GameManager.Instance.GameGoal(-1);
             Destroy(gameObject);
@@ -88,7 +88,7 @@ public class TankEnemy : MonoBehaviour
         Instantiate(bullet, shootPos.position, Quaternion.LookRotation(targetDir));
 
         yield return new WaitForSeconds(shootRate);
-        isShooting=false;
+        isShooting = false;
     }
 
     void faceTarget()
