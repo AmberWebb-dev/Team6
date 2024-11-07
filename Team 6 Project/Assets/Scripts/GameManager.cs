@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
     // Screen Effects
     [SerializeField] GameObject effectBlind;
-
+    public GameObject player;
     public bool isPaused;
     float timeScaleOrig;
 
