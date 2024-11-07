@@ -2663,7 +2663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192561679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49000168, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0.092, y: -0.25, z: 0.612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5227,7 +5227,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pController: {fileID: 373450615}
-  HP: 3
+  HP: 5
   speed: 5
   sprint: 2
   jumpMax: 2
@@ -9801,7 +9801,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &707698173
 PrefabInstance:
@@ -15503,7 +15503,7 @@ Transform:
   - {fileID: 45689069}
   - {fileID: 1660092019}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084972305
 PrefabInstance:
@@ -21094,7 +21094,7 @@ Transform:
   - {fileID: 651344205}
   - {fileID: 192561680}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1459823493
 NavMeshAgent:
@@ -21110,7 +21110,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2.5
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -21138,7 +21138,7 @@ MonoBehaviour:
   HP: 3
   attackObj: {fileID: 1000678003479077656, guid: c7f5b4157da0d9045bc6a889269cf72e, type: 3}
   attackRate: 1
-  target: {fileID: 6133415621640478050, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
+  target: {fileID: 0}
 --- !u!135 &1459823495
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21150,7 +21150,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1459823496
 BoxCollider:
@@ -26584,7 +26584,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -26690,7 +26690,7 @@ MonoBehaviour:
   viewAngle: 120
   HP: 2
   explosionRadius: 10
-  explosionDamage: 0
+  explosionDamage: 2
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

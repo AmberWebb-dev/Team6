@@ -18,6 +18,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage
     [SerializeField] float attackRate;
 
     [SerializeField] GameObject target;
+    //[SerializeField] GameObject[] target;
+
 
     Color colourOriginal;
 
@@ -37,29 +39,24 @@ public class CDEnemyAI : MonoBehaviour, IDamage
     // Update is called once per frame
     void Update()
     {
+
         cropDirection = GameManager.Instance.crops.transform.position - headPosition.position;
         agent.SetDestination(GameManager.Instance.crops.transform.position);
 
         Debug.DrawRay(headPosition.position, cropDirection);
 
-        RaycastHit hit;
-        //if(target != null)
-        if (Physics.Raycast(headPosition.position, cropDirection, out hit))
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (hit.collider.CompareTag("Crop"))
-            {
-
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    faceTarget();
-                }
-
-                if (!isAttacking && cropInRange)
-                {
-                    StartCoroutine(Attack());
-                }
-            }
+            faceTarget();
         }
+
+        if (!isAttacking && cropInRange)
+        {
+            StartCoroutine(Attack());
+        }
+
+
+
     }
 
     private void OnTriggerEnter(Collider other)

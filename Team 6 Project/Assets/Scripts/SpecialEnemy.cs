@@ -100,10 +100,11 @@ public class SpecialEnemy : MonoBehaviour, IDamage
             {
                 damageable.TakeDamage(explosionDamage);
             }
-            if (hit.gameObject.layer == LayerMask.NameToLayer("Player") && GameManager.Instance != null)
-            {
-                GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
-            }
+            // sorry had to commment this one out, kept crashing the game T_T
+            //if (hit.gameObject.layer == LayerMask.NameToLayer("Player") && GameManager.Instance != null)
+            //{
+            //    GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
+            //}
         }
         StartCoroutine(Death());
     }
@@ -115,9 +116,10 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     }
     IEnumerator Death()
     {
-        GameManager.Instance.GameGoal(-1);
 
         yield return new WaitForSeconds(1.0f);
+        GameManager.Instance.GameGoal(-1);
+
         Destroy(gameObject);
     }
 }
