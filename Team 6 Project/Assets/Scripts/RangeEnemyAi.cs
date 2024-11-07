@@ -3,68 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RangeEnemyAi : MonoBehaviour
+public class RangeEnemyAi : MonoBehaviour, IDamage
 {
-    //setting up basic things here, will make the methods soon.
-    bool isShooting;
-    bool targetInRange;
+    [SerializeField] NavMeshAgent agent;
+    [SerializeField] Renderer model;
+
+    [SerializeField] Transform shootPos;
+    [SerializeField] Transform headPos;
 
     [SerializeField] int HP;
     [SerializeField] int faceTargetSpeed;
     [SerializeField] GameObject bullet;
-
-    [SerializeField] Transform shootPos;
-    [SerializeField] Transform headPos;
     [SerializeField] float shootRate;
-    [SerializeField] float attackRange;
-
-    [SerializeField] float stoppingDis = 2f;
 
     Color colorOrig;
-    public GameObject targetCrop;
 
-    Vector3 targetDir;
+    bool isShooting;
+    bool playerInRange;
 
-    private NavMeshAgent agent;
+    Vector3 playerDir;
 
-    // Start is called before the first frame update
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.stoppingDistance = stoppingDis;
+        colorOrig = model.material.color;
         GameManager.Instance.GameGoal(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (targetCrop != null)
+        if (playerInRange)
         {
-            agent.SetDestination(targetCrop.transform.position);
+            playerDir = GameManager.Instance.transform.position - headPos.position;
 
-            if (agent.remainingDistance <= stoppingDis)
+            agent.SetDestination(GameManager.Instance.player.transform.position);
+
+            if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                targetDir = (targetCrop.transform.position - transform.position).normalized;
-
-                // Call faceTarget only if within stopping distance
                 faceTarget();
+            }
 
-                if (!isShooting)
-                {
-                    StartCoroutine(shoot());
-                }
+            if (!isShooting)
+            {
+                StartCoroutine(shoot());
             }
         }
     }
 
-
-    //we are doing the range
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == targetCrop)
+        if (other.CompareTag("Player"))
         {
-            targetInRange = true;
+            playerInRange = true;
         }
     }
 
@@ -72,15 +63,16 @@ public class RangeEnemyAi : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            targetInRange = false;
+            playerInRange = false;
         }
     }
 
-    //dmg method
     public void takeDamage(int amount)
     {
         HP -= amount;
-        //color change here
+        StartCoroutine(flashRed());
+
+        agent.SetDestination(GameManager.Instance.player.transform.position);
 
         if (HP <= 0)
         {
@@ -89,11 +81,17 @@ public class RangeEnemyAi : MonoBehaviour
         }
     }
 
-    //shooting
+    IEnumerator flashRed()
+    {
+        model.material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        model.material.color = colorOrig;
+    }
+
     IEnumerator shoot()
     {
         isShooting = true;
-        Instantiate(bullet, shootPos.position, Quaternion.LookRotation(targetDir));
+        Instantiate(bullet, shootPos.position, transform.rotation);
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
@@ -101,7 +99,12 @@ public class RangeEnemyAi : MonoBehaviour
 
     void faceTarget()
     {
-        Quaternion rot = Quaternion.LookRotation(targetDir);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * faceTargetSpeed);
+        Quaternion rot = Quaternion.LookRotation(playerDir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot.normalized, Time.deltaTime * faceTargetSpeed);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        
     }
 }
