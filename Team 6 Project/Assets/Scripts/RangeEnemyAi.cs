@@ -18,6 +18,8 @@ public class RangeEnemyAi : MonoBehaviour
     [SerializeField] float shootRate;
     [SerializeField] float attackRange;
 
+    [SerializeField] float stoppingDis = 2f;
+
     Color colorOrig;
     public GameObject targetCrop;
 
@@ -29,6 +31,7 @@ public class RangeEnemyAi : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = stoppingDis;
         GameManager.Instance.GameGoal(1);
     }
 
@@ -39,13 +42,18 @@ public class RangeEnemyAi : MonoBehaviour
         {
             agent.SetDestination(targetCrop.transform.position);
 
-            targetDir = (targetCrop.transform.position - transform.position).normalized;
-            faceTarget();
-        }
+            if (agent.remainingDistance <= stoppingDis)
+            {
+                targetDir = (targetCrop.transform.position - transform.position).normalized;
 
-        if (targetInRange && !isShooting)
-        {
-            StartCoroutine(shoot());
+                // Call faceTarget only if within stopping distance
+                faceTarget();
+
+                if (!isShooting)
+                {
+                    StartCoroutine(shoot());
+                }
+            }
         }
     }
 
