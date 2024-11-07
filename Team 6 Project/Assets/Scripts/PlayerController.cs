@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamage
 {
     [SerializeField] LayerMask ignoreMask;
     [SerializeField] CharacterController pController;
 
+    [SerializeField] int HP;
     [SerializeField] int speed;
     [SerializeField] int sprint;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int shootDistance;
 
     private int jumpCount;
+    int HPOriginal;
 
     bool isSprinting;
     bool isShooting;
@@ -29,7 +31,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HPOriginal = HP;
+        UpdatePlayerUI();
     }
 
     // Update is called once per frame
@@ -122,5 +125,30 @@ public class PlayerController : MonoBehaviour
         // Wait for duration of the shooting rate and set isShooting back to false
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    public void TakeDamage(int amount)
+    {
+        HP -= amount;
+        UpdatePlayerUI();
+        StartCoroutine(FlashDamage());
+
+        // Player is killed
+        if(HP <= 0)
+        {
+            GameManager.Instance.YouLose();
+        }
+    }
+
+    public void UpdatePlayerUI()
+    {
+        GameManager.Instance.playerHPBar.fillAmount = (float)HP / HPOriginal;
+    }
+
+    IEnumerator FlashDamage()
+    {
+        GameManager.Instance.playerDamageScreen.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        GameManager.Instance.playerDamageScreen.SetActive(false);
     }
 }

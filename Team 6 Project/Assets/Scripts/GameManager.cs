@@ -10,11 +10,19 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton Instance
 
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
+    [SerializeField] TMP_Text enemyCountText;
     // Screen Effects
     [SerializeField] GameObject effectBlind;
     public GameObject player;
+    public PlayerController playerScript;
     public bool isPaused;
     float timeScaleOrig;
+
+    public Image playerHPBar;
+    public GameObject playerDamageScreen;
+
+    public GameObject crops;
+    public CropDamage cropDamageScript;
 
     int enemyCount;
 
@@ -22,6 +30,13 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         timeScaleOrig = Time.timeScale;
+
+        crops = GameObject.FindWithTag("Crop");
+        cropDamageScript = crops.GetComponent<CropDamage>();
+
+        player = GameObject.FindWithTag("Player");
+        playerScript = player.GetComponent<PlayerController>();
+
     }
 
     void Update()
@@ -69,6 +84,8 @@ public class GameManager : MonoBehaviour
     public void GameGoal(int amount)
     {
         enemyCount += amount;
+
+        enemyCountText.text = enemyCount.ToString("F0");
 
         if (enemyCount == 0)
         {

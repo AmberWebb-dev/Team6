@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6133415621640478063}
   - component: {fileID: 6133415621640478048}
   - component: {fileID: 6133415621640478049}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Crop
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 6133415621640478048}
-  HP: 3
+  HP: 2
 --- !u!33 &6133415621640478063
 MeshFilter:
   m_ObjectHideFlags: 0
