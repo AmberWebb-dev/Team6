@@ -20136,8 +20136,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459823491}
-  - component: {fileID: 1459823492}
   - component: {fileID: 1459823490}
+  - component: {fileID: 1459823494}
   - component: {fileID: 1459823489}
   - component: {fileID: 1459823488}
   - component: {fileID: 1459823493}
@@ -20226,26 +20226,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1459823492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459823487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abecb64010b03474a89b97541fe4933d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 3
-  faceTargetSpeed: 0
-  bullet: {fileID: 0}
-  shootPos: {fileID: 0}
-  headPos: {fileID: 0}
-  shootRate: 1
-  attackRange: 3
-  targetCrop: {fileID: 1621437228}
 --- !u!195 &1459823493
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20268,6 +20248,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1459823494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459823487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ced5ea685790c54095fa945f50ac70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 1459823489}
+  HP: 3
 --- !u!1001 &1462911760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22125,11 +22119,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3107808065315445, guid: bf137a7ab0f8a1c49937f9fa9ef0d338, type: 3}
   m_PrefabInstance: {fileID: 1620583369}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1621437228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6133415621640478050, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
-  m_PrefabInstance: {fileID: 6133415621293209975}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1624348513
 PrefabInstance:
