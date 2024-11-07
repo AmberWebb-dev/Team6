@@ -29,6 +29,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     {
         ogColor = model.material.color;
         audioSource = GetComponent<AudioSource>();
+        // Update game goal
+        GameManager.Instance.GameGoal(1);
     }
     void Update()
     {
@@ -113,6 +115,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     }
     IEnumerator Death()
     {
+        GameManager.Instance.GameGoal(-1);
+
         yield return new WaitForSeconds(1.0f);
         Destroy(gameObject);
     }

@@ -92,6 +92,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage
 
         if (HP <= 0)
         {
+            GameManager.Instance.GameGoal(-1);
             Destroy(gameObject);
         }
     }

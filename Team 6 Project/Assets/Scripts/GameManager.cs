@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton Instance
 
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
+    [SerializeField] TMP_Text enemyCountText;
     // Screen Effects
     [SerializeField] GameObject effectBlind;
     public GameObject player;
@@ -78,6 +79,8 @@ public class GameManager : MonoBehaviour
     public void GameGoal(int amount)
     {
         enemyCount += amount;
+
+        enemyCountText.text = enemyCount.ToString("F0");
 
         if (enemyCount == 0)
         {
