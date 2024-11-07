@@ -10280,7 +10280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720143617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shoot pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10386,9 +10386,9 @@ GameObject:
   - component: {fileID: 730404865}
   - component: {fileID: 730404864}
   - component: {fileID: 730404869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Range Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16622,7 +16622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160888386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16637,7 +16637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160888385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
