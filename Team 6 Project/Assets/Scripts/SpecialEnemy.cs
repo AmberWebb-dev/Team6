@@ -101,10 +101,10 @@ public class SpecialEnemy : MonoBehaviour, IDamage
                 damageable.TakeDamage(explosionDamage);
             }
             // sorry had to commment this one out, kept crashing the game T_T
-            //if (hit.gameObject.layer == LayerMask.NameToLayer("Player") && GameManager.Instance != null)
-            //{
-            //    GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
-            //}
+            if (hit.gameObject.layer == LayerMask.NameToLayer("Player") && GameManager.Instance != null)
+            {
+                GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
+            }
         }
         StartCoroutine(Death());
     }
