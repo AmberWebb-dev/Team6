@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
     [SerializeField] TMP_Text enemyCountText;
+    [SerializeField] TMP_Text cropCountText;
     [SerializeField] GameObject effectBlind;
     public GameObject player;
     public PlayerController playerScript;
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
         timeScaleOrig = Time.timeScale;
 
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
-        cropCount = cropsArray.Length;
+        //cropCount = cropsArray.Length;
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
@@ -133,6 +134,8 @@ public class GameManager : MonoBehaviour
     public void UpdateCrop(int amount)
     {
         cropCount += amount;
+
+        cropCountText.text = cropCount.ToString("F0");
 
         if (cropCount <= 0)
         {
