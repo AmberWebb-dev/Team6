@@ -13,6 +13,7 @@ public class CropDamage : MonoBehaviour, IDamage
     void Start()
     {
         colourOriginal = model.material.color;
+        GameManager.Instance.UpdateCrop(1);
     }
 
     public void TakeDamage(int amount)
@@ -23,7 +24,9 @@ public class CropDamage : MonoBehaviour, IDamage
 
         if (HP <= 0)
         {
-            GameManager.Instance.UnregisterCrop(gameObject); // Unregister before destruction
+            //GameManager.Instance.UnregisterCrop(gameObject); // Unregister before destruction
+            GameManager.Instance.UpdateCrop(-1);
+
             Destroy(gameObject);
         }
     }

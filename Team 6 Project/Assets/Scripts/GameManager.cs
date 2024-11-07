@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public CropDamage cropDamageScript;
 
     int enemyCount;
+    int cropCount;
 
     void Awake()
     {
@@ -127,6 +128,18 @@ public class GameManager : MonoBehaviour
             menuActive.SetActive(true);
         }
     }
+    public void UpdateCrop(int amount)
+    {
+        cropCount += amount;
+
+        //enemyCountText.text = enemyCount.ToString("F0");
+
+        if (cropCount == 0)
+        {
+            YouLose();
+        }
+    }
+
 
     // Coroutine to apply blinding effect
     public IEnumerator ApplyBlindEffect()
