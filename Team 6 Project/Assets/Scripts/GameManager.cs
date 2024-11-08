@@ -26,10 +26,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] cropsArray;
 
     // Wave settings
-    [SerializeField] GameObject molePrefab; // Prefab for the enemy
-    [SerializeField] List<Transform> spawnPoints; // List of spawn points
-    [SerializeField] int enemiesPerWave = 5; // Number of enemies per wave
-    [SerializeField] float timeBetweenSpawns = 1f, waveCooldown = 50F; // Time between enemy spawns
+    [SerializeField] List<GameObject> molePrefabs;
+    [SerializeField] List<Transform> spawnPoints; 
+    [SerializeField] int enemiesPerWave = 5;
+    [SerializeField] float timeBetweenSpawns = 1f, waveCooldown = 50F; 
 
     void Awake()
     {
@@ -37,14 +37,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         timeScaleOrig = Time.timeScale;
 
-        // Initialize crops and crop count
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
         //cropCount = cropsArray.Length;
         cropCountText.text = cropCount.ToString("F0");
 
-        // Initialize enemy and wave count
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        waveCount = 0; // Start at wave 0, will increment with first wave
+        waveCount = 0;
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
@@ -180,10 +178,9 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
 
-        // Wait for wave cooldown before next wave starts
         yield return new WaitForSeconds(waveCooldown);
 
-        if (cropCount > 0) // Only start a new wave if crops are remaining
+        if (cropCount > 0) 
         {
             StartNextWave();
         }
@@ -191,10 +188,11 @@ public class GameManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        if (spawnPoints.Count > 0)
+        if (spawnPoints.Count > 0 && molePrefabs.Count > 0)
         {
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-            Instantiate(molePrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject enemyPrefab = molePrefabs[Random.Range(0, molePrefabs.Count)];
+            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }
 
