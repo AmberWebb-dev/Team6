@@ -89,7 +89,7 @@ MonoBehaviour:
   viewAngle: 120
   HP: 2
   explosionRadius: 10
-  explosionDamage: 2
+  explosionDamage: 0
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

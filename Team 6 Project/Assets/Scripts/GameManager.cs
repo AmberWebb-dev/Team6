@@ -8,22 +8,28 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    //UI Stuff
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
-    [SerializeField] TMP_Text enemyCountText;
-    [SerializeField] TMP_Text cropCountText;
+    [SerializeField] TMP_Text enemyCountText, waveCountText, cropCountText;
     [SerializeField] GameObject effectBlind;
-    public GameObject player;
-    public PlayerController playerScript;
     public bool isPaused;
-    float timeScaleOrig;
-
-    public Image playerHPBar;
-    public GameObject playerDamageScreen;
-
-    public GameObject[] cropsArray;
     int enemyCount;
     int cropCount;
+    int waveCount;
+    //Player Stuff
+    public PlayerController playerScript;
+    public GameObject player;
+    public GameObject playerDamageScreen;
+    public Image playerHPBar;
+    float timeScaleOrig;
+
+    public GameObject[] cropsArray;
+
+    // Wave settings
+    [SerializeField] GameObject molePrefab; // Prefab for the enemy
+    [SerializeField] List<Transform> spawnPoints; // List of spawn points
+    [SerializeField] int enemiesPerWave = 5; // Number of enemies per wave
+    [SerializeField] float timeBetweenSpawns = 1f, waveCooldown = 50F; // Time between enemy spawns
 
     void Awake()
     {
@@ -31,11 +37,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         timeScaleOrig = Time.timeScale;
 
+        // Initialize crops and crop count
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
         //cropCount = cropsArray.Length;
+        cropCountText.text = cropCount.ToString("F0");
+
+        // Initialize enemy and wave count
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        waveCount = 0; // Start at wave 0, will increment with first wave
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
+
+        StartNextWave();
     }
 
     public void UnregisterCrop(GameObject crop)
@@ -89,6 +103,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Game States
     public void statePause()
     {
         isPaused = true;
@@ -96,7 +111,6 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
     }
-
     public void stateUnpause()
     {
         isPaused = false;
@@ -109,14 +123,12 @@ public class GameManager : MonoBehaviour
             menuActive = null;
         }
     }
-
     public void YouLose()
     {
         statePause();
         menuActive = menuLose;
         menuActive.SetActive(true);
     }
-
     public void GameGoal(int amount)
     {
         enemyCount += amount;
@@ -151,5 +163,48 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(2f);
             effectBlind.SetActive(false);
         }
+    }
+
+    public void StartNextWave()
+    {
+        waveCount++;
+        UpdateWaveCountUI();
+        StartCoroutine(SpawnWave());
+    }
+
+    IEnumerator SpawnWave()
+    {
+        for (int i = 0; i < enemiesPerWave; i++)
+        {
+            SpawnEnemy();
+            yield return new WaitForSeconds(timeBetweenSpawns);
+        }
+
+        // Wait for wave cooldown before next wave starts
+        yield return new WaitForSeconds(waveCooldown);
+
+        if (cropCount > 0) // Only start a new wave if crops are remaining
+        {
+            StartNextWave();
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        if (spawnPoints.Count > 0)
+        {
+            Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+            Instantiate(molePrefab, spawnPoint.position, spawnPoint.rotation);
+        }
+    }
+
+    void UpdateEnemyCountUI()
+    {
+        enemyCountText.text = enemyCount.ToString("F0");
+    }
+
+    void UpdateWaveCountUI()
+    {
+        waveCountText.text = waveCount.ToString("F0"); 
     }
 }
