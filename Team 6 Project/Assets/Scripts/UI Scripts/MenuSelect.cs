@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MenuSelect : MonoBehaviour
 {
     public List<GameObject> pages; // UI pages: 0 - Main Menu, 1 - Level Select
     public Button nextButton;
