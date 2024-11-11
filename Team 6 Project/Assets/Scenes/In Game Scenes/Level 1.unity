@@ -3382,6 +3382,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: numOfWaves
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: waveCooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: enemiesPerWave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: molePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3985926867833323077, guid: e970ad163e9c99a4f9ff3c45b907affe, type: 3}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: molePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8059749084214848233, guid: 40a39479362161747869e53a1146804c, type: 3}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: molePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 9008777840376650599, guid: 5808cee0cc69b5e48b56dfcffcb01fa7, type: 3}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: spawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1140479402}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: spawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1788501714}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1683192124}
     - target: {fileID: 8303663385367270501, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -13672,6 +13716,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1015848981385885390, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
   m_PrefabInstance: {fileID: 1136478924}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1140479402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 801867579821980945, guid: 59530de5c1647b14ab17cab20b5818dd, type: 3}
+  m_PrefabInstance: {fileID: 643500784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1145388489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19634,6 +19683,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1015848981385885390, guid: 2fb59737d6e4b1c489e14796b487c46d, type: 3}
   m_PrefabInstance: {fileID: 1682277982}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1683192124 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 801867579821980945, guid: 59530de5c1647b14ab17cab20b5818dd, type: 3}
+  m_PrefabInstance: {fileID: 280858226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1683600448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20433,6 +20487,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6133415621640478062, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
   m_PrefabInstance: {fileID: 1778310157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1788501714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 801867579821980945, guid: 59530de5c1647b14ab17cab20b5818dd, type: 3}
+  m_PrefabInstance: {fileID: 629120837}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1793511928
 PrefabInstance:

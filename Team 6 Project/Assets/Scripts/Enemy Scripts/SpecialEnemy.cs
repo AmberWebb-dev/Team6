@@ -1,4 +1,3 @@
-// SpecialEnemy.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +18,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     [SerializeField] AudioClip explosionSound;
 
     bool playerInRange;
+    bool hasExploded = false; // New flag to prevent multiple explosions
     Vector3 playerDir;
     float angleToPlayer;
 
@@ -29,16 +29,14 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     {
         ogColor = model.material.color;
         audioSource = GetComponent<AudioSource>();
-        // Update game goal
         GameManager.Instance.GameGoal(1);
     }
+
     void Update()
     {
         if (playerInRange)
         {
-            // The enemy chases the player directly
             agent.SetDestination(GameManager.Instance.player.transform.position);
-
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 FaceTarget();
@@ -76,7 +74,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         StartCoroutine(FlashRed());
 
-        if (HP <= 0)
+        if (HP <= 0 && !hasExploded) // Ensure explosion happens only once
         {
             Explode();
         }
@@ -84,9 +82,11 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     void Explode()
     {
-        audioSource.volume = 0.4f;
+        hasExploded = true;
+
         if (audioSource != null && explosionSound != null)
         {
+            audioSource.volume = 0.4f;
             audioSource.PlayOneShot(explosionSound);
         }
 
@@ -94,34 +94,28 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         foreach (Collider hit in hitColliders)
         {
-            IDamage damageable = hit.GetComponent<IDamage>();
+            if (hit.gameObject == gameObject) continue; 
 
-            if (damageable != null && hit.gameObject != gameObject)
+            IDamage damageable = hit.GetComponent<IDamage>();
+            if (damageable != null)
             {
                 damageable.TakeDamage(explosionDamage);
             }
-            // sorry had to commment this one out, kept crashing the game T_T
-            //if (hit.gameObject.layer == LayerMask.NameToLayer("Player") && GameManager.Instance != null)
-           // {
-               // GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
-           // }
+
+            if (hit.CompareTag("Player") && GameManager.Instance != null)
+            {
+                GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
+            }
         }
+
         GameManager.Instance.GameGoal(-1);
-        Destroy(gameObject);
+        Destroy(gameObject); 
     }
+
     IEnumerator FlashRed()
     {
         model.material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         model.material.color = ogColor;
     }
-    /*IEnumerator Death()
-    {
-
-        yield return new WaitForSeconds(1.0f);
-        GameManager.Instance.GameGoal(-1);
-
-        Destroy(gameObject);
-    }*/
 }
-
