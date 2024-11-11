@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
 
     // Wave settings
     [SerializeField] List<GameObject> molePrefabs;
-    [SerializeField] List<Transform> spawnPoints; 
+    [SerializeField] List<Transform> spawnPoints;
+    [SerializeField] int numOfWaves = 1;
     [SerializeField] int enemiesPerWave = 5;
     [SerializeField] float timeBetweenSpawns = 1f, waveCooldown = 50F; 
 
@@ -130,14 +131,22 @@ public class GameManager : MonoBehaviour
     public void GameGoal(int amount)
     {
         enemyCount += amount;
-
         enemyCountText.text = enemyCount.ToString("F0");
 
-        if (enemyCount == 0)
+        if (enemyCount <= 0)
         {
-            StatePause();
-            menuActive = menuWin;
-            menuActive.SetActive(true);
+            if (waveCount < numOfWaves)
+            {
+                // Start the next wave if there are waves left
+                StartCoroutine(NextWaveWithCooldown());
+            }
+            else
+            {
+                // End game with win condition if all waves are completed
+                StatePause();
+                menuActive = menuWin;
+                menuActive.SetActive(true);
+            }
         }
     }
 
@@ -163,11 +172,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void StartNextWave()
     {
-        waveCount++;
-        UpdateWaveCountUI();
-        StartCoroutine(SpawnWave());
+        if (waveCount < numOfWaves)
+        {
+            waveCount++;
+            UpdateWaveCountUI();
+            StartCoroutine(SpawnWave());
+        }
+        else
+        {
+            Debug.Log("All waves completed.");
+        }
+    }
+
+    IEnumerator NextWaveWithCooldown()
+    {
+        yield return new WaitForSeconds(waveCooldown);  // Wait for cooldown before starting next wave
+        StartNextWave();
     }
 
     IEnumerator SpawnWave()
@@ -180,7 +203,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(waveCooldown);
 
-        if (cropCount > 0) 
+        if (cropCount > 0)
         {
             StartNextWave();
         }
@@ -203,6 +226,6 @@ public class GameManager : MonoBehaviour
 
     void UpdateWaveCountUI()
     {
-        waveCountText.text = waveCount.ToString("F0"); 
+        waveCountText.text = waveCount + " / " + numOfWaves;
     }
 }
