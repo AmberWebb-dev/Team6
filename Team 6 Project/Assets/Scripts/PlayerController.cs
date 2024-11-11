@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IDamage
+public class PlayerController : MonoBehaviour, IDamage, IHealth
 {
     [SerializeField] LayerMask ignoreMask;
     [SerializeField] CharacterController pController;
@@ -138,6 +139,16 @@ public class PlayerController : MonoBehaviour, IDamage
         {
             GameManager.Instance.YouLose();
         }
+    }
+
+    public void HealUp()
+    {
+        if (HP < HPOriginal)
+        {
+            HP = HPOriginal;
+            UpdatePlayerUI();
+        }
+        
     }
 
     public void UpdatePlayerUI()
