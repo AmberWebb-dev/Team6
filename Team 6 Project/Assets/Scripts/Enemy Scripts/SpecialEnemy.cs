@@ -41,7 +41,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                faceTarget();
+                FaceTarget();
             }
         }
     }
@@ -63,7 +63,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
         }
     }
 
-    void faceTarget()
+    void FaceTarget()
     {
         playerDir = GameManager.Instance.player.transform.position - transform.position;
         Quaternion rot = Quaternion.LookRotation(playerDir);

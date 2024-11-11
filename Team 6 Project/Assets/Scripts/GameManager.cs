@@ -90,26 +90,26 @@ public class GameManager : MonoBehaviour
         {
             if (menuActive == null)
             {
-                statePause();
+                StatePause();
                 menuActive = menuPause;
                 menuActive.SetActive(isPaused);
             }
             else if (menuActive == menuPause)
             {
-                stateUnpause();
+                StateUnpause();
             }
         }
     }
 
     //Game States
-    public void statePause()
+    public void StatePause()
     {
         isPaused = true;
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
     }
-    public void stateUnpause()
+    public void StateUnpause()
     {
         isPaused = false;
         Time.timeScale = timeScaleOrig;
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
     }
     public void YouLose()
     {
-        statePause();
+        StatePause();
         menuActive = menuLose;
         menuActive.SetActive(true);
     }
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            statePause();
+            StatePause();
             menuActive = menuWin;
             menuActive.SetActive(true);
         }
