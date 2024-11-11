@@ -14,7 +14,10 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameManager.Instance.StateUnpause();
     }
-
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Quit()
     {
 #if UNITY_EDITOR
