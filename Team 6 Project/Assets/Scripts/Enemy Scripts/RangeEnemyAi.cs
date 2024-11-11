@@ -45,12 +45,12 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                faceTarget();
+                FaceTarget();
             }
 
             if (!isShooting)
             {
-                StartCoroutine(shoot());
+                StartCoroutine(Shoot());
             }
        }
     }
@@ -75,7 +75,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     {
         HP -= amount;
 
-        StartCoroutine(flashRed());
+        StartCoroutine(FlashRed());
 
         if(HP <= 0)
         {
@@ -84,14 +84,14 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         }
     }
 
-    IEnumerator flashRed()
+    IEnumerator FlashRed()
     {
         model.material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         model.material.color = colorOrig;
     }
 
-    IEnumerator shoot()
+    IEnumerator Shoot()
     {
         isShooting = true;
         Instantiate(bullet, shootPos.position, transform.rotation);
@@ -100,7 +100,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         isShooting = false;
     }
 
-    void faceTarget()
+    void FaceTarget()
     {
         Quaternion rot = Quaternion.LookRotation(playerDir);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot.normalized, Time.deltaTime * faceTargetSpeed);

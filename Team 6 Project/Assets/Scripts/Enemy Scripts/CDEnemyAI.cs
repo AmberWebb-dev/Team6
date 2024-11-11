@@ -43,7 +43,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                faceTarget(cropDirection);
+                FaceTarget(cropDirection);
             }
 
             if (!isAttacking && Vector3.Distance(transform.position, currentTargetCrop.transform.position) <= agent.stoppingDistance)
@@ -72,7 +72,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage
         }
     }
 
-    void faceTarget(Vector3 cropDirection)
+    void FaceTarget(Vector3 cropDirection)
     {
         Quaternion rot = Quaternion.LookRotation(cropDirection);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * faceTargetSpeed);
