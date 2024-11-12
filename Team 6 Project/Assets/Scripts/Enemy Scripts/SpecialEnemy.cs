@@ -18,7 +18,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     [SerializeField] AudioClip explosionSound;
 
     bool playerInRange;
-    bool hasExploded = false; // New flag to prevent multiple explosions
+    bool hasExploded = false; 
     Vector3 playerDir;
     float angleToPlayer;
 
@@ -74,7 +74,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         StartCoroutine(FlashRed());
 
-        if (HP <= 0 && !hasExploded) // Ensure explosion happens only once
+        if (HP <= 0 && !hasExploded)
         {
             Explode();
         }
