@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     Vector3 moveDirection;
     Vector3 playerVelocity;
 
+    //shield implementation (delete if we are not using it)
+    public bool isShielded = false;
+    public GameObject shieldEffect;
+    private Coroutine shieldCoroutine;
+    //end of shield
+
     // Start is called before the first frame update
     void Start()
     {
@@ -162,4 +168,41 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         yield return new WaitForSeconds(0.1f);
         GameManager.Instance.playerDamageScreen.SetActive(false);
     }
+
+    //shield implementation (delete if we decide not to use it)
+    public void ActivateShield(float duration)
+    {
+        if (shieldCoroutine != null)
+        {
+            StopCoroutine(shieldCoroutine);
+        }
+
+        //debugging-ignore
+        Debug.Log("Shield activated!");
+
+        shieldCoroutine = StartCoroutine(shieldDuration(duration));
+    }
+
+    private IEnumerator shieldDuration(float duration)
+    {
+        isShielded = true;
+
+        if (shieldEffect != null)
+        {
+            shieldEffect.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(duration);
+
+        isShielded = false;
+        if (shieldEffect != null)
+        {
+            shieldEffect.SetActive(false);
+        }
+
+        shieldCoroutine = null;
+        //debugging-ignore
+        Debug.Log("Shield deactivated!");
+    }
+    //end of shield
 }
