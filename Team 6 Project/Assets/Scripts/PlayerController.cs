@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     public bool isShielded = false;
     public GameObject shieldEffect;
     private Coroutine shieldCoroutine;
+    public GameObject ShieldOverlay;
     //end of shield
 
     // Start is called before the first frame update
@@ -136,6 +137,14 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
     public void TakeDamage(int amount)
     {
+        //shield implimentation
+        if (isShielded)
+        {
+            Debug.Log("damage deflected by shield");
+            return;
+        }
+
+
         HP -= amount;
         UpdatePlayerUI();
         StartCoroutine(FlashDamage());
@@ -181,6 +190,11 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         Debug.Log("Shield activated!");
 
         shieldCoroutine = StartCoroutine(shieldDuration(duration));
+
+        if (ShieldOverlay != null)
+        {
+            ShieldOverlay.SetActive(true);
+        }
     }
 
     private IEnumerator shieldDuration(float duration)
@@ -198,6 +212,11 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         if (shieldEffect != null)
         {
             shieldEffect.SetActive(false);
+        }
+
+        if (ShieldOverlay != null)
+        {
+            ShieldOverlay.SetActive(false);
         }
 
         shieldCoroutine = null;
