@@ -30,8 +30,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     Vector3 playerVelocity;
 
     //shield implementation (delete if we are not using it)
-    public bool isShielded = false;
-    public GameObject shieldEffect;
+    public bool isShielded;
     private Coroutine shieldCoroutine;
     public GameObject ShieldOverlay;
     //end of shield
@@ -140,7 +139,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         //shield implimentation
         if (isShielded)
         {
-            Debug.Log("damage deflected by shield");
+            
             return;
         }
 
@@ -186,33 +185,21 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
             StopCoroutine(shieldCoroutine);
         }
 
-        //debugging-ignore
-        Debug.Log("Shield activated!");
+        shieldCoroutine = StartCoroutine(shieldWithOverlay(duration));
+    }
 
-        shieldCoroutine = StartCoroutine(shieldDuration(duration));
+    private IEnumerator shieldWithOverlay(float duration)
+    {
+        isShielded = true;
 
         if (ShieldOverlay != null)
         {
             ShieldOverlay.SetActive(true);
         }
-    }
-
-    private IEnumerator shieldDuration(float duration)
-    {
-        isShielded = true;
-
-        if (shieldEffect != null)
-        {
-            shieldEffect.SetActive(true);
-        }
 
         yield return new WaitForSeconds(duration);
 
         isShielded = false;
-        if (shieldEffect != null)
-        {
-            shieldEffect.SetActive(false);
-        }
 
         if (ShieldOverlay != null)
         {
@@ -220,8 +207,6 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         }
 
         shieldCoroutine = null;
-        //debugging-ignore
-        Debug.Log("Shield deactivated!");
     }
     //end of shield
 }
