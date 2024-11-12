@@ -1503,11 +1503,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButtons:
   - button: {fileID: 860304710}
-    sceneName: SampleScene
+    sceneName: Level 1
   - button: {fileID: 2041513760}
-    sceneName: SampleScene
+    sceneName: Level 2
   - button: {fileID: 201093300}
-    sceneName: SampleScene
+    sceneName: Level 3
 --- !u!1 &853365490
 GameObject:
   m_ObjectHideFlags: 0
