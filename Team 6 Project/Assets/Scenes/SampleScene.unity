@@ -17232,6 +17232,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6009347513091937624, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
+      propertyPath: healthPackPrefab
+      value: 
+      objectReference: {fileID: 5090388281228216879, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
+    - target: {fileID: -6009347513091937624, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
+      propertyPath: packRespawnTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4513176522580164359, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
       propertyPath: m_RootOrder
       value: 6
