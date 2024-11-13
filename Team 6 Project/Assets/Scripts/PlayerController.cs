@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     //shield implementation (delete if we are not using it)
     public bool isShielded;
     private Coroutine shieldCoroutine;
-    public GameObject ShieldOverlay;
+    //public GameObject ShieldOverlay;
     //end of shield
 
     // Start is called before the first frame update
@@ -192,19 +192,11 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     {
         isShielded = true;
 
-        if (ShieldOverlay != null)
-        {
-            ShieldOverlay.SetActive(true);
-        }
+        GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyShieldEffect(duration));
 
         yield return new WaitForSeconds(duration);
 
         isShielded = false;
-
-        if (ShieldOverlay != null)
-        {
-            ShieldOverlay.SetActive(false);
-        }
 
         shieldCoroutine = null;
     }

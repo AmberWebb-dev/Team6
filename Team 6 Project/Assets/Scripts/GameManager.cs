@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
     [SerializeField] TMP_Text enemyCountText, waveCountText, cropCountText;
     [SerializeField] GameObject effectBlind;
+    [SerializeField] GameObject effectShield;
     public bool isPaused;
     int enemyCount;
     int cropCount;
@@ -169,6 +170,16 @@ public class GameManager : MonoBehaviour
             effectBlind.SetActive(true);
             yield return new WaitForSeconds(2f);
             effectBlind.SetActive(false);
+        }
+    }
+
+    public IEnumerator ApplyShieldEffect(float duration)
+    {
+        if (effectShield != null)
+        {
+            effectShield.SetActive(true);
+            yield return new WaitForSeconds(duration);
+            effectShield.SetActive(false);
         }
     }
 
