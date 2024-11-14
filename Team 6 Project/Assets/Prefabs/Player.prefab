@@ -163,6 +163,7 @@ MonoBehaviour:
   shootDamage: 1
   shootRate: 0.5
   shootDistance: 10
+  isShielded: 0
 --- !u!143 &9213953181857506157
 CharacterController:
   m_ObjectHideFlags: 0

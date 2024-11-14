@@ -4,12 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    // Level settings
+    // Used for next level button. Takes the index of the current scene and compares it
+    // to the total amount of levels we have. Level one has to be index one, level two
+    // index two, etc. Update this value whenever a new level is added.
+    public int totalLevelCount;
+    private int currentLevel;
     //UI Stuff
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
+    [SerializeField] Button nextLevelButton;
     [SerializeField] TMP_Text enemyCountText, waveCountText, cropCountText;
     [SerializeField] GameObject effectBlind;
     [SerializeField] GameObject effectShield;
@@ -38,6 +46,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
         Time.timeScale = 1;
         timeScaleOrig = Time.timeScale;
+
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
         //cropCount = cropsArray.Length;
@@ -147,6 +157,15 @@ public class GameManager : MonoBehaviour
                 StatePause();
                 menuActive = menuWin;
                 menuActive.SetActive(true);
+
+                if (currentLevel + 1 > totalLevelCount)
+                {
+                    nextLevelButton.interactable = false;
+                }
+                else
+                {
+                    nextLevelButton.interactable = true;
+                }
             }
         }
     }
@@ -238,5 +257,10 @@ public class GameManager : MonoBehaviour
     void UpdateWaveCountUI()
     {
         waveCountText.text = waveCount + " / " + numOfWaves;
+    }
+
+    public int GetCurrentLevelIndex()
+    {
+        return currentLevel;
     }
 }

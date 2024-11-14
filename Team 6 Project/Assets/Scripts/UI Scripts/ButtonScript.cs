@@ -26,4 +26,16 @@ public class ButtonScript : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void NextLevel()
+    {
+        int nextSceneIndex = GameManager.Instance.GetCurrentLevelIndex() + 1;
+        if (nextSceneIndex > GameManager.Instance.totalLevelCount)
+        {
+            return;
+        }
+
+        SceneManager.LoadScene(nextSceneIndex);
+        GameManager.Instance.StateUnpause();
+    }
 }
