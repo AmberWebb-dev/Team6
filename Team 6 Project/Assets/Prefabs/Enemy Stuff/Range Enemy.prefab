@@ -90,6 +90,7 @@ MonoBehaviour:
   faceTargetSpeed: 5
   bullet: {fileID: 1000678003479077656, guid: c7f5b4157da0d9045bc6a889269cf72e, type: 3}
   shootRate: 1
+  scoreValue: 200
 --- !u!195 &3985926867833319871
 NavMeshAgent:
   m_ObjectHideFlags: 0

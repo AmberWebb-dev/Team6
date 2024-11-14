@@ -17,6 +17,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     [SerializeField] LayerMask playerLayer;
     [SerializeField] AudioClip explosionSound;
 
+    [SerializeField] int scoreValue;
+
     bool playerInRange;
     bool hasExploded = false; 
     Vector3 playerDir;
@@ -109,6 +111,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
         }
 
         GameManager.Instance.GameGoal(-1);
+        GameManager.Instance.enemyScoreTotal += scoreValue;
         Destroy(gameObject); 
     }
 

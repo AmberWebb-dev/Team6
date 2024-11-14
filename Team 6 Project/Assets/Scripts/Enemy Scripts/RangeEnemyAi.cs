@@ -16,6 +16,8 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
 
+    [SerializeField] int scoreValue;
+
     Color colorOrig;
 
     bool isShooting;
@@ -80,6 +82,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         if(HP <= 0)
         {
             GameManager.Instance.GameGoal(-1);
+            GameManager.Instance.enemyScoreTotal += scoreValue;
             Destroy(gameObject);
         }
     }

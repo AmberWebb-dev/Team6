@@ -18,12 +18,15 @@ public class GameManager : MonoBehaviour
     //UI Stuff
     [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
     [SerializeField] Button nextLevelButton;
+    [SerializeField] TMP_Text scoreText, highscoreText;
+    public int enemyScoreTotal;
     [SerializeField] TMP_Text enemyCountText, waveCountText, cropCountText;
     [SerializeField] GameObject effectBlind;
     [SerializeField] GameObject effectShield;
     public bool isPaused;
     int enemyCount;
     int cropCount;
+    int cropCountOriginal;
     int waveCount;
     //Player Stuff
     public PlayerController playerScript;
@@ -50,11 +53,13 @@ public class GameManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         cropsArray = GameObject.FindGameObjectsWithTag("Crop");
+        cropCountOriginal = cropsArray.Length;
         //cropCount = cropsArray.Length;
         cropCountText.text = cropCount.ToString("F0");
 
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         waveCount = 0;
+        enemyScoreTotal = 0;
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
@@ -158,6 +163,7 @@ public class GameManager : MonoBehaviour
                 menuActive = menuWin;
                 menuActive.SetActive(true);
 
+                // Set Win UI Stuff
                 if (currentLevel + 1 > totalLevelCount)
                 {
                     nextLevelButton.interactable = false;
@@ -166,6 +172,10 @@ public class GameManager : MonoBehaviour
                 {
                     nextLevelButton.interactable = true;
                 }
+
+                scoreText.text = $"Score: {CalculateScore()}";
+
+                // High score stuff
             }
         }
     }
@@ -262,5 +272,10 @@ public class GameManager : MonoBehaviour
     public int GetCurrentLevelIndex()
     {
         return currentLevel;
+    }
+
+    private int CalculateScore()
+    {
+        return Mathf.RoundToInt(((float)cropCount / (float)cropCountOriginal) * (float)enemyScoreTotal);
     }
 }

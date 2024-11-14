@@ -128,6 +128,7 @@ MonoBehaviour:
   HP: 3
   attackDamage: 1
   attackRate: 1
+  scoreValue: 100
 --- !u!195 &8059749084214848019
 NavMeshAgent:
   m_ObjectHideFlags: 0

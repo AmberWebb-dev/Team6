@@ -15,6 +15,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage
     [SerializeField] int attackDamage = 10;
     [SerializeField] float attackRate;
 
+    [SerializeField] int scoreValue;
+
     private GameObject currentTargetCrop;
     private Color colourOriginal;
     private bool isAttacking;
@@ -86,6 +88,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage
         if (HP <= 0)
         {
             GameManager.Instance.GameGoal(-1);
+            GameManager.Instance.enemyScoreTotal += scoreValue;
             Destroy(gameObject);
         }
     }
