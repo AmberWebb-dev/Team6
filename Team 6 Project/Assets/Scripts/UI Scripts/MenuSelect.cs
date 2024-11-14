@@ -7,6 +7,7 @@ public class MenuSelect : MonoBehaviour
     public List<GameObject> pages; // UI pages: 0 - Main Menu, 1 - Level Select
     public Button nextButton;
     public Button previousButton;
+    [SerializeField] private TMPro.TMP_Text levelOneHighscoreText, levelTwoHighscoreText, levelThreeHighscoreText;
     private int currentPageIndex = 0; // Current page index
 
     void Start()
@@ -28,6 +29,10 @@ public class MenuSelect : MonoBehaviour
             currentPageIndex++;
             pages[currentPageIndex].SetActive(true);
             UpdateButtonVisibility();
+            if (currentPageIndex == 1)
+            {
+                UpdateHighscoreText();
+            }
         }
     }
 
@@ -39,6 +44,10 @@ public class MenuSelect : MonoBehaviour
             currentPageIndex--;
             pages[currentPageIndex].SetActive(true);
             UpdateButtonVisibility();
+            if (currentPageIndex == 1)
+            {
+                UpdateHighscoreText();
+            }
         }
     }
 
@@ -46,5 +55,16 @@ public class MenuSelect : MonoBehaviour
     {
         nextButton.gameObject.SetActive(currentPageIndex < pages.Count - 1);
         previousButton.gameObject.SetActive(currentPageIndex > 0);
+    }
+
+    private void UpdateHighscoreText()
+    {
+        int highscore;
+        highscore = PlayerPrefs.GetInt("Level 1 Highscore", 0);
+        levelOneHighscoreText.text = $"Highscore: {(highscore == 0 ? "--" : highscore)}";
+        highscore = PlayerPrefs.GetInt("Level 2 Highscore", 0);
+        levelTwoHighscoreText.text = $"Highscore: {(highscore == 0 ? "--" : highscore)}";
+        highscore = PlayerPrefs.GetInt("Level 3 Highscore", 0);
+        levelThreeHighscoreText.text = $"Highscore: {(highscore == 0 ? "--" : highscore)}";
     }
 }

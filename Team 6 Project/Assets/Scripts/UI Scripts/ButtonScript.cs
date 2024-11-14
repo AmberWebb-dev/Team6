@@ -38,4 +38,9 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene(nextSceneIndex);
         GameManager.Instance.StateUnpause();
     }
+
+    public void DeleteSaveData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

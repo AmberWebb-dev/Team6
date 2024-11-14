@@ -173,9 +173,22 @@ public class GameManager : MonoBehaviour
                     nextLevelButton.interactable = true;
                 }
 
-                scoreText.text = $"Score: {CalculateScore()}";
+                int score = CalculateScore();
+                scoreText.text = $"Score: {score}";
 
                 // High score stuff
+                string scoreKey = $"Level {currentLevel} Highscore";
+                int highScore = PlayerPrefs.GetInt(scoreKey, 0);
+
+                if (score > highScore || highScore == 0)
+                {
+                    highscoreText.text = "New Highscore!";
+                    PlayerPrefs.SetInt(scoreKey, score);
+                }
+                else
+                {
+                    highscoreText.text = $"Highscore: {highScore}";
+                }
             }
         }
     }
