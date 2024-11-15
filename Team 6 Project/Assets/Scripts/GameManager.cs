@@ -171,7 +171,9 @@ public class GameManager : MonoBehaviour
                 StatePause();
                 menuActive = menuWin;
                 menuActive.SetActive(true);
-
+                string starKey = $"Level_{currentLevel}_Star";
+                PlayerPrefs.SetInt(starKey, 1); // 1 indicates a star earned
+                PlayerPrefs.Save();
                 // Set Win UI Stuff
                 if (currentLevel + 1 > totalLevelCount)
                 {

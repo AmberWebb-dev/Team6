@@ -13,16 +13,27 @@ public class LevelSelect : MonoBehaviour
     }
 
     public List<LevelButton> levelButtons;
+    [SerializeField] private List<GameObject> levelStars;
 
     void Start()
     {
+        UpdateLevelStars();
         foreach (var levelButton in levelButtons)
         {
             string sceneToLoad = levelButton.sceneName;
             levelButton.button.onClick.AddListener(() => LoadScene(sceneToLoad));
         }
     }
-
+    private void UpdateLevelStars()
+    {
+        for (int i = 0; i < levelStars.Count; i++)
+        {
+            int levelIndex = i + 1;
+            string starKey = $"Level_{levelIndex}_Star";
+            bool hasStar = PlayerPrefs.GetInt(starKey, 0) == 1;
+            levelStars[i].SetActive(hasStar);
+        }
+    }
     private void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
