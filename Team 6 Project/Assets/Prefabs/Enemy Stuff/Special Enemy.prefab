@@ -97,6 +97,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   explosionSound: {fileID: 8300000, guid: f86d4490fbe5e394cb6e89e7cb697c3c, type: 3}
+  roamDistance: 200
+  roamTimer: 3
   scoreValue: 150
 --- !u!33 &9008777840376650602
 MeshFilter:
