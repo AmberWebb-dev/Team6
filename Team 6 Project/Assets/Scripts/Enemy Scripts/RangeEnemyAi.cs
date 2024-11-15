@@ -16,14 +16,22 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
 
+    [SerializeField] int roamDistance;
+    [SerializeField] int roamTimer;
+
     [SerializeField] int scoreValue;
 
     Color colorOrig;
 
     bool isShooting;
     bool playerInRange;
+    bool isRoaming;
 
     Vector3 playerDir;
+    Vector3 startPosition;
+
+    float stoppingDistanceOrig;
+    float angleToPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,30 +39,72 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         agent = GetComponent<NavMeshAgent>();
         colorOrig = model.material.color;
         GameManager.Instance.GameGoal(1);
+        startPosition = transform.position;
+        stoppingDistanceOrig = agent.stoppingDistance;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (playerInRange)
+        if(playerInRange && !CanSeePlayer())
         {
-            playerDir = GameManager.Instance.player.transform.position - headPos.position;
+            if(!isRoaming && agent.remainingDistance < 0.05f)
+            {
+                StartCoroutine(Roam());
+            }
+        }
+        else if(!playerInRange)
+        {
+            if(!isRoaming && agent.remainingDistance < 0.05f)
+            {
+                StartCoroutine(Roam());
+            }
+        }
+    }
 
+    IEnumerator Roam()
+    {
+        isRoaming = true;
+        yield return new WaitForSeconds(roamTimer);
+
+        agent.stoppingDistance = 0;
+        Vector3 randDistance = Random.insideUnitSphere * roamDistance;
+        randDistance += startPosition;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randDistance, out hit, roamDistance, 1);
+        agent.SetDestination(hit.position);
+
+        isRoaming = false;
+    }
+
+    bool CanSeePlayer()
+    {
+        playerDir = GameManager.Instance.player.transform .position - headPos.position; 
+        angleToPlayer = Vector3.Angle(playerDir, transform.position);
+
+        RaycastHit hit;
+        if(Physics.Raycast(headPos.position, playerDir, out hit))
+        {
+            // Player seen
             agent.SetDestination(GameManager.Instance.player.transform.position);
 
-
-
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            if(agent.remainingDistance <= agent.stoppingDistance)
             {
                 FaceTarget();
             }
-
-            if (!isShooting)
+            if(!isShooting)
             {
                 StartCoroutine(Shoot());
             }
-       }
+
+            agent.stoppingDistance = stoppingDistanceOrig;
+            return true;
+        }
+
+        agent.stoppingDistance = 0;
+        return false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,6 +120,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            agent.stoppingDistance = 0;
         }
     }
 
@@ -78,6 +129,9 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         HP -= amount;
 
         StartCoroutine(FlashRed());
+
+        // Chases player if shot out of range
+        agent.SetDestination(GameManager.Instance.player.transform.position);
 
         if(HP <= 0)
         {

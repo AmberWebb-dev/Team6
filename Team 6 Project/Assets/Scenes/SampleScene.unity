@@ -17464,6 +17464,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 373450616}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: cropsArray.Array.data[0]
       value: 
       objectReference: {fileID: 376489597}
@@ -17674,6 +17678,10 @@ PrefabInstance:
     - target: {fileID: 5235747505205121800, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_Name
       value: Game Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747506182973463, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
