@@ -23,6 +23,18 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int shootDamage;
     [SerializeField] float shootRate;
     [SerializeField] int shootDistance;
+    [Header("----- Shovel Stats -----")]
+    bool hasShovel;
+    bool isSwinging;
+    [SerializeField] GameObject shovelModel;
+    [SerializeField] List<ShovelStats> shovelList;
+    [SerializeField] int shovelDMG;
+    [SerializeField] int shovelDurability;
+    [SerializeField] float swingRate;
+    [SerializeField] int shovelDist;
+
+    private int selectedShovel = -1;                 
+    private float lastSwingTime;
 
     Vector3 moveDirection;
     Vector3 playerVelocity;
@@ -81,6 +93,10 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         if(Input.GetButton("Fire1") && !isShooting)
         {
             StartCoroutine(Shoot());
+        }
+        if (hasShovel && Input.GetKeyDown(KeyCode.F) && !isShooting)
+        {
+            StartCoroutine(SwingShovel());
         }
     }
     
@@ -198,4 +214,72 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         shieldCoroutine = null;
     }
     //end of shield
+
+    public void GetShovelStats(ShovelStats shovel)
+    {
+        shovelList.Add(shovel);                       
+        selectedShovel = shovelList.Count - 1;       
+        shovelDMG = shovel.shovelDMG;
+        shovelDurability = shovel.durability;
+        swingRate = shovel.swingRate;
+        shovelDist = shovel.shovelDist;
+        shovelModel.GetComponent<MeshFilter>().sharedMesh = shovel.shovelModel.GetComponent<MeshFilter>().sharedMesh;
+        shovelModel.GetComponent<MeshRenderer>().sharedMaterial = shovel.shovelModel.GetComponent<MeshRenderer>().sharedMaterial;
+        shovelModel.SetActive(true);
+
+        hasShovel = true;
+        Debug.Log("Shovel equipped: " + shovel.name);
+    }
+
+
+    IEnumerator SwingShovel()
+    {
+        // Ensure player isn't already swinging
+        isSwinging = true;
+
+        // Check for hits within the shovel's distance
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * shovelDist / 2, shovelDist / 2, ~ignoreMask);
+
+        foreach (Collider hitCollider in hitColliders)
+        {
+            Debug.Log(hitCollider.name);
+
+            IDamage dmg = hitCollider.GetComponent<IDamage>();
+            if (dmg != null)
+            {
+                dmg.TakeDamage(shovelDMG);
+            }
+        }
+
+        shovelDurability--;
+        Debug.Log("Shovel durability: " + shovelDurability);
+
+        if (shovelDurability <= 0)
+        {
+            BreakShovel();
+        }
+
+        yield return new WaitForSeconds(swingRate);
+        isSwinging = false;
+    }
+
+    void BreakShovel()
+    {
+        hasShovel = false;
+        shovelDMG = 0;
+        shovelDist = 0;
+        swingRate = 0;
+        shovelModel.SetActive(false);
+
+        Debug.Log("Shovel broke!");
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (hasShovel)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, shovelDist);
+        }
+    }
 }

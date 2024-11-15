@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741a83cee525c324aa711a0c33ee4bf1, type: 3}
+  m_Name: CleanShovel
+  m_EditorClassIdentifier: 
+  shovelModel: {fileID: 100000, guid: b648a5becce55114193c9c2f2143161c, type: 3}
+  shovelDMG: 0
+  shovelDist: 0
+  swingRate: 0
+  durability: 0
