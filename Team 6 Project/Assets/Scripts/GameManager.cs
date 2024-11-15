@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text enemyCountText;
     [SerializeField] TMP_Text waveCountText;
     [SerializeField] TMP_Text cropCountText;
+    [SerializeField] TMP_Text waveTimerText;
     [Header("----- Screen Effects -----")]
     public GameObject playerDamageScreen;
     [SerializeField] GameObject effectBlind;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
     //Misc
     public int enemyScoreTotal;
     int enemyCount;
+    Coroutine waveTimer;
 
     void Awake()
     {
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
 
+        waveTimerText.text = "--";
         StartNextWave();
     }
 
@@ -163,7 +166,11 @@ public class GameManager : MonoBehaviour
             if (waveCount < numOfWaves)
             {
                 // Start the next wave if there are waves left
-                StartCoroutine(NextWaveWithCooldown());
+                if (waveTimer != null)
+                {
+                    StopCoroutine(waveTimer);
+                }
+                waveTimer = StartCoroutine(NextWaveWithCooldown(5.0f));
             }
             else
             {
@@ -248,13 +255,25 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("All waves completed.");
+            waveTimerText.text = "--";
         }
     }
 
-    IEnumerator NextWaveWithCooldown()
+    IEnumerator NextWaveWithCooldown(float cooldown)
     {
-        yield return new WaitForSeconds(waveCooldown);  // Wait for cooldown before starting next wave
-        StartNextWave();
+        // Wait for cooldown before starting next wave
+        for (int i = 0; i < cooldown; i++)
+        {
+            yield return new WaitForSeconds(1.0f);
+            waveTimerText.text = (cooldown - i - 1).ToString();
+        }
+
+        waveTimerText.text = "--";
+
+        if (cropCount > 0)
+        {
+            StartNextWave();
+        }
     }
 
     IEnumerator SpawnWave()
@@ -265,12 +284,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
 
-        yield return new WaitForSeconds(waveCooldown);
-
-        if (cropCount > 0)
+        if (waveTimer != null)
         {
-            StartNextWave();
+            StopCoroutine(waveTimer);
         }
+        waveTimer = StartCoroutine(NextWaveWithCooldown(waveCooldown));
     }
 
     private void SpawnEnemy()

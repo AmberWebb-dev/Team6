@@ -3428,7 +3428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: waveCooldown
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: spawnPoints.Array.data[0]
