@@ -15,34 +15,43 @@ public class GameManager : MonoBehaviour
     // index two, etc. Update this value whenever a new level is added.
     public int totalLevelCount;
     private int currentLevel;
-    //UI Stuff
-    [SerializeField] GameObject menuActive, menuPause, menuWin, menuLose;
+    [Header("----- Menus -----")]
+    [SerializeField] GameObject menuActive;
+    [SerializeField] GameObject menuPause;
+    [SerializeField] GameObject menuWin;
+    [SerializeField] GameObject menuLose;
     [SerializeField] Button nextLevelButton;
-    [SerializeField] TMP_Text scoreText, highscoreText;
-    public int enemyScoreTotal;
-    [SerializeField] TMP_Text enemyCountText, waveCountText, cropCountText;
+    [Header("----- Text -----")]
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text highscoreText;
+    [SerializeField] TMP_Text enemyCountText;
+    [SerializeField] TMP_Text waveCountText;
+    [SerializeField] TMP_Text cropCountText;
+    [Header("----- Screen Effects -----")]
+    public GameObject playerDamageScreen;
     [SerializeField] GameObject effectBlind;
     [SerializeField] GameObject effectShield;
     public bool isPaused;
-    int enemyCount;
-    int cropCount;
-    int cropCountOriginal;
-    int waveCount;
-    //Player Stuff
+    float timeScaleOrig;
+    [Header("----- Player Stuff -----")]
     public PlayerController playerScript;
     public GameObject player;
-    public GameObject playerDamageScreen;
     public Image playerHPBar;
-    float timeScaleOrig;
-
+    [Header("----- Crop Info -----")]
     public GameObject[] cropsArray;
-
-    // Wave settings
+    int cropCount;
+    int cropCountOriginal;
+    [Header("----- Wave Settings -----")]
     [SerializeField] List<GameObject> molePrefabs;
     [SerializeField] List<Transform> spawnPoints;
     [SerializeField] int numOfWaves = 1;
+    int waveCount;
     [SerializeField] int enemiesPerWave = 5;
-    [SerializeField] float timeBetweenSpawns = 1f, waveCooldown = 50F; 
+    [SerializeField] float timeBetweenSpawns = 1f;
+    [SerializeField] float waveCooldown = 50F;
+    //Misc
+    public int enemyScoreTotal;
+    int enemyCount;
 
     void Awake()
     {

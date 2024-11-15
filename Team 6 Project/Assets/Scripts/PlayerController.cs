@@ -5,30 +5,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IDamage, IHealth
 {
+    [Header("----- Components -----")]
     [SerializeField] LayerMask ignoreMask;
     [SerializeField] CharacterController pController;
-
+    [Header("----- Player Stats -----")]
+    int HPOriginal;
     [SerializeField] int HP;
     [SerializeField] int speed;
+    bool isSprinting;
     [SerializeField] int sprint;
-
+    private int jumpCount;
     [SerializeField] int jumpMax;
     [SerializeField] int jumpSpeed;
     [SerializeField] int gravity;
-
+    [Header("----- Gun Stats -----")]
+    bool isShooting;
     [SerializeField] int shootDamage;
     [SerializeField] float shootRate;
     [SerializeField] int shootDistance;
 
-    private int jumpCount;
-    int HPOriginal;
-
-    bool isSprinting;
-    bool isShooting;
-
     Vector3 moveDirection;
     Vector3 playerVelocity;
-
     //shield implementation (delete if we are not using it)
     public bool isShielded;
     private Coroutine shieldCoroutine;
