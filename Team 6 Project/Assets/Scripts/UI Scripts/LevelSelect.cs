@@ -24,7 +24,7 @@ public class LevelSelect : MonoBehaviour
             levelButton.button.onClick.AddListener(() => LoadScene(sceneToLoad));
         }
     }
-    private void UpdateLevelStars()
+    public void UpdateLevelStars()
     {
         for (int i = 0; i < levelStars.Count; i++)
         {

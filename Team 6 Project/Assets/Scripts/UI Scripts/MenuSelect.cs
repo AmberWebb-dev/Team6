@@ -32,6 +32,11 @@ public class MenuSelect : MonoBehaviour
             if (currentPageIndex == 1)
             {
                 UpdateHighscoreText();
+                LevelSelect levelSelect = pages[currentPageIndex].GetComponent<LevelSelect>();
+                if (levelSelect != null)
+                {
+                    levelSelect.UpdateLevelStars();
+                }
             }
         }
     }
@@ -44,9 +49,14 @@ public class MenuSelect : MonoBehaviour
             currentPageIndex--;
             pages[currentPageIndex].SetActive(true);
             UpdateButtonVisibility();
-            if (currentPageIndex == 1)
+            if (currentPageIndex == 0)
             {
                 UpdateHighscoreText();
+                LevelSelect levelSelect = pages[currentPageIndex].GetComponent<LevelSelect>();
+                if (levelSelect != null)
+                {
+                    levelSelect.UpdateLevelStars();
+                }
             }
         }
     }

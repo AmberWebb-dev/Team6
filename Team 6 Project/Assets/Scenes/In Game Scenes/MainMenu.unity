@@ -1703,7 +1703,6 @@ GameObject:
   m_Component:
   - component: {fileID: 844186566}
   - component: {fileID: 844186567}
-  - component: {fileID: 844186568}
   m_Layer: 5
   m_Name: Levels
   m_TagString: Untagged
@@ -1760,29 +1759,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &844186568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844186565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2ca709372c98b0489561c07251b83e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelButtons:
-  - button: {fileID: 860304710}
-    sceneName: Level 1
-  - button: {fileID: 2041513760}
-    sceneName: Level 2
-  - button: {fileID: 201093300}
-    sceneName: Level 3
-  levelStars:
-  - {fileID: 289309049}
-  - {fileID: 2076844367}
-  - {fileID: 274560438}
 --- !u!1 &853365490
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276936030}
   - component: {fileID: 1276936031}
+  - component: {fileID: 1276936032}
   m_Layer: 5
   m_Name: Level Select
   m_TagString: Untagged
@@ -3275,6 +3252,29 @@ MonoBehaviour:
   levelOneHighscoreText: {fileID: 1158065077}
   levelTwoHighscoreText: {fileID: 876573800}
   levelThreeHighscoreText: {fileID: 521587522}
+--- !u!114 &1276936032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276936029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ca709372c98b0489561c07251b83e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelButtons:
+  - button: {fileID: 860304710}
+    sceneName: Level 1
+  - button: {fileID: 2041513760}
+    sceneName: Level 2
+  - button: {fileID: 201093300}
+    sceneName: Level 3
+  levelStars:
+  - {fileID: 289309049}
+  - {fileID: 2076844367}
+  - {fileID: 274560438}
 --- !u!1 &1421332980
 GameObject:
   m_ObjectHideFlags: 0
