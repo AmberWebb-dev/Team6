@@ -147,11 +147,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     {
         hasExploded = true;
 
-        if (audioSource != null && explosionSound != null)
-        {
-            audioSource.volume = 0.4f;
-            audioSource.PlayOneShot(explosionSound);
-        }
+        AudioManager.Instance.explosionSound.Play();
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
 
