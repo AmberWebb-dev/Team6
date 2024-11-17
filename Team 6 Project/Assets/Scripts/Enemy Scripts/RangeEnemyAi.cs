@@ -26,6 +26,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     bool isShooting;
     bool playerInRange;
     bool isRoaming;
+    bool isKnockedback;
 
     Vector3 playerDir;
     Vector3 startPosition;
@@ -74,7 +75,10 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
         NavMeshHit hit;
         NavMesh.SamplePosition(randDistance, out hit, roamDistance, 1);
-        agent.SetDestination(hit.position);
+        if (!isKnockedback)
+        {
+            agent.SetDestination(hit.position);
+        }
 
         isRoaming = false;
     }
@@ -85,7 +89,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         angleToPlayer = Vector3.Angle(playerDir, transform.position);
 
         RaycastHit hit;
-        if(Physics.Raycast(headPos.position, playerDir, out hit))
+        if(Physics.Raycast(headPos.position, playerDir, out hit) && !isKnockedback)
         {
             // Player seen
             agent.SetDestination(GameManager.Instance.player.transform.position);
@@ -131,7 +135,10 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         StartCoroutine(FlashRed());
 
         // Chases player if shot out of range
-        agent.SetDestination(GameManager.Instance.player.transform.position);
+        if (!isKnockedback)
+        {
+            agent.SetDestination(GameManager.Instance.player.transform.position);
+        }
 
         if(HP <= 0)
         {
@@ -161,5 +168,37 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     {
         Quaternion rot = Quaternion.LookRotation(playerDir);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot.normalized, Time.deltaTime * faceTargetSpeed);
+    }
+
+    public void Knockback(Vector3 direction, float strength, float time)
+    {
+        StartCoroutine(KnockbackAnimation(direction, strength, time));
+    }
+
+    IEnumerator KnockbackAnimation(Vector3 direction, float strength, float time)
+    {
+        isKnockedback = true;
+
+        float angleSpeedOriginal = agent.angularSpeed;
+        agent.angularSpeed = 0;
+
+        float accelerationOriginal = agent.acceleration;
+        agent.acceleration = 999;
+
+        Vector3 originalDestination = agent.destination;
+        if (agent.isOnNavMesh)
+        {
+            agent.SetDestination(transform.position - direction * strength);
+        }
+
+        yield return new WaitForSeconds(time);
+
+        if (agent.isOnNavMesh)
+        {
+            agent.SetDestination(originalDestination);
+        }
+        agent.acceleration = accelerationOriginal;
+        agent.angularSpeed = angleSpeedOriginal;
+        isKnockedback = false;
     }
 }

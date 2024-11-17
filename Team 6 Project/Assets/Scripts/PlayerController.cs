@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int shovelDMG;
     [SerializeField] int shovelDurability;
     [SerializeField] float swingRate;
+    [SerializeField] float shovelKnockback;
+    [SerializeField] float knockbackStunDuration;
     [SerializeField] int shovelDist;
 
     private int selectedShovel = -1;                 
@@ -222,6 +224,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         shovelDMG = shovel.shovelDMG;
         shovelDurability = shovel.durability;
         swingRate = shovel.swingRate;
+        shovelKnockback = shovel.shovelKnockback;
+        knockbackStunDuration = shovel.knockbackStunDuration;
         shovelDist = shovel.shovelDist;
         shovelModel.GetComponent<MeshFilter>().sharedMesh = shovel.shovelModel.GetComponent<MeshFilter>().sharedMesh;
         shovelModel.GetComponent<MeshRenderer>().sharedMaterial = shovel.shovelModel.GetComponent<MeshRenderer>().sharedMaterial;
@@ -242,12 +246,19 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         foreach (Collider hitCollider in hitColliders)
         {
-            Debug.Log(hitCollider.name);
+            Debug.Log($"Shoel hit: {hitCollider.name}");
 
             IDamage dmg = hitCollider.GetComponent<IDamage>();
             if (dmg != null)
             {
                 dmg.TakeDamage(shovelDMG);
+            }
+
+            IKnockback knockback = hitCollider.GetComponent<IKnockback>();
+            if (knockback != null)
+            {
+                Vector3 dir = transform.position - hitCollider.transform.position;
+                knockback.Knockback(dir.normalized, shovelKnockback, knockbackStunDuration);
             }
         }
 

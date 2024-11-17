@@ -19,6 +19,7 @@ public class TankyEnemy : MonoBehaviour, IDamage
     private GameObject currentTargetCrop;
     private Color colourOriginal;
     private bool isAttacking;
+    bool isKnockedback;
 
     void Start()
     {
@@ -31,6 +32,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
     void Update()
     {
+        if (isKnockedback) { return; }
+
         if (currentTargetCrop == null)
         {
             UpdateTargetCrop();
@@ -107,5 +110,37 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
         yield return new WaitForSeconds(attackRate);
         isAttacking = false;
+    }
+
+    public void Knockback(Vector3 direction, float strength, float time)
+    {
+        StartCoroutine(KnockbackAnimation(direction, strength, time));
+    }
+
+    IEnumerator KnockbackAnimation(Vector3 direction, float strength, float time)
+    {
+        isKnockedback = true;
+
+        float angleSpeedOriginal = agent.angularSpeed;
+        agent.angularSpeed = 0;
+
+        float accelerationOriginal = agent.acceleration;
+        agent.acceleration = 999;
+
+        Vector3 originalDestination = agent.destination;
+        if (agent.isOnNavMesh)
+        {
+            agent.SetDestination(transform.position - direction * strength);
+        }
+
+        yield return new WaitForSeconds(time);
+
+        if (agent.isOnNavMesh)
+        {
+            agent.SetDestination(originalDestination);
+        }
+        agent.acceleration = accelerationOriginal;
+        agent.angularSpeed = angleSpeedOriginal;
+        isKnockedback = false;
     }
 }
