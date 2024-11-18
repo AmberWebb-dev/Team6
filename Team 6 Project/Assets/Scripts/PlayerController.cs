@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] float knockbackStunDuration;
     [SerializeField] int shovelDist;
 
+    bool isPlayingSteps;
+
     private int selectedShovel = -1;                 
     private float lastSwingTime;
 
@@ -100,6 +102,11 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         {
             StartCoroutine(SwingShovel());
         }
+
+        if (pController.isGrounded && !isPlayingSteps && moveDirection.magnitude > 0.3f)
+        {
+            StartCoroutine(PlaySteps());
+        }
     }
     
     void Jump()
@@ -147,6 +154,24 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         // Wait for duration of the shooting rate and set isShooting back to false
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    IEnumerator PlaySteps()
+    {
+        isPlayingSteps = true;
+
+        AudioManager.Instance.footstepSound.PlayOnPlayer();
+
+        if (isSprinting)
+        {
+            yield return new WaitForSeconds(0.3f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        isPlayingSteps = false;
     }
 
     public void TakeDamage(int amount)

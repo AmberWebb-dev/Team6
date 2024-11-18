@@ -6,16 +6,23 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [Header("----- Audio Source -----")]
+    [Header("----- Audio Sources -----")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource playerAudioSource;
 
     // Add any new audio clips here!
     [Header("----- Audio Clips -----")]
     public AudioClipWrapper explosionSound;
+    public AudioClipWrapper footstepSound;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        playerAudioSource = GameManager.Instance.player.GetComponent<AudioSource>();
     }
 
     [System.Serializable]
@@ -29,6 +36,13 @@ public class AudioManager : MonoBehaviour
             if (audioClips == null || AudioManager.Instance.audioSource == null) { return; }
 
             AudioManager.Instance.audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)], volume);
+        }
+
+        public void PlayOnPlayer()
+        {
+            if (audioClips == null || AudioManager.Instance.playerAudioSource == null) { return; }
+
+            AudioManager.Instance.playerAudioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)], volume);
         }
     }
 }

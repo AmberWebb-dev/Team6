@@ -46,10 +46,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 245121424329218589}
+  playerAudioSource: {fileID: 0}
   explosionSound:
     audioClips:
     - {fileID: 8300000, guid: f86d4490fbe5e394cb6e89e7cb697c3c, type: 3}
     volume: 0.4
+  footstepSound:
+    audioClips:
+    - {fileID: 8300000, guid: 1e869d808198bd540b58773802355b04, type: 3}
+    - {fileID: 8300000, guid: 60768cae3cb97ef4a86dfc2273db7567, type: 3}
+    - {fileID: 8300000, guid: 372d35ae0e61ada4b90dcd4e22aa60c9, type: 3}
+    - {fileID: 8300000, guid: ce380f2443291754a9f31c76629cdac8, type: 3}
+    - {fileID: 8300000, guid: c63d62770c572344285b969a7eb86b6f, type: 3}
+    - {fileID: 8300000, guid: ddc546d6f2aeaff498eb73fe4625e172, type: 3}
+    - {fileID: 8300000, guid: fe9591ea9ed357e41983de8f41b8391b, type: 3}
+    - {fileID: 8300000, guid: c6e75ca7365afb749a9f6e991ee3b239, type: 3}
+    - {fileID: 8300000, guid: d015fd82abd764e40aaafa59fb067ba7, type: 3}
+    volume: 0.25
 --- !u!82 &245121424329218589
 AudioSource:
   m_ObjectHideFlags: 0
