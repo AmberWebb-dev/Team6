@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -22,7 +23,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        playerAudioSource = GameManager.Instance.player.GetComponent<AudioSource>();
+        if (GameManager.Instance != null && GameManager.Instance.player != null)
+        {
+            playerAudioSource = GameManager.Instance.player.GetComponent<AudioSource>();
+        }
     }
 
     [System.Serializable]
