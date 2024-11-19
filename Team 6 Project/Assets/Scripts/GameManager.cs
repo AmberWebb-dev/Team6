@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     [SerializeField] Button nextLevelButton;
+    [Header("----- Popups -----")]
+    [SerializeField] Transform controlPopupTransform;
+    [SerializeField] GameObject controlPopupPrefab;
+    private Dictionary<string, GameObject> controlPopups = new Dictionary<string, GameObject>();
     [Header("----- Text -----")]
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text highscoreText;
@@ -319,5 +323,27 @@ public class GameManager : MonoBehaviour
     private int CalculateScore()
     {
         return Mathf.RoundToInt(((float)cropCount / (float)cropCountOriginal) * (float)enemyScoreTotal);
+    }
+
+    public void AddControlPopup(string action, string key)
+    {
+        if (controlPopups.ContainsKey(action))
+        {
+            RemoveControlPopup(action);
+        }
+
+        GameObject popup = Instantiate(controlPopupPrefab, controlPopupTransform);
+        popup.transform.GetChild(0).GetComponent<TMP_Text>().text = $"{key}: {action}";
+
+        controlPopups.Add(action, popup);
+    }
+
+    public void RemoveControlPopup(string action)
+    {
+        if (!controlPopups.ContainsKey(action)) { return; }
+
+        GameObject popup = controlPopups[action];
+        controlPopups.Remove(action);
+        Destroy(popup);
     }
 }

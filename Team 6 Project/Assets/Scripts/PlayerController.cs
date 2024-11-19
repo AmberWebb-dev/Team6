@@ -258,6 +258,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         shovelModel.SetActive(true);
 
         hasShovel = true;
+        GameManager.Instance.AddControlPopup("Shovel", "F");
         Debug.Log("Shovel equipped: " + shovel.name);
     }
 
@@ -313,6 +314,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         shovelDist = 0;
         swingRate = 0;
         shovelModel.SetActive(false);
+
+        GameManager.Instance.RemoveControlPopup("Shovel");
 
         Debug.Log("Shovel broke!");
     }
