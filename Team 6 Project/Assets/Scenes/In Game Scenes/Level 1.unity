@@ -23978,6 +23978,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
+      propertyPath: shovelHitSound.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
+      propertyPath: shovelHitSound.audioClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
+      propertyPath: shovelHitSound.audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
     - target: {fileID: 245121424329218591, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -24031,6 +24043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5067409458042033809, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
+      propertyPath: shovelHitParticles
+      value: 
+      objectReference: {fileID: 8186149131180772835, guid: daf553d3fea289b4bb50bd9d2c3092c2, type: 3}
     - target: {fileID: 5067409458042033819, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
       propertyPath: m_Name
       value: Player

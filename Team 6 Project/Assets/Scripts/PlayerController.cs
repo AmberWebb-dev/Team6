@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] float shovelKnockback;
     [SerializeField] float knockbackStunDuration;
     [SerializeField] int shovelDist;
+    [SerializeField] private GameObject shovelHitParticles;
 
     bool isPlayingSteps;
 
@@ -271,7 +272,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         foreach (Collider hitCollider in hitColliders)
         {
-            Debug.Log($"Shoel hit: {hitCollider.name}");
+            Debug.Log($"Shovel hit: {hitCollider.name}");
 
             IDamage dmg = hitCollider.GetComponent<IDamage>();
             if (dmg != null)
@@ -285,9 +286,15 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
                 Vector3 dir = transform.position - hitCollider.transform.position;
                 knockback.Knockback(dir.normalized, shovelKnockback, knockbackStunDuration);
             }
+
+            Instantiate(shovelHitParticles, hitCollider.transform.position, Quaternion.identity);
         }
 
-        shovelDurability--;
+        if (hitColliders.Length > 0)
+        {
+            shovelDurability--;
+            AudioManager.Instance.shovelHitSound.PlayOnPlayer();
+        }
         Debug.Log("Shovel durability: " + shovelDurability);
 
         if (shovelDurability <= 0)

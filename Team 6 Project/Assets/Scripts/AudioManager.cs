@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     [Header("----- Audio Clips -----")]
     public AudioClipWrapper explosionSound;
     public AudioClipWrapper footstepSound;
+    public AudioClipWrapper shovelHitSound;
 
     private void Awake()
     {
