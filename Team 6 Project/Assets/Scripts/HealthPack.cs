@@ -24,6 +24,7 @@ public class HealthPack : MonoBehaviour
         if (health != null)
         {
             health.HealUp();
+            AudioManager.Instance.healSound.Play();
             // Move health pack off the map
             Vector3 gonePos = new Vector3(0, -10, 0);
             gameObject.transform.position = gonePos;

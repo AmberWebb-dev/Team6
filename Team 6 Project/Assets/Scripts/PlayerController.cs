@@ -137,6 +137,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     {
         isShooting = true;
 
+        AudioManager.Instance.shootSound.PlayOnPlayer();
+
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDistance, ~ignoreMask))
         {
@@ -259,6 +261,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         hasShovel = true;
         GameManager.Instance.AddControlPopup("Shovel", "F");
+        AudioManager.Instance.shovelPickupSound.Play();
         Debug.Log("Shovel equipped: " + shovel.name);
     }
 
@@ -271,8 +274,12 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         // Check for hits within the shovel's distance
         Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * shovelDist / 2, shovelDist / 2, ~ignoreMask);
 
+        int enemiesHit = 0;
         foreach (Collider hitCollider in hitColliders)
         {
+            if (!hitCollider.CompareTag("Enemy")) { continue; }
+            enemiesHit++;
+
             Debug.Log($"Shovel hit: {hitCollider.name}");
 
             IDamage dmg = hitCollider.GetComponent<IDamage>();
@@ -291,7 +298,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
             Instantiate(shovelHitParticles, hitCollider.transform.position, Quaternion.identity);
         }
 
-        if (hitColliders.Length > 0)
+        if (enemiesHit > 0)
         {
             shovelDurability--;
             AudioManager.Instance.shovelHitSound.PlayOnPlayer();
