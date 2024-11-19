@@ -154,6 +154,7 @@ MonoBehaviour:
   shovelKnockback: 0
   knockbackStunDuration: 0
   shovelDist: 0
+  shovelHitParticles: {fileID: 8186149131180772835, guid: daf553d3fea289b4bb50bd9d2c3092c2, type: 3}
   isShielded: 0
 --- !u!143 &5067409458042033822
 CharacterController:

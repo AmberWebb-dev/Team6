@@ -3464,14 +3464,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5235747506656577201, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5235747506656577201, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -55.680054
-      objectReference: {fileID: 0}
     - target: {fileID: 5415505954768236390, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 55.6802
@@ -3887,14 +3879,6 @@ PrefabInstance:
     - target: {fileID: 2276042260435846925, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
       propertyPath: m_Name
       value: Shield
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276042260435847025, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
-      propertyPath: respawnDelay
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276042260435847026, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2276042260435847030, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
       propertyPath: m_RootOrder
@@ -20730,15 +20714,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4513176522580164359, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.55865
+      value: 39.5
       objectReference: {fileID: 0}
     - target: {fileID: 4513176522580164359, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4513176522580164359, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.87788
+      value: -54.75
       objectReference: {fileID: 0}
     - target: {fileID: 4513176522580164359, guid: cebbb3fa3974b4241bfbfeba6811013b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23978,18 +23962,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
-      propertyPath: shovelHitSound.volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
-      propertyPath: shovelHitSound.audioClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 245121424329218590, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
-      propertyPath: shovelHitSound.audioClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
     - target: {fileID: 245121424329218591, guid: 22e8f8ce08cdbd5459ae769043c24d8f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -24043,10 +24015,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5067409458042033809, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
-      propertyPath: shovelHitParticles
-      value: 
-      objectReference: {fileID: 8186149131180772835, guid: daf553d3fea289b4bb50bd9d2c3092c2, type: 3}
     - target: {fileID: 5067409458042033819, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
       propertyPath: m_Name
       value: Player
