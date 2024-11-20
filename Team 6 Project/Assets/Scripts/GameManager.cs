@@ -59,6 +59,15 @@ public class GameManager : MonoBehaviour
     int enemyCount;
     Coroutine waveTimer;
 
+    //endless mode
+    [SerializeField] bool isEndlessMode;
+    private int difficultyMultiplier;
+    private float spawnRateMultiplier;
+    private float waveCooldownReduction;
+    private float healthScale;
+    private float speedScale;
+    private float damageScale;
+
     void Awake()
     {
         Instance = this;
@@ -250,6 +259,13 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
+        if (!isEndlessMode && waveCooldown >= numOfWaves)
+        {
+            Debug.Log("All waves completed.");
+            waveTimerText.text = "--";
+            return;
+        }
+
         if (waveCount < numOfWaves)
         {
             waveCount++;
@@ -260,6 +276,14 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("All waves completed.");
             waveTimerText.text = "--";
+        }
+
+        if (isEndlessMode)
+        {
+            waveCount++;
+            ScaleDifficulty(); // Adjust difficulty for endless mode
+            UpdateWaveCountUI();
+            StartCoroutine(SpawnWave());
         }
     }
 
@@ -302,6 +326,23 @@ public class GameManager : MonoBehaviour
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
             GameObject enemyPrefab = molePrefabs[Random.Range(0, molePrefabs.Count)];
             Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+
+            if (isEndlessMode)
+            {
+                CDEnemyAI enemyAI = enemy.GetComponent<CDEnemyAI>();
+                if (enemyAI != null)
+                {
+                    // Scale enemy properties
+                    enemyAI.HP = Mathf.RoundToInt(enemyAI.HP * healthScale);
+                    if (enemyAI.agent != null)
+                    {
+                        enemyAI.agent.speed *= speedScale;
+                    }
+                    enemyAI.attackDamage = Mathf.RoundToInt(enemyAI.attackDamage * damageScale);
+                }
+            }
+
         }
     }
 
@@ -312,7 +353,15 @@ public class GameManager : MonoBehaviour
 
     void UpdateWaveCountUI()
     {
-        waveCountText.text = waveCount + " / " + numOfWaves;
+        if (isEndlessMode)
+        {
+            waveCountText.text = "Wave: " + waveCount;
+        }
+        else
+        {
+            waveCountText.text = waveCount + " / " + numOfWaves;
+        }
+
     }
 
     public int GetCurrentLevelIndex()
@@ -345,5 +394,16 @@ public class GameManager : MonoBehaviour
         GameObject popup = controlPopups[action];
         controlPopups.Remove(action);
         Destroy(popup);
+    }
+
+    //endless mode
+    private void ScaleDifficulty()
+    {
+        // Adjust scaling factors for enemies based on wave count
+        healthScale = Mathf.Pow(1.1f, waveCount);
+        speedScale = Mathf.Pow(1.05f, waveCount);
+        damageScale = Mathf.Pow(1.05f, waveCount);
+
+        Debug.Log($"Scaling difficulty: Health x{healthScale}, Speed x{speedScale}, Damage x{damageScale}");
     }
 }

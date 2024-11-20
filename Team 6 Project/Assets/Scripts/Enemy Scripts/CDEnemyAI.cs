@@ -8,12 +8,12 @@ using UnityEngine.AI;
 public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 {
     [SerializeField] Renderer model;
-    [SerializeField] NavMeshAgent agent;
+    [SerializeField] public NavMeshAgent agent;
 
     [SerializeField] Transform headPosition;
     [SerializeField] int faceTargetSpeed;
-    [SerializeField] int HP;
-    [SerializeField] int attackDamage = 10;
+    [SerializeField] public int HP;
+    [SerializeField] public int attackDamage = 10;
     [SerializeField] float attackRate;
 
     [SerializeField] int scoreValue;
