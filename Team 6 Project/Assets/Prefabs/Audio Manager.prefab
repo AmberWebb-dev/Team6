@@ -62,7 +62,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fe9591ea9ed357e41983de8f41b8391b, type: 3}
     - {fileID: 8300000, guid: c6e75ca7365afb749a9f6e991ee3b239, type: 3}
     - {fileID: 8300000, guid: d015fd82abd764e40aaafa59fb067ba7, type: 3}
-    volume: 0.25
+    volume: 0.1
   shovelHitSound:
     audioClips:
     - {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
