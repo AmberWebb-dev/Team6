@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 741a83cee525c324aa711a0c33ee4bf1, type: 3}
-  m_Name: CleanShovel
+  m_Name: StrongRustyShovel
   m_EditorClassIdentifier: 
-  shovelModel: {fileID: 100000, guid: b648a5becce55114193c9c2f2143161c, type: 3}
-  shovelDMG: 0
-  shovelDist: 0
-  swingRate: 0
-  durability: 0
+  shovelModel: {fileID: 1000011881196238, guid: beb87db6153f69442821a348e08035ab, type: 3}
+  shovelCost: 100
+  shovelDMG: 3
+  shovelDist: 5
+  swingRate: 3.5
+  shovelKnockback: 5
+  knockbackStunDuration: 1.5
+  durability: 7

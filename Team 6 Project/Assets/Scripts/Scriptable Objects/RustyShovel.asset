@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RustyShovel
   m_EditorClassIdentifier: 
   shovelModel: {fileID: 1000011881196238, guid: beb87db6153f69442821a348e08035ab, type: 3}
+  shovelCost: 50
   shovelDMG: 1
   shovelDist: 5
   swingRate: 4.5

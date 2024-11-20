@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/In Game Scenes/Level 3.unity
     guid: 9917957bdff64bb41840f63dc8878236
   - enabled: 1
+    path: Assets/Scenes/In Game Scenes/Endless Mode.unity
+    guid: cf6360240815214439193273a5b1c6fc
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
