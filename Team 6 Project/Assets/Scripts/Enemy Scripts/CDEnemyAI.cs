@@ -91,9 +91,14 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 
         if (HP <= 0)
         {
+            AudioManager.Instance.enemyDeathSound.PlayAtPoint(transform.position);
             GameManager.Instance.GameGoal(-1);
             GameManager.Instance.enemyScoreTotal += scoreValue;
             Destroy(gameObject);
+        }
+        else
+        {
+            AudioManager.Instance.enemyHitSound.PlayAtPoint(transform.position);
         }
     }
 

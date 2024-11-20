@@ -141,6 +141,10 @@ public class SpecialEnemy : MonoBehaviour, IDamage
         {
             Explode();
         }
+        else
+        {
+            AudioManager.Instance.enemyHitSound.PlayAtPoint(transform.position);
+        }
     }
 
     void Explode()

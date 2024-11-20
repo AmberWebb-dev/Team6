@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 245121424329218589}
   playerAudioSource: {fileID: 0}
+  audioSource3DPrefab: {fileID: 2777080840791296490, guid: 38277706cd70a9a4da5f10e9ba14f4eb, type: 3}
   explosionSound:
     audioClips:
     - {fileID: 8300000, guid: f86d4490fbe5e394cb6e89e7cb697c3c, type: 3}
@@ -67,6 +68,18 @@ MonoBehaviour:
     audioClips:
     - {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
     volume: 0.5
+  playerJumpSound:
+    audioClips:
+    - {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
+    volume: 0.5
+  playerLandSound:
+    audioClips:
+    - {fileID: 8300000, guid: eaae8fe8d600e1f459f34aa5757fa3b8, type: 3}
+    volume: 0.5
+  playerHurtSound:
+    audioClips:
+    - {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+    volume: 0.5
   shovelPickupSound:
     audioClips:
     - {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
@@ -78,7 +91,27 @@ MonoBehaviour:
   shootSound:
     audioClips:
     - {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
-    volume: 0.5
+    volume: 0.35
+  enemyHitSound:
+    audioClips:
+    - {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
+    volume: 1
+  enemyDeathSound:
+    audioClips:
+    - {fileID: 8300000, guid: 83829ff414f47a048b5387e4ab33571c, type: 3}
+    volume: 1
+  enemyShootSound:
+    audioClips:
+    - {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    volume: 1
+  cropHitSound:
+    audioClips:
+    - {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
+    volume: 1
+  cropDeathSound:
+    audioClips:
+    - {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+    volume: 0.2
 --- !u!82 &245121424329218589
 AudioSource:
   m_ObjectHideFlags: 0

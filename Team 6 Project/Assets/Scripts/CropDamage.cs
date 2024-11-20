@@ -24,10 +24,15 @@ public class CropDamage : MonoBehaviour, IDamage
 
         if (HP <= 0)
         {
+            AudioManager.Instance.cropDeathSound.PlayOnPlayer();
             //GameManager.Instance.UnregisterCrop(gameObject); // Unregister before destruction
             GameManager.Instance.UpdateCrop(-1);
 
             Destroy(gameObject);
+        }
+        else
+        {
+            AudioManager.Instance.cropHitSound.PlayAtPoint(transform.position);
         }
     }
 

@@ -142,9 +142,14 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
         if(HP <= 0)
         {
+            AudioManager.Instance.enemyDeathSound.PlayAtPoint(transform.position);
             GameManager.Instance.GameGoal(-1);
             GameManager.Instance.enemyScoreTotal += scoreValue;
             Destroy(gameObject);
+        }
+        else
+        {
+            AudioManager.Instance.enemyHitSound.PlayAtPoint(transform.position);
         }
     }
 
@@ -159,6 +164,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     {
         isShooting = true;
         Instantiate(bullet, shootPos.position, transform.rotation);
+        AudioManager.Instance.enemyShootSound.PlayAtPoint(transform.position);
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;

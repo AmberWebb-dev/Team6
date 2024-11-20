@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
-        if (!isEndlessMode && waveCooldown >= numOfWaves)
+        if (!isEndlessMode && waveCount >= numOfWaves)
         {
             Debug.Log("All waves completed.");
             waveTimerText.text = "--";

@@ -82,6 +82,10 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         if(pController.isGrounded)
         {
             SetJumpCount(0);
+            if (playerVelocity.y < -3.0f)
+            {
+                AudioManager.Instance.playerLandSound.PlayOnPlayer();
+            }
             playerVelocity = Vector3.zero;
         }
 
@@ -116,6 +120,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         {
             SetJumpCount(GetJumpCount() + 1);
             playerVelocity.y = jumpSpeed;
+            AudioManager.Instance.playerJumpSound.PlayOnPlayer();
         }
     }
 
@@ -189,6 +194,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         HP -= amount;
         UpdatePlayerUI();
+        AudioManager.Instance.playerHurtSound.PlayOnPlayer();
         StartCoroutine(FlashDamage());
 
         // Player is killed
