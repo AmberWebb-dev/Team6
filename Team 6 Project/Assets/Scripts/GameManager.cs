@@ -321,15 +321,19 @@ public class GameManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
+        //check for spawn and enemy prefabs
         if (spawnPoints.Count > 0 && molePrefabs.Count > 0)
         {
+            //randomly select spawn point
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+            //randomly select enemy prefab
             GameObject enemyPrefab = molePrefabs[Random.Range(0, molePrefabs.Count)];
-            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-
-
+            //initiate enemy prefab to spawn point
+            GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            //checking for endless mode
             if (isEndlessMode)
             {
+                //get cdenemy script
                 CDEnemyAI enemyAI = enemy.GetComponent<CDEnemyAI>();
                 if (enemyAI != null)
                 {
@@ -339,10 +343,10 @@ public class GameManager : MonoBehaviour
                     {
                         enemyAI.agent.speed *= speedScale;
                     }
+                    //scales enemy attack
                     enemyAI.attackDamage = Mathf.RoundToInt(enemyAI.attackDamage * damageScale);
                 }
             }
-
         }
     }
 
