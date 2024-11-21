@@ -174,7 +174,11 @@ public class GameManager : MonoBehaviour
 
         if (isEndlessMode)
         {
-            PlayerPrefs.SetInt("EndlessRecord", waveCount);
+            int prevHighscore = PlayerPrefs.GetInt("EndlessRecord", 0);
+            if (prevHighscore < waveCount)
+            {
+                PlayerPrefs.SetInt("EndlessRecord", waveCount);
+            }
         }
     }
     public void GameGoal(int amount)
