@@ -7,7 +7,7 @@ public class MenuSelect : MonoBehaviour
     public List<GameObject> pages; // UI pages: 0 - Main Menu, 1 - Level Select
     public Button nextButton;
     public Button previousButton;
-    [SerializeField] private TMPro.TMP_Text levelOneHighscoreText, levelTwoHighscoreText, levelThreeHighscoreText;
+    [SerializeField] private TMPro.TMP_Text levelOneHighscoreText, levelTwoHighscoreText, levelThreeHighscoreText, endlessModeHighscoreText;
     private int currentPageIndex = 0; // Current page index
 
     void Start()
@@ -29,9 +29,9 @@ public class MenuSelect : MonoBehaviour
             currentPageIndex++;
             pages[currentPageIndex].SetActive(true);
             UpdateButtonVisibility();
+            UpdateHighscoreText();
             if (currentPageIndex == 1)
             {
-                UpdateHighscoreText();
                 LevelSelect levelSelect = pages[currentPageIndex].GetComponent<LevelSelect>();
                 if (levelSelect != null)
                 {
@@ -49,9 +49,9 @@ public class MenuSelect : MonoBehaviour
             currentPageIndex--;
             pages[currentPageIndex].SetActive(true);
             UpdateButtonVisibility();
+            UpdateHighscoreText();
             if (currentPageIndex == 0)
             {
-                UpdateHighscoreText();
                 LevelSelect levelSelect = pages[currentPageIndex].GetComponent<LevelSelect>();
                 if (levelSelect != null)
                 {
@@ -76,5 +76,7 @@ public class MenuSelect : MonoBehaviour
         levelTwoHighscoreText.text = $"Highscore: {(highscore == 0 ? "--" : highscore)}";
         highscore = PlayerPrefs.GetInt("Level 3 Highscore", 0);
         levelThreeHighscoreText.text = $"Highscore: {(highscore == 0 ? "--" : highscore)}";
+        highscore = PlayerPrefs.GetInt("EndlessRecord", 0);
+        endlessModeHighscoreText.text = $"Record: {(highscore == 0 ? "--" : $"Wave {highscore}")}";
     }
 }

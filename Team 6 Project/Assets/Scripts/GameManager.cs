@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text waveCountText;
     [SerializeField] TMP_Text cropCountText;
     [SerializeField] TMP_Text waveTimerText;
+    [SerializeField] TMP_Text waveCountLoseText;
     [Header("----- Screen Effects -----")]
     public GameObject playerDamageScreen;
     [SerializeField] GameObject effectBlind;
@@ -168,6 +169,13 @@ public class GameManager : MonoBehaviour
         StatePause();
         menuActive = menuLose;
         menuActive.SetActive(true);
+
+        waveCountLoseText.text = $"Wave: {waveCount}";
+
+        if (isEndlessMode)
+        {
+            PlayerPrefs.SetInt("EndlessRecord", waveCount);
+        }
     }
     public void GameGoal(int amount)
     {
@@ -176,7 +184,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyCount <= 0)
         {
-            if (waveCount < numOfWaves)
+            if (waveCount < numOfWaves || isEndlessMode)
             {
                 // Start the next wave if there are waves left
                 if (waveTimer != null)
@@ -359,7 +367,7 @@ public class GameManager : MonoBehaviour
     {
         if (isEndlessMode)
         {
-            waveCountText.text = "Wave: " + waveCount;
+            waveCountText.text = waveCount.ToString();
         }
         else
         {
