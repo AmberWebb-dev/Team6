@@ -288,7 +288,6 @@ public class GameManager : MonoBehaviour
 
         if (isEndlessMode)
         {
-            //waveCount++;
             ScaleDifficulty(); // Adjust difficulty for endless mode
             UpdateWaveCountUI();
             StartCoroutine(SpawnWave());
@@ -314,6 +313,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+
         for (int i = 0; i < enemiesPerWave; i++)
         {
             SpawnEnemy();

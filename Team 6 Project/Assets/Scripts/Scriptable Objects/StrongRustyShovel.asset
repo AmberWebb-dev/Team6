@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: StrongRustyShovel
   m_EditorClassIdentifier: 
   shovelModel: {fileID: 1000011881196238, guid: beb87db6153f69442821a348e08035ab, type: 3}
-  shovelCost: 100
-  shovelDMG: 3
+  shovelDMG: 4
   shovelDist: 5
   swingRate: 3.5
   shovelKnockback: 5
