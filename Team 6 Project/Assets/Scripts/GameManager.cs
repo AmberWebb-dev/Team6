@@ -267,6 +267,8 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
+      
+
         if (!isEndlessMode && waveCount >= numOfWaves)
         {
             Debug.Log("All waves completed.");
@@ -274,7 +276,14 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (waveCount < numOfWaves)
+        if (isEndlessMode)
+        {
+            ScaleDifficulty(); // Adjust difficulty for endless mode
+            UpdateWaveCountUI();
+            StartCoroutine(SpawnWave());
+        }
+
+        if (waveCount < numOfWaves || isEndlessMode)
         {
             waveCount++;
             UpdateWaveCountUI();
@@ -286,22 +295,21 @@ public class GameManager : MonoBehaviour
             waveTimerText.text = "--";
         }
 
-        if (isEndlessMode)
-        {
-            ScaleDifficulty(); // Adjust difficulty for endless mode
-            UpdateWaveCountUI();
-            StartCoroutine(SpawnWave());
-        }
+      
     }
 
     IEnumerator NextWaveWithCooldown(float cooldown)
     {
-        // Wait for cooldown before starting next wave
-        for (int i = 0; i < cooldown; i++)
+        if (waveCount < numOfWaves || isEndlessMode)
         {
-            yield return new WaitForSeconds(1.0f);
-            waveTimerText.text = (cooldown - i - 1).ToString();
+            // Wait for cooldown before starting next wave
+            for (int i = 0; i < cooldown; i++)
+            {
+                yield return new WaitForSeconds(1.0f);
+                waveTimerText.text = (cooldown - i - 1).ToString();
+            }
         }
+
 
         waveTimerText.text = "--";
 
@@ -313,7 +321,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-
         for (int i = 0; i < enemiesPerWave; i++)
         {
             SpawnEnemy();
