@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int shootDamage;
     [SerializeField] float shootRate;
     [SerializeField] int shootDistance;
+    [SerializeField] Animator crossbowAnimator;
     [Header("----- Shovel Stats -----")]
     bool hasShovel;
     bool isSwinging;
@@ -54,6 +55,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     {
         HPOriginal = HP;
         UpdatePlayerUI();
+
+        crossbowAnimator.SetBool("Fire", true);
+        crossbowAnimator.SetFloat("ShootRate", 1 / shootRate * 3);
     }
 
     // Update is called once per frame
@@ -144,6 +148,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         AudioManager.Instance.shootSound.PlayOnPlayer();
 
+        crossbowAnimator.SetBool("Fire", false);
+
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDistance, ~ignoreMask))
         {
@@ -161,6 +167,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         // Wait for duration of the shooting rate and set isShooting back to false
         yield return new WaitForSeconds(shootRate);
+
+        crossbowAnimator.SetBool("Fire", true);
+
         isShooting = false;
     }
 
