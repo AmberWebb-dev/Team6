@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    enum pickupType { tool };
+    enum pickupType { tool, seed, crop };
     [SerializeField] pickupType type;
     [SerializeField] ShovelStats shovel;
-    void Start()
+    bool inRange;
+    void Update()
     {
-        if (type == pickupType.tool)
+        if (inRange && Input.GetKeyDown(KeyCode.E) && type == pickupType.tool)
         {
-
+            PickUpShovel();
         }
     }
 
@@ -19,8 +20,27 @@ public class ItemPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.playerScript.GetShovelStats(shovel);
-            Destroy(gameObject);
+            inRange = true;
+            GameManager.Instance.AddControlPopup("Pick Up", "E");
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = false;
+            GameManager.Instance.RemoveControlPopup("Pick Up");
+        }
+
+    }
+
+    void PickUpShovel()
+    {
+        Debug.Log($"Item Picked Up");
+        GameManager.Instance.playerScript.GetShovelStats(shovel);
+        Destroy(gameObject);
+        GameManager.Instance.RemoveControlPopup("Pick Up");
+
     }
 }
