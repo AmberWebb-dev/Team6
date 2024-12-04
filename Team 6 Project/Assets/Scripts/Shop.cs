@@ -9,6 +9,10 @@ public class Shop : MonoBehaviour, IInteract
     [SerializeField] private string shopPopupText;
     [SerializeField] private int cost;
 
+    [Header("----- Shop Text -----")]
+    [SerializeField] TMPro.TMP_Text shopText;
+    [SerializeField] Canvas textCanvas;
+
     bool isHovered;
     float interactionCooldown;
 
@@ -17,6 +21,8 @@ public class Shop : MonoBehaviour, IInteract
         if (isHovered == false)
         {
             GameManager.Instance.AddControlPopup(shopPopupText, "E");
+            textCanvas.gameObject.SetActive(true);
+            shopText.text = $"{shopPopupText}\nCost: {cost}";
         }
         isHovered = true;
         interactionCooldown = 0.01f;
@@ -29,6 +35,7 @@ public class Shop : MonoBehaviour, IInteract
             if (isHovered)
             {
                 GameManager.Instance.RemoveControlPopup(shopPopupText);
+                textCanvas.gameObject.SetActive(false);
             }
             isHovered = false;
         }
