@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text cropCountText;
     [SerializeField] TMP_Text waveTimerText;
     [SerializeField] TMP_Text waveCountLoseText;
+    [SerializeField] TMP_Text coinCountText;
     [Header("----- Screen Effects -----")]
     public GameObject playerDamageScreen;
     [SerializeField] GameObject effectBlind;
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
     public int enemyScoreTotal;
     int enemyCount;
     Coroutine waveTimer;
+    private int coins;
 
     //endless mode
     [SerializeField] bool isEndlessMode;
@@ -88,6 +91,8 @@ public class GameManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
+
+        SetCoins(0);
 
         waveTimerText.text = "--";
         StartNextWave();
@@ -417,6 +422,27 @@ public class GameManager : MonoBehaviour
         GameObject popup = controlPopups[action];
         controlPopups.Remove(action);
         Destroy(popup);
+    }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        if (coins < 0) { coins = 0; }
+
+        coinCountText.text = coins.ToString();
+    }
+
+    public void SetCoins(int amount)
+    {
+        coins = amount;
+        if (coins < 0) { coins = 0; }
+
+        coinCountText.text = coins.ToString();
+    }
+
+    public int GetCoinCount()
+    {
+        return coins;
     }
 
     //endless mode
