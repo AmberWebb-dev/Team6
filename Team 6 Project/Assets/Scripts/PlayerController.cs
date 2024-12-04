@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int jumpMax;
     [SerializeField] int jumpSpeed;
     [SerializeField] int gravity;
+    [SerializeField] int interactionRange;
     [Header("----- Gun Stats -----")]
     bool isShooting;
     [SerializeField] int shootDamage;
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * shootDistance, Color.red);
         Movement();
         Sprint();
+        Interact();
     }
 
     // Setter for jumpCount private variable
@@ -79,6 +81,19 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     int GetJumpCount()
     { 
         return jumpCount; 
+    }
+
+    void Interact()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactionRange, ~ignoreMask))
+        {
+            IInteract interact = hit.collider.GetComponent<IInteract>();
+            if (interact != null)
+            {
+                interact.Interact();
+            }
+        }
     }
 
     void Movement()

@@ -269,6 +269,7 @@ MonoBehaviour:
   jumpMax: 2
   jumpSpeed: 10
   gravity: 28
+  interactionRange: 5
   shootDamage: 1
   shootRate: 0.5
   shootDistance: 10

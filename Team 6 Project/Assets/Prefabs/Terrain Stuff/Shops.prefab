@@ -798,6 +798,8 @@ GameObject:
   - component: {fileID: 1738871378622071831}
   - component: {fileID: 3426797154223770546}
   - component: {fileID: 606467055931309944}
+  - component: {fileID: 1959720825}
+  - component: {fileID: 1959720826}
   m_Layer: 0
   m_Name: Shovel Shop
   m_TagString: Untagged
@@ -872,6 +874,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1959720825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399043758496718509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.3015976, y: 4.2464814, z: 2.6397934}
+  m_Center: {x: -0.04062605, y: 2.1201994, z: 0.0059300065}
+--- !u!114 &1959720826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399043758496718509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d84bd41f3e4414d9effd4a3a8ac1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopType: 1
+  shopPopupText: Buy Shovel
+  cost: 10
 --- !u!1 &1577558493155206313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,6 +4207,8 @@ GameObject:
   - component: {fileID: 5233261824676679348}
   - component: {fileID: 9155708582157107473}
   - component: {fileID: 6407332798703121883}
+  - component: {fileID: 1634622416}
+  - component: {fileID: 1634622417}
   m_Layer: 0
   m_Name: Seed Shop
   m_TagString: Untagged
@@ -4256,6 +4288,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1634622416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894171770976146446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 1.5, z: 0.8374913}
+  m_Center: {x: -0.000000059604638, y: 0.75, z: 0.4242956}
+--- !u!114 &1634622417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894171770976146446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d84bd41f3e4414d9effd4a3a8ac1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopType: 0
+  shopPopupText: Buy Seeds
+  cost: 3
 --- !u!1 &5044126643918677901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,6 +6236,8 @@ GameObject:
   - component: {fileID: 8163805135824132783}
   - component: {fileID: 5108333295595263242}
   - component: {fileID: 6989733238378947008}
+  - component: {fileID: 1436703585}
+  - component: {fileID: 1436703586}
   m_Layer: 0
   m_Name: Sell Crops Shop
   m_TagString: Untagged
@@ -6258,6 +6320,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1436703585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791159689275424789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.449102, y: 3.1590066, z: 2.3256488}
+  m_Center: {x: -0.2571953, y: 1.5795033, z: 0.06526017}
+--- !u!114 &1436703586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791159689275424789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d84bd41f3e4414d9effd4a3a8ac1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopType: 2
+  shopPopupText: Sell Crops
+  cost: 0
 --- !u!1 &8950492961342707583
 GameObject:
   m_ObjectHideFlags: 0
