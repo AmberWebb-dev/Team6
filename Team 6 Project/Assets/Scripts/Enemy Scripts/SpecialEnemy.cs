@@ -35,10 +35,12 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     Color ogColor;
     private AudioSource audioSource;
 
+    [SerializeField] GameObject flashOverlay;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        ogColor = model.material.color;
+        
         audioSource = GetComponent<AudioSource>();
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
@@ -178,9 +180,9 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     IEnumerator FlashRed()
     {
-        model.material.color = Color.red;
+        flashOverlay.SetActive(true);  // Show the overlay.
         yield return new WaitForSeconds(0.1f);
-        model.material.color = ogColor;
+        flashOverlay.SetActive(false); // Hide the overlay.
     }
 
     public void Knockback(Vector3 direction, float strength, float time)

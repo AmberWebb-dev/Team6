@@ -22,7 +22,8 @@ public class Shop : MonoBehaviour, IInteract
         {
             GameManager.Instance.AddControlPopup(shopPopupText, "E");
             textCanvas.gameObject.SetActive(true);
-            shopText.text = $"{shopPopupText}\nCost: {cost}";
+            string costText = (shopType == ShopType.SellShop) ? $"Coins per crop: {cost}" : $"Cost: {cost}";
+            shopText.text = $"{shopPopupText}\n{costText}";
         }
         isHovered = true;
         interactionCooldown = 0.01f;
@@ -75,7 +76,10 @@ public class Shop : MonoBehaviour, IInteract
                         }
                         break;
                     case ShopType.SellShop:
-                        Debug.Log("SELLING CROPS (NOT IMPLEMENTED)");
+                        Debug.Log($"{GameManager.Instance.playerScript.currentCropsInInventory} crops sold!");
+                        GameManager.Instance.AddCoins(GameManager.Instance.playerScript.currentCropsInInventory * cost);
+                        GameManager.Instance.playerScript.currentCropsInInventory = 0;
+                        GameManager.Instance.UpdateCropInventory(0);
                         break;
                 }
             }

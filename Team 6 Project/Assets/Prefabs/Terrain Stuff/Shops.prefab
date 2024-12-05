@@ -7062,7 +7062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopType: 2
   shopPopupText: Sell Crops
-  cost: 0
+  cost: 1
   shopText: {fileID: 1447004230}
   textCanvas: {fileID: 1560032051}
 --- !u!1 &8950492961342707583
