@@ -367,9 +367,26 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         {
             currentCropsInInventory++;
             Debug.Log($"Crops in Inventory: " + currentCropsInInventory);
+            GameManager.Instance.UpdateCropInventory(currentCropsInInventory);
+
         }
-        
+
+
     }
+
+    public void PlaceCrop()
+    {
+        if(currentCropsInInventory > 0)
+        {
+            currentCropsInInventory--;
+
+            Debug.Log($"Crops in Inventory: " + currentCropsInInventory);
+            GameManager.Instance.UpdateCropInventory(currentCropsInInventory);
+
+        }
+
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (hasShovel)

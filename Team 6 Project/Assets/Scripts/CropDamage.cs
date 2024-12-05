@@ -1,15 +1,18 @@
 // CropDamage.cs
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class CropDamage : MonoBehaviour, IDamage
 {
     [SerializeField] Renderer model;
     [SerializeField] int HP;
+    [SerializeField] GameObject prefab;
 
     bool inRange;
-    bool inInventory;
+    bool fullInventory;
 
     Color colourOriginal;
 
@@ -21,7 +24,7 @@ public class CropDamage : MonoBehaviour, IDamage
 
     void Update()
     {
-        if(inRange && Input.GetKeyDown(KeyCode.E) && !inInventory)
+        if(inRange && Input.GetButtonDown("Pick Up") && !fullInventory)
         {
             if (GameManager.Instance.playerScript.currentCropsInInventory 
                 < GameManager.Instance.playerScript.maxCropInInventory)
@@ -31,20 +34,34 @@ public class CropDamage : MonoBehaviour, IDamage
             }
             else
             {
+                fullInventory = true;
                 Debug.Log($"Crop inventory full!");
             }
+        }
+        if(Input.GetButtonDown("Plant Crop"))
+        {
+            PlaceCrop();
         }
     }
 
     void PickUpCrop()
     {
-        inInventory = true;
         GameManager.Instance.playerScript.PickUpCrop();
         Destroy(gameObject);
         GameManager.Instance.RemoveControlPopup("Pick Up");
-        GameManager.Instance.UpdateCropInventory(GameManager.Instance.playerScript.currentCropsInInventory);
+        //GameManager.Instance.UpdateCropInventory(GameManager.Instance.playerScript.currentCropsInInventory);
         Debug.Log($"Crop added to inventory");
 
+    }
+
+    void PlaceCrop()
+    {
+        if (GameManager.Instance.playerScript.currentCropsInInventory > 0)
+        {
+            GameManager.Instance.playerScript.PlaceCrop();
+
+            Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

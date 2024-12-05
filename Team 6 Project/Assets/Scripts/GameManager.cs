@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public Image playerHPBar;
     [Header("----- Crop Info -----")]
+    public DirtActivity DirtActivityScript;
     public GameObject[] cropsArray;
     int cropCount;
     int cropCountOriginal;

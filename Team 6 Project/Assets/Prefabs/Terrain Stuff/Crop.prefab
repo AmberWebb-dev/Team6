@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 3898229860069760914}
   HP: 2
+  prefab: {fileID: 6133415621640478050}
 --- !u!136 &5751893198970304096
 CapsuleCollider:
   m_ObjectHideFlags: 0
