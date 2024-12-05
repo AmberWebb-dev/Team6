@@ -7,6 +7,7 @@ public class DirtActivity : MonoBehaviour
 {
     bool hasCrop;
     bool inRange;
+    [SerializeField] GameObject prefab;
 
     private void Update()
     {
@@ -18,10 +19,19 @@ public class DirtActivity : MonoBehaviour
         else if(hasCrop && inRange)
         {
             Debug.Log($"inRangs and HAS crop");
+            
         }
         else
         {
             //nothing
+        }
+
+        if (inRange && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentCropsInInventory > 0)
+        {
+            Debug.Log("Placing Crop");
+            GameManager.Instance.playerScript.PlaceCrop();
+
+            Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
 

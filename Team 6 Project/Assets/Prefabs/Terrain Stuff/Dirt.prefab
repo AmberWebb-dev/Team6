@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077590cd1ddc51441a6f3e7e580a50f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropPos: {fileID: 3567582621384906976}
+  prefab: {fileID: 6133415621640478050, guid: f1ea4286b797a2e4887443685cf132e0, type: 3}
 --- !u!33 &8111658017147021311
 MeshFilter:
   m_ObjectHideFlags: 0

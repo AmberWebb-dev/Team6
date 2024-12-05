@@ -38,10 +38,6 @@ public class CropDamage : MonoBehaviour, IDamage
                 Debug.Log($"Crop inventory full!");
             }
         }
-        if(Input.GetButtonDown("Plant Crop"))
-        {
-            PlaceCrop();
-        }
     }
 
     void PickUpCrop()
