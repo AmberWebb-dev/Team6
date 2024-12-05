@@ -9,43 +9,32 @@ public class DirtActivity : MonoBehaviour
     bool inRange;
     [SerializeField] GameObject prefab;
 
+    Vector3 newCropPos;
+
     private void Update()
     {
-        if(!hasCrop && inRange)
-        {
-            Debug.Log($"inRange and Does not have crop!!");
 
-        }
-        else if(hasCrop && inRange)
-        {
-            Debug.Log($"inRangs and HAS crop");
-            
-        }
-        else
-        {
-            //nothing
-        }
-
-        if (inRange && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentCropsInInventory > 0)
+        if (inRange && !hasCrop && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentCropsInInventory > 0)
         {
             Debug.Log("Placing Crop");
             GameManager.Instance.playerScript.PlaceCrop();
-
-            Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+            newCropPos = gameObject.transform.position;
+            newCropPos.y = prefab.transform.position.y;
+            Instantiate(prefab, newCropPos, Quaternion.identity);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Crop"))
+        if (other.CompareTag("Crop") && other.CompareTag("Player"))
         {
             hasCrop = true;
-           // Debug.Log($"Crop here");
+            Debug.Log($"Crop here");
         }
         else
         {
             hasCrop = false;
-            //Debug.Log($"no Crop here");
+            Debug.Log($"no Crop here");
         }
 
         if (other.CompareTag("Player") && !hasCrop)
