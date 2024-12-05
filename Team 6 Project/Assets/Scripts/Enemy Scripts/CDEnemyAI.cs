@@ -23,10 +23,12 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private bool isAttacking;
     private bool isKnockedback;
 
+    [SerializeField] GameObject hitEffectPrefab;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        colourOriginal = model.material.color;
+        
         GameManager.Instance.GameGoal(1);
 
         // Set initial target crop
@@ -87,7 +89,16 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     public void TakeDamage(int amount)
     {
         HP -= amount;
-        StartCoroutine(FlashRed());
+        if (hitEffectPrefab != null)
+        {
+            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+            Debug.Log("Hit effect instantiated!");
+        }
+        else
+        {
+            Debug.LogWarning("HitEffectPrefab is not assigned!");
+        }
+
 
         if (HP <= 0)
         {
@@ -102,12 +113,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         }
     }
 
-    IEnumerator FlashRed()
-    {
-        model.material.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        model.material.color = colourOriginal;
-    }
+    
 
     IEnumerator Attack()
     {

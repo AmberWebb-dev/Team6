@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 8059749084214848023}
   - component: {fileID: 8059749084214848030}
   - component: {fileID: 8059749084214848017}
+  - component: {fileID: 2881925366801731843}
   m_Layer: 6
   m_Name: Enemy(CropDestroyer)
   m_TagString: Enemy
@@ -92,7 +93,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8059749084214848233}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 39.51, y: 0.5, z: -16.21}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129,6 +130,7 @@ MonoBehaviour:
   attackDamage: 1
   attackRate: 1
   scoreValue: 100
+  hitEffectPrefab: {fileID: 4036704911568839332, guid: 6c3841a679cda2c48b6454a4dd94dde6, type: 3}
 --- !u!195 &8059749084214848019
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -219,3 +221,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &2881925366801731843
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8059749084214848233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8648476b323d6294e8c8b3c3c7966a9e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 7ee714c1e648f144787da2e14ede51b5, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

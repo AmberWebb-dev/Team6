@@ -34,11 +34,13 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     float stoppingDistanceOrig;
     float angleToPlayer;
 
+    [SerializeField] GameObject flashOverlay;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        colorOrig = model.material.color;
+
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
         stoppingDistanceOrig = agent.stoppingDistance;
@@ -155,9 +157,9 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
     IEnumerator FlashRed()
     {
-        model.material.color = Color.red;
+        flashOverlay.SetActive(true);  // Show the overlay.
         yield return new WaitForSeconds(0.1f);
-        model.material.color = colorOrig;
+        flashOverlay.SetActive(false); // Hide the overlay.
     }
 
     IEnumerator Shoot()
@@ -207,4 +209,6 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         agent.angularSpeed = angleSpeedOriginal;
         isKnockedback = false;
     }
+
+
 }
