@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int shovelDist;
     [SerializeField] private GameObject shovelHitParticles;
 
+    [SerializeField] public int maxCropInInventory;
+    public int currentCropsInInventory;
+
     bool isPlayingSteps;
 
     private int selectedShovel = -1;                 
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     {
         HPOriginal = HP;
         UpdatePlayerUI();
+        currentCropsInInventory = 0;
 
         crossbowAnimator.SetBool("Fire", true);
         crossbowAnimator.SetFloat("ShootRate", 1 / shootRate * 3);
@@ -357,6 +361,15 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         Debug.Log("Shovel broke!");
     }
 
+    public void PickUpCrop()
+    {
+        if(currentCropsInInventory < maxCropInInventory)
+        {
+            currentCropsInInventory++;
+            Debug.Log($"Crops in Inventory: " + currentCropsInInventory);
+        }
+        
+    }
     private void OnDrawGizmosSelected()
     {
         if (hasShovel)

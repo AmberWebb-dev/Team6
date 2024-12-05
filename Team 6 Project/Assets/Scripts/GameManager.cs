@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text waveTimerText;
     [SerializeField] TMP_Text waveCountLoseText;
     [SerializeField] TMP_Text coinCountText;
+    [SerializeField] TMP_Text cropInventoryText;
+
     [Header("----- Screen Effects -----")]
     public GameObject playerDamageScreen;
     [SerializeField] GameObject effectBlind;
@@ -251,6 +253,12 @@ public class GameManager : MonoBehaviour
         {
             YouLose();
         }
+    }
+
+    public void UpdateCropInventory(int amount)
+    {
+        cropInventoryText.text = amount.ToString("F0") + " / " + Instance.playerScript.maxCropInInventory.ToString("F0");
+
     }
 
     public IEnumerator ApplyBlindEffect()

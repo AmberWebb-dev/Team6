@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6133415621640478062}
   - component: {fileID: 6133415621640478061}
   - component: {fileID: 5751893198970304096}
+  - component: {fileID: 6054761092753832031}
   m_Layer: 0
   m_Name: Crop
   m_TagString: Crop
@@ -66,6 +67,19 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!135 &6054761092753832031
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6133415621640478050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1139350480450593017
 PrefabInstance:
   m_ObjectHideFlags: 0
