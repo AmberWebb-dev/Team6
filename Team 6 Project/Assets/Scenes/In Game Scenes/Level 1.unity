@@ -3583,10 +3583,6 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
-      propertyPath: cropInventoryText
-      value: 
-      objectReference: {fileID: 1751621334}
-    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1140479402}
@@ -22469,17 +22465,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 982d86a08033e3e4c81b96929131a643, type: 3}
---- !u!114 &1751621334 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5142767125756011582, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
-  m_PrefabInstance: {fileID: 278877444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1752818155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26833,10 +26818,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5067409458042033809, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
-      propertyPath: maxCropInInventory
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5067409458042033819, guid: 4c8fa7ade9783af40a367286398da08e, type: 3}
       propertyPath: m_Name
       value: Player

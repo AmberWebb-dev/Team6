@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 23e3a5236c00ace4fb6efc5788169e2e
+timeCreated: 1432302214
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BLLowerLeg
+    100002: BLUpperLeg
+    100004: BRLowerLeg
+    100006: BRUpperLeg
+    100008: FLLowerLeg
+    100010: FLUpperLeg
+    100012: FRLowerLeg
+    100014: FRUpperLeg
+    100016: Head
+    100018: joint12
+    100020: joint14
+    100022: joint16
+    100024: joint19
+    100026: joint22
+    100028: joint3
+    100030: joint6
+    100032: LeftEar
+    100034: RightEar
+    100036: Root
+    100038: Sheep
+    100040: //RootNode
+    100042: Spine1
+    100044: Spine2
+    100046: Spine3
+    400000: BLLowerLeg
+    400002: BLUpperLeg
+    400004: BRLowerLeg
+    400006: BRUpperLeg
+    400008: FLLowerLeg
+    400010: FLUpperLeg
+    400012: FRLowerLeg
+    400014: FRUpperLeg
+    400016: Head
+    400018: joint12
+    400020: joint14
+    400022: joint16
+    400024: joint19
+    400026: joint22
+    400028: joint3
+    400030: joint6
+    400032: LeftEar
+    400034: RightEar
+    400036: Root
+    400038: //RootNode
+    400040: Sheep
+    400042: Spine1
+    400044: Spine2
+    400046: Spine3
+    4300000: Sheep
+    7400000: Idle
+    7400002: Walking
+    7400004: GrazeStart
+    7400006: GrazeIdle
+    9500000: //RootNode
+    13700000: Sheep
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/BLUpperLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg/joint3
+        weight: 1
+      - path: Root/BRUpperLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg/joint22
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg/joint19
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/joint12
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar/joint14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar/joint16
+        weight: 1
+      - path: Sheep
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/BLUpperLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg/joint3
+        weight: 1
+      - path: Root/BRUpperLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg/joint22
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg/joint19
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/joint12
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar/joint14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar/joint16
+        weight: 1
+      - path: Sheep
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GrazeStart
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/BLUpperLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg/joint3
+        weight: 1
+      - path: Root/BRUpperLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg/joint22
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg/joint19
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/joint12
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar/joint14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar/joint16
+        weight: 1
+      - path: Sheep
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GrazeIdle
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/BLUpperLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg
+        weight: 1
+      - path: Root/BLUpperLeg/BLLowerLeg/joint3
+        weight: 1
+      - path: Root/BRUpperLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg
+        weight: 1
+      - path: Root/BRUpperLeg/BRLowerLeg/joint22
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FLUpperLeg/FLLowerLeg/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/FRUpperLeg/FRLowerLeg/joint19
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/joint12
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/LeftEar/joint14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Head/RightEar/joint16
+        weight: 1
+      - path: Sheep
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

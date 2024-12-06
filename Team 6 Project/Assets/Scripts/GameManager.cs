@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text waveCountLoseText;
     [SerializeField] TMP_Text coinCountText;
     [SerializeField] TMP_Text cropInventoryText;
+    [SerializeField] TMP_Text seedInventoryText;
 
     [Header("----- Screen Effects -----")]
     public GameObject playerDamageScreen;
@@ -94,6 +95,9 @@ public class GameManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerController>();
+
+        UpdateCropInventory(0);
+        UpdateSeedInventory(0);
 
         SetCoins(0);
 
@@ -260,6 +264,11 @@ public class GameManager : MonoBehaviour
     {
         cropInventoryText.text = amount.ToString("F0") + " / " + Instance.playerScript.maxCropInInventory.ToString("F0");
 
+    }
+
+    public void UpdateSeedInventory(int amount)
+    {
+        seedInventoryText.text = $"{amount} / {playerScript.maxSeedsInInventory}";
     }
 
     public IEnumerator ApplyBlindEffect()
