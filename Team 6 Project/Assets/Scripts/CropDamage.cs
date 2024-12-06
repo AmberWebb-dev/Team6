@@ -45,19 +45,7 @@ public class CropDamage : MonoBehaviour, IDamage
         GameManager.Instance.playerScript.PickUpCrop();
         Destroy(gameObject);
         GameManager.Instance.RemoveControlPopup("Pick Up");
-        //GameManager.Instance.UpdateCropInventory(GameManager.Instance.playerScript.currentCropsInInventory);
         Debug.Log($"Crop added to inventory");
-
-    }
-
-    void PlaceCrop()
-    {
-        if (GameManager.Instance.playerScript.currentCropsInInventory > 0)
-        {
-            GameManager.Instance.playerScript.PlaceCrop();
-
-            Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,6 +56,7 @@ public class CropDamage : MonoBehaviour, IDamage
             GameManager.Instance.AddControlPopup("Pick Up", "E");
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -87,7 +76,6 @@ public class CropDamage : MonoBehaviour, IDamage
         if (HP <= 0)
         {
             AudioManager.Instance.cropDeathSound.PlayOnPlayer();
-            //GameManager.Instance.UnregisterCrop(gameObject); // Unregister before destruction
             GameManager.Instance.UpdateCrop(-1);
 
             Destroy(gameObject);
