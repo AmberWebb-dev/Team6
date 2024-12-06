@@ -27,9 +27,13 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private Material[] originalMaterials;
     Color materialOrig;
 
+    //animation stuffs
+    [SerializeField] Animator anim;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         materialOrig = model.material.color;
         //originalMaterials = model.materials;
         GameManager.Instance.GameGoal(1);
@@ -52,6 +56,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             Vector3 cropDirection = currentTargetCrop.transform.position - headPosition.position;
             agent.SetDestination(currentTargetCrop.transform.position);
 
+            anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 FaceTarget(cropDirection);
@@ -65,6 +71,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         else
         {
             agent.ResetPath(); // Stop moving if no target is available
+            anim.SetBool("isWalking", false);
         }
     }
 
@@ -119,6 +126,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     {
         isAttacking = true;
 
+        anim.SetBool("isAttacking", true);
+
         CropDamage cropDamage = currentTargetCrop.GetComponent<CropDamage>();
         if (cropDamage != null)
         {
@@ -126,6 +135,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         }
 
         yield return new WaitForSeconds(attackRate);
+        anim.SetBool("isAttacking", false);
         isAttacking = false;
     }
 

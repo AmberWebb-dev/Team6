@@ -92,8 +92,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8059749084214848233}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.039, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -101,7 +101,7 @@ Transform:
   - {fileID: 8059749082934971270}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8059749084214848020
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   attackRate: 1
   scoreValue: 100
   flashRedMaterial: {fileID: 2100000, guid: 5dfd42b3eb8f70a4a9f5c8a3210b3e88, type: 2}
+  anim: {fileID: 0}
 --- !u!195 &8059749084214848019
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ NavMeshAgent:
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!23 &8059749084214848023
@@ -207,7 +208,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!135 &8059749084214848017
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -230,9 +231,9 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8059749084214848233}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8648476b323d6294e8c8b3c3c7966a9e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7ee714c1e648f144787da2e14ede51b5, type: 2}
-  m_CullingMode: 1
+  m_Avatar: {fileID: 9000000, guid: 1dec398cdf62ed943bb6d870e2422dca, type: 3}
+  m_Controller: {fileID: 22100000, guid: 182ce13682d63714396120bb518c037f, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
