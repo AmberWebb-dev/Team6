@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] public int maxCropInInventory;
     public int currentCropsInInventory;
 
+    public int maxSeedsInInventory;
+    public int currentSeedsInInventory;
+
     bool isPlayingSteps;
 
     private int selectedShovel = -1;                 
@@ -376,12 +379,12 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
     public void PlaceCrop()
     {
-        if(currentCropsInInventory > 0)
+        if(currentSeedsInInventory > 0)
         {
-            currentCropsInInventory--;
+            currentSeedsInInventory--;
 
-            Debug.Log($"Crops in Inventory: " + currentCropsInInventory);
-            GameManager.Instance.UpdateCropInventory(currentCropsInInventory);
+            Debug.Log($"Seeds in Inventory: " + currentSeedsInInventory);
+            GameManager.Instance.UpdateSeedInventory(currentSeedsInInventory);
 
         }
 

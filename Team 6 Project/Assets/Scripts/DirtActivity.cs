@@ -14,9 +14,9 @@ public class DirtActivity : MonoBehaviour
     private void Update()
     {
 
-        if (inRange && !hasCrop && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentCropsInInventory > 0)
+        if (inRange && !hasCrop && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentSeedsInInventory > 0)
         {
-            Debug.Log("Placing Crop");
+            Debug.Log("Placing Seed");
             GameManager.Instance.playerScript.PlaceCrop();
             newCropPos = gameObject.transform.position;
             newCropPos.y = prefab.transform.position.y;
@@ -39,7 +39,7 @@ public class DirtActivity : MonoBehaviour
 
         if (other.CompareTag("Player") && !hasCrop)
         {
-            GameManager.Instance.AddControlPopup("Plant Crop", "G");
+            GameManager.Instance.AddControlPopup("Plant Seed", "G");
             inRange = true;
         }
     }
@@ -56,7 +56,7 @@ public class DirtActivity : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.RemoveControlPopup("Plant Crop");
+            GameManager.Instance.RemoveControlPopup("Plant Seed");
             inRange = false;
         }
     }

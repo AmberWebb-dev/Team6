@@ -54,9 +54,10 @@ public class Shop : MonoBehaviour, IInteract
                     case ShopType.SeedShop:
                         if (GameManager.Instance.GetCoinCount() >= cost)
                         {
-                            Debug.Log("BOUGHT SEEDS (SEEDS NOT IMPLEMENTED)");
+                            Debug.Log("BOUGHT SEEDS");
                             GameManager.Instance.AddCoins(-cost);
-                            // TODO: Add seeds when buying them
+                            GameManager.Instance.playerScript.currentSeedsInInventory = GameManager.Instance.playerScript.maxSeedsInInventory;
+                            GameManager.Instance.UpdateSeedInventory(GameManager.Instance.playerScript.maxSeedsInInventory);
                         }
                         else
                         {

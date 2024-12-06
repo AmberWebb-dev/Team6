@@ -52,7 +52,7 @@ public class CropDamage : MonoBehaviour, IDamage
 
     void PlaceCrop()
     {
-        if (GameManager.Instance.playerScript.currentCropsInInventory > 0)
+        if (GameManager.Instance.playerScript.currentSeedsInInventory > 0)
         {
             GameManager.Instance.playerScript.PlaceCrop();
 
