@@ -35,7 +35,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     Color ogColor;
     private AudioSource audioSource;
 
-    [SerializeField] GameObject flashOverlay;
+    Color colorOrig;
 
     void Start()
     {
@@ -137,7 +137,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     {
         HP -= amount;
 
-        StartCoroutine(FlashRed());
+        StartCoroutine(flashRed());
 
         if (HP <= 0 && !hasExploded)
         {
@@ -178,11 +178,11 @@ public class SpecialEnemy : MonoBehaviour, IDamage
         Destroy(gameObject); 
     }
 
-    IEnumerator FlashRed()
+    IEnumerator flashRed()
     {
-        flashOverlay.SetActive(true);  // Show the overlay.
+        model.material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        flashOverlay.SetActive(false); // Hide the overlay.
+        model.material.color = colorOrig;
     }
 
     public void Knockback(Vector3 direction, float strength, float time)

@@ -34,8 +34,6 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     float stoppingDistanceOrig;
     float angleToPlayer;
 
-    [SerializeField] GameObject flashOverlay;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -134,7 +132,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     {
         HP -= amount;
 
-        StartCoroutine(FlashRed());
+        StartCoroutine(flashRed());
 
         // Chases player if shot out of range
         if (!isKnockedback)
@@ -155,11 +153,11 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         }
     }
 
-    IEnumerator FlashRed()
+    IEnumerator flashRed()
     {
-        flashOverlay.SetActive(true);  // Show the overlay.
+        model.material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        flashOverlay.SetActive(false); // Hide the overlay.
+        model.material.color = colorOrig;
     }
 
     IEnumerator Shoot()
