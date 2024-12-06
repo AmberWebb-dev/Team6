@@ -1613,6 +1613,8 @@ MonoBehaviour:
   cost: 10
   shopText: {fileID: 831633713}
   textCanvas: {fileID: 415151884}
+  shovelPickupPrefab: {fileID: 1066998215736283023, guid: b6fee119443d16847985b6ff670c9c64, type: 3}
+  shovelPickupPos: {x: 65.401, y: 0.977, z: -43.354}
 --- !u!1 &1577558493155206313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4036,7 @@ Transform:
   - {fileID: 1122572060332480616}
   - {fileID: 8476725843795928736}
   - {fileID: 1118765167075804962}
+  - {fileID: 863024205769409678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5030,6 +5033,8 @@ MonoBehaviour:
   cost: 3
   shopText: {fileID: 2058100298}
   textCanvas: {fileID: 251399347}
+  shovelPickupPrefab: {fileID: 0}
+  shovelPickupPos: {x: 0, y: 0, z: 0}
 --- !u!1 &5044126643918677901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,6 +5450,104 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6096248577721092904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863024205769409678}
+  - component: {fileID: 6098475404339142694}
+  - component: {fileID: 7541708784863258305}
+  - component: {fileID: 7226205223760882082}
+  m_Layer: 0
+  m_Name: ShovelPatch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &863024205769409678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096248577721092904}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 65.344, y: -0.058, z: -43.353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3451796663851499430}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6098475404339142694
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096248577721092904}
+  m_Mesh: {fileID: -3417964714629170170, guid: c3568e678d846a349a694e4904eb4247, type: 3}
+--- !u!23 &7541708784863258305
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096248577721092904}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 759bda0839684014da802c08b417916d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7226205223760882082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096248577721092904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3417964714629170170, guid: c3568e678d846a349a694e4904eb4247, type: 3}
 --- !u!1 &6160737752546182706
 GameObject:
   m_ObjectHideFlags: 0
@@ -7065,6 +7168,8 @@ MonoBehaviour:
   cost: 1
   shopText: {fileID: 1447004230}
   textCanvas: {fileID: 1560032051}
+  shovelPickupPrefab: {fileID: 0}
+  shovelPickupPos: {x: 0, y: 0, z: 0}
 --- !u!1 &8950492961342707583
 GameObject:
   m_ObjectHideFlags: 0

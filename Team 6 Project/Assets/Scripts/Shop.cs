@@ -13,6 +13,11 @@ public class Shop : MonoBehaviour, IInteract
     [SerializeField] TMPro.TMP_Text shopText;
     [SerializeField] Canvas textCanvas;
 
+    [Header("----- Prefabs -----")]
+    [SerializeField] private GameObject shovelPickupPrefab;
+    private GameObject shovelPickup;
+    [SerializeField] private Vector3 shovelPickupPos;
+
     bool isHovered;
     float interactionCooldown;
 
@@ -65,11 +70,11 @@ public class Shop : MonoBehaviour, IInteract
                         }
                         break;
                     case ShopType.ShovelShop:
-                        if (GameManager.Instance.GetCoinCount() >= cost)
+                        if (GameManager.Instance.GetCoinCount() >= cost && shovelPickup == null)
                         {
-                            Debug.Log("BOUGHT SHOVEL (SHOVEL BUYING NOT IMPLEMENTED)");
+                            Debug.Log("BOUGHT SHOVEL");
                             GameManager.Instance.AddCoins(-cost);
-                            // TODO: Add shovel when buying it
+                            shovelPickup = Instantiate(shovelPickupPrefab, shovelPickupPos, Quaternion.identity);
                         }
                         else
                         {
