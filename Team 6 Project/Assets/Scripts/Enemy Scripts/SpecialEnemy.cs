@@ -35,12 +35,14 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     Color ogColor;
     private AudioSource audioSource;
 
-    Color colorOrig;
+    [SerializeField] Material flashRedMaterial;
+    private Material[] originalMaterials;
+
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        originalMaterials = model.materials;
         audioSource = GetComponent<AudioSource>();
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
@@ -180,9 +182,17 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
+        Material[] flashMaterials = new Material[model.materials.Length];
+        for (int i = 0; i < flashMaterials.Length; i++)
+        {
+            flashMaterials[i] = flashRedMaterial;
+        }
+
+        model.materials = flashMaterials;
         yield return new WaitForSeconds(0.1f);
-        model.material.color = colorOrig;
+
+        // Restore the original materials
+        model.materials = originalMaterials;
     }
 
     public void Knockback(Vector3 direction, float strength, float time)

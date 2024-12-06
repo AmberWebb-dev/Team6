@@ -21,7 +21,9 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
     [SerializeField] int scoreValue;
 
-    Color colorOrig;
+    [SerializeField] Material flashRedMaterial;
+    private Material[] originalMaterials;
+
 
     bool isShooting;
     bool playerInRange;
@@ -38,7 +40,7 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        originalMaterials = model.materials;
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
         stoppingDistanceOrig = agent.stoppingDistance;
@@ -155,9 +157,17 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
+        Material[] flashMaterials = new Material[model.materials.Length];
+        for (int i = 0; i < flashMaterials.Length; i++)
+        {
+            flashMaterials[i] = flashRedMaterial;
+        }
+
+        model.materials = flashMaterials;
         yield return new WaitForSeconds(0.1f);
-        model.material.color = colorOrig;
+
+        // Restore the original materials
+        model.materials = originalMaterials;
     }
 
     IEnumerator Shoot()

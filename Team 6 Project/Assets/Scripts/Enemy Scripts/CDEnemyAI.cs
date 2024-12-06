@@ -23,12 +23,13 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private bool isAttacking;
     private bool isKnockedback;
 
-    Color colorOrig;
+    [SerializeField] Material flashRedMaterial;
+    private Material[] originalMaterials;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        originalMaterials = model.materials;
         GameManager.Instance.GameGoal(1);
 
         // Set initial target crop
@@ -107,9 +108,17 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
+        Material[] flashMaterials = new Material[model.materials.Length];
+        for (int i = 0; i < flashMaterials.Length; i++)
+        {
+            flashMaterials[i] = flashRedMaterial;
+        }
+
+        model.materials = flashMaterials;
         yield return new WaitForSeconds(0.1f);
-        model.material.color = colorOrig;
+
+        // Restore the original materials
+        model.materials = originalMaterials;
     }
 
     IEnumerator Attack()

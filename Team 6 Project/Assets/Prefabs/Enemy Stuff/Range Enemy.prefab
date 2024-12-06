@@ -93,7 +93,7 @@ MonoBehaviour:
   roamDistance: 100
   roamTimer: 3
   scoreValue: 200
-  flashOverlay: {fileID: 0}
+  flashRedMaterial: {fileID: 2100000, guid: 5dfd42b3eb8f70a4a9f5c8a3210b3e88, type: 2}
 --- !u!195 &3985926867833319871
 NavMeshAgent:
   m_ObjectHideFlags: 0
