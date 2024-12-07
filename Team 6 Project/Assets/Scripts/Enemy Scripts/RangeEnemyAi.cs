@@ -37,11 +37,14 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     float stoppingDistanceOrig;
     float angleToPlayer;
 
+    [SerializeField] Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        materialOrig = model.material.color;
+        materialOrig = GetComponentInChildren<Renderer>().material.color;
+        anim = GetComponent<Animator>();
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
         stoppingDistanceOrig = agent.stoppingDistance;
@@ -50,8 +53,9 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     // Update is called once per frame
     void Update()
     {
+        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
 
-        if(playerInRange && !CanSeePlayer())
+        if (playerInRange && !CanSeePlayer())
         {
             if(!isRoaming && agent.remainingDistance < 0.05f)
             {
@@ -70,6 +74,8 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     IEnumerator Roam()
     {
         isRoaming = true;
+        anim.SetBool("isWalking", true);
+
         yield return new WaitForSeconds(roamTimer);
 
         agent.stoppingDistance = 0;
@@ -84,6 +90,8 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         }
 
         isRoaming = false;
+
+        anim.SetBool("isWalking", false);
     }
 
     bool CanSeePlayer()
@@ -106,10 +114,14 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
                 StartCoroutine(Shoot());
             }
 
+            anim.SetBool("isAttacking", true);
+            anim.SetBool("isWalking", false);
             agent.stoppingDistance = stoppingDistanceOrig;
             return true;
         }
 
+        anim.SetBool("isAttacking", false);
+        anim.SetBool("isWalking", false);
         agent.stoppingDistance = 0;
         return false;
     }
@@ -158,9 +170,23 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        model.material.color = materialOrig;
+        // Get the SkinnedMeshRenderer dynamically
+        SkinnedMeshRenderer visibleModel = GetComponentInChildren<SkinnedMeshRenderer>();
+        if (visibleModel != null)
+        {
+            // Save original color
+            Material material = visibleModel.material;
+            Color originalColor = material.color;
+
+            // Flash red
+            material.color = Color.red;
+
+            // Wait for the flash duration
+            yield return new WaitForSeconds(0.1f);
+
+            // Restore the original color
+            material.color = originalColor;
+        }
     }
 
     IEnumerator Shoot()

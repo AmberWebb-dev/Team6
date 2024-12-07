@@ -38,12 +38,13 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     [SerializeField] Material flashRedMaterial;
     private Material[] originalMaterials;
     Color materialOrig;
-
+    [SerializeField] Animator anim;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        materialOrig = model.material.color;
+        anim = GetComponent<Animator>();
+        materialOrig = GetComponentInChildren<Renderer>().material.color;
         audioSource = GetComponent<AudioSource>();
         GameManager.Instance.GameGoal(1);
         startPosition = transform.position;
@@ -66,7 +67,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
                 StartCoroutine(Roam());
             }
         }
-
+        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
     }
 
     IEnumerator Roam()
@@ -156,6 +157,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     {
         hasExploded = true;
 
+        anim.SetBool("isAttacking", true);
+
         AudioManager.Instance.explosionSound.Play();
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -183,9 +186,23 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        model.material.color = materialOrig;
+        // Get the SkinnedMeshRenderer dynamically
+        SkinnedMeshRenderer visibleModel = GetComponentInChildren<SkinnedMeshRenderer>();
+        if (visibleModel != null)
+        {
+            // Save original color
+            Material material = visibleModel.material;
+            Color originalColor = material.color;
+
+            // Flash red
+            material.color = Color.red;
+
+            // Wait for the flash duration
+            yield return new WaitForSeconds(0.1f);
+
+            // Restore the original color
+            material.color = originalColor;
+        }
     }
 
     public void Knockback(Vector3 direction, float strength, float time)

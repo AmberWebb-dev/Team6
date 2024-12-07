@@ -7,7 +7,7 @@ public class TankyEnemy : MonoBehaviour, IDamage
 {
     [SerializeField] Renderer model;
     [SerializeField] NavMeshAgent agent;
-
+    private Color materialOrig;
     [SerializeField] Transform headPosition;
     [SerializeField] int faceTargetSpeed;
     [SerializeField] int HP;
@@ -24,7 +24,7 @@ public class TankyEnemy : MonoBehaviour, IDamage
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        colourOriginal = model.material.color;
+        materialOrig = GetComponentInChildren<Renderer>().material.color;
         GameManager.Instance.GameGoal(1);
 
         UpdateTargetCrop();
@@ -98,9 +98,23 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
     IEnumerator FlashRed()
     {
-        model.material.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        model.material.color = colourOriginal;
+        // Get the SkinnedMeshRenderer dynamically
+        SkinnedMeshRenderer visibleModel = GetComponentInChildren<SkinnedMeshRenderer>();
+        if (visibleModel != null)
+        {
+            // Save original color
+            Material material = visibleModel.material;
+            Color originalColor = material.color;
+
+            // Flash red
+            material.color = Color.red;
+
+            // Wait for the flash duration
+            yield return new WaitForSeconds(0.1f);
+
+            // Restore the original color
+            material.color = originalColor;
+        }
     }
 
     IEnumerator Attack()

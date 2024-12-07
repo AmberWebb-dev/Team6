@@ -33,7 +33,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        materialOrig = model.material.color;
+        materialOrig = GetComponentInChildren<Renderer>().material.color;
         //originalMaterials = model.materials;
         GameManager.Instance.GameGoal(1);
 
@@ -118,28 +118,48 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 
     IEnumerator flashRed()
     {
-        model.material.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        model.material.color = materialOrig;
+        // Get the SkinnedMeshRenderer dynamically
+        SkinnedMeshRenderer visibleModel = GetComponentInChildren<SkinnedMeshRenderer>();
+        if (visibleModel != null)
+        {
+            // Save original color
+            Material material = visibleModel.material;
+            Color originalColor = material.color;
+
+            // Flash red
+            material.color = Color.red;
+
+            // Wait for the flash duration
+            yield return new WaitForSeconds(0.1f);
+
+            // Restore the original color
+            material.color = originalColor;
+        }
     }
 
     IEnumerator Attack()
     {
         isAttacking = true;
 
-        anim.SetBool("isAttacking", true);
+        Debug.Log("Starting attack on crop: " + currentTargetCrop.name);
 
-        Debug.Log($"isAttacking: {anim.GetBool("isAttacking")}");
+        anim.SetBool("isAttacking", true);
 
         CropDamage cropDamage = currentTargetCrop.GetComponent<CropDamage>();
         if (cropDamage != null)
         {
             cropDamage.TakeDamage(attackDamage);
+            Debug.Log("Crop took " + attackDamage + " damage.");
+        }
+        else
+        {
+            Debug.LogError("No CropDamage script found on target crop!");
         }
 
         yield return new WaitForSeconds(attackRate);
         anim.SetBool("isAttacking", false);
         isAttacking = false;
+        Debug.Log("Attack completed.");
     }
 
     public void Knockback(Vector3 direction, float strength, float time)
