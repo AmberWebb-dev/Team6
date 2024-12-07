@@ -22,6 +22,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private Color colourOriginal;
     private bool isAttacking;
     private bool isKnockedback;
+    private bool inRange;
 
     [SerializeField] Material flashRedMaterial;
     private Material[] originalMaterials;
@@ -101,7 +102,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     {
         HP -= amount;
 
-        StartCoroutine(flashRed());
+        StartCoroutine(FlashRed());
 
         if (HP <= 0)
         {
@@ -116,7 +117,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         }
     }
 
-    IEnumerator flashRed()
+    IEnumerator FlashRed()
     {
         // Get the SkinnedMeshRenderer dynamically
         SkinnedMeshRenderer visibleModel = GetComponentInChildren<SkinnedMeshRenderer>();

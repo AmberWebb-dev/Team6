@@ -84,9 +84,7 @@ public class GameManager : MonoBehaviour
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        cropsArray = GameObject.FindGameObjectsWithTag("Crop");
         cropCountOriginal = cropsArray.Length;
-        //cropCount = cropsArray.Length;
         cropCountText.text = cropCount.ToString("F0");
 
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
