@@ -1611,10 +1611,10 @@ MonoBehaviour:
   shopType: 1
   shopPopupText: Buy Shovel
   cost: 10
+  shovelPickupPatch: {fileID: 6096248577721092904}
   shopText: {fileID: 831633713}
   textCanvas: {fileID: 415151884}
   shovelPickupPrefab: {fileID: 1066998215736283023, guid: b6fee119443d16847985b6ff670c9c64, type: 3}
-  shovelPickupPos: {x: 65.401, y: 0.977, z: -43.354}
 --- !u!1 &1577558493155206313
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,10 +5031,10 @@ MonoBehaviour:
   shopType: 0
   shopPopupText: Buy Seeds
   cost: 3
+  shovelPickupPatch: {fileID: 0}
   shopText: {fileID: 2058100298}
   textCanvas: {fileID: 251399347}
   shovelPickupPrefab: {fileID: 0}
-  shovelPickupPos: {x: 0, y: 0, z: 0}
 --- !u!1 &5044126643918677901
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,10 +7166,10 @@ MonoBehaviour:
   shopType: 2
   shopPopupText: Sell Crops
   cost: 1
+  shovelPickupPatch: {fileID: 0}
   shopText: {fileID: 1447004230}
   textCanvas: {fileID: 1560032051}
   shovelPickupPrefab: {fileID: 0}
-  shovelPickupPos: {x: 0, y: 0, z: 0}
 --- !u!1 &8950492961342707583
 GameObject:
   m_ObjectHideFlags: 0

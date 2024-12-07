@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour, IInteract
     [SerializeField] private ShopType shopType;
     [SerializeField] private string shopPopupText;
     [SerializeField] private int cost;
+    [SerializeField] private GameObject shovelPickupPatch;
 
     [Header("----- Shop Text -----")]
     [SerializeField] TMPro.TMP_Text shopText;
@@ -16,7 +17,6 @@ public class Shop : MonoBehaviour, IInteract
     [Header("----- Prefabs -----")]
     [SerializeField] private GameObject shovelPickupPrefab;
     private GameObject shovelPickup;
-    [SerializeField] private Vector3 shovelPickupPos;
 
     bool isHovered;
     float interactionCooldown;
@@ -74,7 +74,7 @@ public class Shop : MonoBehaviour, IInteract
                         {
                             Debug.Log("BOUGHT SHOVEL");
                             GameManager.Instance.AddCoins(-cost);
-                            shovelPickup = Instantiate(shovelPickupPrefab, shovelPickupPos, Quaternion.identity);
+                            shovelPickup = Instantiate(shovelPickupPrefab, shovelPickupPatch.transform.position + Vector3.up, Quaternion.identity);
                         }
                         else
                         {
