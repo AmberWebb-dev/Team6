@@ -27,7 +27,6 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private Material[] originalMaterials;
     Color materialOrig;
 
-    //animation stuffs
     [SerializeField] Animator anim;
 
     void Start()
@@ -57,6 +56,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             agent.SetDestination(currentTargetCrop.transform.position);
 
             anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+            Debug.Log($"isWalking: {anim.GetBool("isWalking")}");
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -73,6 +73,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             agent.ResetPath(); // Stop moving if no target is available
             anim.SetBool("isWalking", false);
         }
+
     }
 
     void UpdateTargetCrop()
@@ -127,6 +128,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         isAttacking = true;
 
         anim.SetBool("isAttacking", true);
+
+        Debug.Log($"isAttacking: {anim.GetBool("isAttacking")}");
 
         CropDamage cropDamage = currentTargetCrop.GetComponent<CropDamage>();
         if (cropDamage != null)

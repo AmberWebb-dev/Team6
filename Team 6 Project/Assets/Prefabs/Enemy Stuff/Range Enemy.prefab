@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3985926867833319867}
   - component: {fileID: 3985926867833319866}
   - component: {fileID: 3985926867833319868}
+  - component: {fileID: 6881537636177818256}
   m_Layer: 6
   m_Name: Range Enemy
   m_TagString: Enemy
@@ -61,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3985926867833323077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.49, y: 0, z: -26.34}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -191,7 +192,27 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!95 &6881537636177818256
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985926867833323077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f6604fa9b28ea604080f94ba14914c58, type: 3}
+  m_Controller: {fileID: 22100000, guid: 4dcea486a1a749347a958dbb4e19302d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &3985926868596107771
 GameObject:
   m_ObjectHideFlags: 0
