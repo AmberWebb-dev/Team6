@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     public Image playerHPBar;
     [Header("----- Crop Info -----")]
     public DirtActivity DirtActivityScript;
-    public GameObject[] cropsArray;
+    public List<GameObject> cropsArray; //only public for debugging purposes (do not change in inspector)
+    int cropArrayCount;
     int cropCount;
     int cropCountOriginal;
     [Header("----- Wave Settings -----")]
@@ -92,8 +93,9 @@ public class GameManager : MonoBehaviour
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        cropCountOriginal = cropsArray.Length;
+        cropCountOriginal = cropsArray.Count;
         cropCountText.text = cropCount.ToString("F0");
+        cropsArray.AddRange(GameObject.FindGameObjectsWithTag("Crop"));
 
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         waveCount = 0;
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public void UnregisterCrop(GameObject crop)
     {
-        for (int i = 0; i < cropsArray.Length; i++)
+        for (int i = 0; i < cropArrayCount; i++)
         {
             if (cropsArray[i] == crop)
             {
@@ -145,8 +147,15 @@ public class GameManager : MonoBehaviour
         return nearestCrop;
     }
 
+    public void AddCropToArray(GameObject newCrop)
+    {
+        cropsArray.Add(newCrop);
+    }
+
+
     void Update()
     {
+        cropArrayCount = cropsArray.Count;
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuActive == null)

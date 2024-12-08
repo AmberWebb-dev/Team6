@@ -9,6 +9,8 @@ public class DirtActivity : MonoBehaviour
     
     [SerializeField] GameObject prefab;
 
+    private GameObject newCrop;
+
     bool hasCrop;
     bool inRange;
 
@@ -18,11 +20,7 @@ public class DirtActivity : MonoBehaviour
     {
         if (inRange && !hasCrop && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentSeedsInInventory > 0)
         {
-            Debug.Log("Placing Seed");
-            GameManager.Instance.playerScript.PlaceCrop();
-            newCropPos = gameObject.transform.position;
-            newCropPos.y = prefab.transform.position.y;
-            Instantiate(prefab, newCropPos, Quaternion.identity);
+            PlantSeeds();
         }
         else if(inRange && hasCrop)
         {
@@ -65,6 +63,16 @@ public class DirtActivity : MonoBehaviour
             GameManager.Instance.RemoveControlPopup("Plant Seed");
             inRange = false;
         }
+    }
+
+    private void PlantSeeds()
+    {
+        Debug.Log("Placing Seed");
+        GameManager.Instance.playerScript.PlaceCrop();
+        newCropPos = gameObject.transform.position;
+        newCropPos.y = prefab.transform.position.y;
+        newCrop = Instantiate(prefab, newCropPos, Quaternion.identity);
+        GameManager.Instance.AddCropToArray(newCrop);
     }
 
 }
