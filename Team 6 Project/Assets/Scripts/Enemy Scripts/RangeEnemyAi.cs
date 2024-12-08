@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class RangeEnemyAi : MonoBehaviour, IDamage
 {
+    [Header("----- Powerup Spawn Chances -----")]
+    [SerializeField] private List<PowerupChance> powerupChances = new List<PowerupChance>();
+
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer model;
 
@@ -160,6 +163,17 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
             AudioManager.Instance.enemyDeathSound.PlayAtPoint(transform.position);
             GameManager.Instance.GameGoal(-1);
             GameManager.Instance.enemyScoreTotal += scoreValue;
+
+            // Roll powerup chances
+            for (int i = 0; i < powerupChances.Count; i++)
+            {
+                if (powerupChances[i].RollChance())
+                {
+                    powerupChances[i].SpawnPowerup(transform.position);
+                    break;
+                }
+            }
+
             Destroy(gameObject);
         }
         else

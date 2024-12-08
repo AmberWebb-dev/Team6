@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class SpecialEnemy : MonoBehaviour, IDamage
 {
+    [Header("----- Powerup Spawn Chances -----")]
+    [SerializeField] private List<PowerupChance> powerupChances = new List<PowerupChance>();
+
     [SerializeField] Renderer model;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Transform headPos;
@@ -181,6 +184,17 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         GameManager.Instance.GameGoal(-1);
         GameManager.Instance.enemyScoreTotal += scoreValue;
+
+        // Roll powerup chances
+        for (int i = 0; i < powerupChances.Count; i++)
+        {
+            if (powerupChances[i].RollChance())
+            {
+                powerupChances[i].SpawnPowerup(transform.position);
+                break;
+            }
+        }
+
         Destroy(gameObject); 
     }
 

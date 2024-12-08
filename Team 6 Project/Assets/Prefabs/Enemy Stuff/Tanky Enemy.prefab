@@ -122,6 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b59393410bc21a4da01e3b08ea8b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupChances:
+  - powerupPrefab: {fileID: 2276042260435846925, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
+    chanceToSpawn: 0.25
   model: {fileID: 0}
   agent: {fileID: 1751422190737065395}
   headPosition: {fileID: 1751422188869590907}
