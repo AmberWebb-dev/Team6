@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] LayerMask ignoreMask;
     [SerializeField] CharacterController pController;
     [Header("----- Player Stats -----")]
-    int HPOriginal;
     [SerializeField] int HP;
     [SerializeField] int speed;
+    int HPOriginal;
     bool isSprinting;
     [SerializeField] int sprint;
     private int jumpCount;
@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int jumpSpeed;
     [SerializeField] int gravity;
     [SerializeField] int interactionRange;
+    [Header("----- Power Ups -----")]
+    [SerializeField] List<ActivePowerup> activePowerups = new List<ActivePowerup>();
     [Header("----- Gun Stats -----")]
     bool isShooting;
     [SerializeField] int shootDamage;
@@ -76,6 +78,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         Movement();
         Sprint();
         Interact();
+        UpdateActivePowerups();
     }
 
     // Setter for jumpCount private variable
@@ -396,6 +399,59 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, shovelDist);
+        }
+    }
+
+    public enum PowerupType { Speed }
+    [System.Serializable]
+    class ActivePowerup
+    {
+        public PowerupType type;
+        public float maxDuration;
+        public float duration;
+    }
+
+    public bool ContainsPowerup(PowerupType type)
+    {
+        for (int i = 0; i < activePowerups.Count; i++)
+        { 
+            if (activePowerups[i].type == type)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void AddPowerup(PowerupType type, float duration)
+    {
+        for (int i = 0; i < activePowerups.Count; i++)
+        {
+            if (activePowerups[i].type == type)
+            {
+                activePowerups[i].duration = duration;
+                activePowerups[i].maxDuration = duration;
+                return;
+            }
+        }
+
+        ActivePowerup newPowerup = new ActivePowerup();
+        newPowerup.type = type;
+        newPowerup.maxDuration = duration;
+        newPowerup.duration = duration;
+
+        activePowerups.Add(newPowerup);
+    }
+
+    private void UpdateActivePowerups()
+    {
+        for (int i = 0; i < activePowerups.Count; i++)
+        {
+            activePowerups[i].duration -= Time.deltaTime;
+            if (activePowerups[i].duration <= 0)
+            {
+                activePowerups.Remove(activePowerups[i]);
+            }
         }
     }
 }
