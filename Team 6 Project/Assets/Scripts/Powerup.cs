@@ -8,6 +8,11 @@ public class Powerup : MonoBehaviour
     [SerializeField] PlayerController.PowerupType type;
     [SerializeField] float duration;
 
+    private void Start()
+    {
+        transform.position = new Vector3(transform.position.x, 1.0f, transform.position.z);
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
