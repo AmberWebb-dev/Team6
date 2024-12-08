@@ -19,7 +19,12 @@ public class Shield : MonoBehaviour
     {
         shieldActive = true;
 
-        StartCoroutine(respawnShield());
+        transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+
+        if (respawnDelay != 0)
+        {
+            StartCoroutine(respawnShield());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,9 +39,16 @@ public class Shield : MonoBehaviour
 
             shieldActive = false;
 
-            StartCoroutine(respawnShield());
-
-            transform.position = new Vector3(-999, -999, -999); // Move it out of view
+            // If respawn delay is zero, it won't respawn.
+            if (respawnDelay == 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                StartCoroutine(respawnShield());
+                transform.position = new Vector3(-999, -999, -999); // Move it out of view
+            }
         }
     }
 

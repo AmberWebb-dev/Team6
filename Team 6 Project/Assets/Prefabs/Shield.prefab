@@ -4864,7 +4864,7 @@ MonoBehaviour:
   spawnRangeX: {x: 0, y: 0}
   spawnRangeZ: {x: 0, y: 0}
   yPosition: 1
-  respawnDelay: 15
+  respawnDelay: 0
 --- !u!33 &2276042260435847024
 MeshFilter:
   m_ObjectHideFlags: 0

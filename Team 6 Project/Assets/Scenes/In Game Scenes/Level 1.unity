@@ -4269,6 +4269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 2276042260435847025, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
+      propertyPath: respawnDelay
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2276042260435847030, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
       propertyPath: m_RootOrder
       value: 7

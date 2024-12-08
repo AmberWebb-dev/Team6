@@ -7,6 +7,9 @@ using UnityEngine.AI;
 
 public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 {
+    [Header("----- Powerup Spawn Chances -----")]
+    [SerializeField] private List<PowerupChance> powerupChances = new List<PowerupChance>();
+
     [SerializeField] Renderer model;
     [SerializeField] public NavMeshAgent agent;
 
@@ -57,7 +60,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             agent.SetDestination(currentTargetCrop.transform.position);
 
             anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
-            Debug.Log($"isWalking: {anim.GetBool("isWalking")}");
+            //Debug.Log($"isWalking: {anim.GetBool("isWalking")}");
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -109,6 +112,17 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             AudioManager.Instance.enemyDeathSound.PlayAtPoint(transform.position);
             GameManager.Instance.GameGoal(-1);
             GameManager.Instance.enemyScoreTotal += scoreValue;
+
+            // Roll powerup chances
+            for (int i = 0; i < powerupChances.Count; i++)
+            {
+                if (powerupChances[i].RollChance())
+                {
+                    powerupChances[i].SpawnPowerup(transform.position);
+                    break;
+                }
+            }
+
             Destroy(gameObject);
         }
         else
