@@ -120,7 +120,9 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
 
-        pController.Move(moveDirection * speed * Time.deltaTime);
+        float speedPowerupModifier = ContainsPowerup(PowerupType.Speed) ? 2 : 1;
+
+        pController.Move(moveDirection * speed * speedPowerupModifier * Time.deltaTime);
 
 
         Jump();
