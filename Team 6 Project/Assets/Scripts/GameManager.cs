@@ -44,6 +44,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject effectShield;
     public bool isPaused;
     float timeScaleOrig;
+
+    [Header("----- Powerup UI -----")]
+    [SerializeField] Transform powerupIconsContent;
+    [SerializeField] GameObject powerupIconPrefab;
+    private List<GameObject> powerupIcons = new List<GameObject>();
+    private List<Image> powerupImages = new List<Image>();
+    int powerupCount = 0;
+
     [Header("----- Player Stuff -----")]
     public PlayerController playerScript;
     public GameObject player;
@@ -152,6 +160,8 @@ public class GameManager : MonoBehaviour
                 StateUnpause();
             }
         }
+
+        UpdatePowerupIcons();
     }
 
     //Game States
@@ -470,5 +480,38 @@ public class GameManager : MonoBehaviour
         damageScale = Mathf.Pow(1.05f, waveCount);
 
         Debug.Log($"Scaling difficulty: Health x{healthScale}, Speed x{speedScale}, Damage x{damageScale}");
+    }
+
+    private void ResetPowerupIcons()
+    {
+        while (powerupIcons.Count > 0)
+        {
+            Destroy(powerupIcons[0]);
+            powerupIcons.RemoveAt(0);
+            powerupImages.RemoveAt(0);
+        }
+
+        for (int i = 0; i < playerScript.activePowerups.Count; i++)
+        {
+            GameObject icon = Instantiate(powerupIconPrefab, powerupIconsContent);
+            powerupIcons.Add(icon);
+            powerupImages.Add(icon.transform.GetChild(0).GetComponent<Image>());
+
+            icon.transform.GetChild(1).GetComponent<TMP_Text>().text = playerScript.activePowerups[i].type.ToString();
+        }
+    }
+
+    private void UpdatePowerupIcons()
+    {
+        if (powerupCount != playerScript.activePowerups.Count)
+        {
+            ResetPowerupIcons();
+            powerupCount = playerScript.activePowerups.Count;
+        }
+
+        for (int i = 0; i < playerScript.activePowerups.Count; i++)
+        {
+            powerupImages[i].fillAmount = playerScript.activePowerups[i].duration / playerScript.activePowerups[i].maxDuration;
+        }
     }
 }

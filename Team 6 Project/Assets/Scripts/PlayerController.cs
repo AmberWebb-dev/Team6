@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int gravity;
     [SerializeField] int interactionRange;
     [Header("----- Power Ups -----")]
-    [SerializeField] List<ActivePowerup> activePowerups = new List<ActivePowerup>();
+    public List<ActivePowerup> activePowerups = new List<ActivePowerup>();
     [Header("----- Gun Stats -----")]
     bool isShooting;
     [SerializeField] int shootDamage;
@@ -406,7 +406,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
     public enum PowerupType { Speed }
     [System.Serializable]
-    class ActivePowerup
+    public class ActivePowerup
     {
         public PowerupType type;
         public float maxDuration;
