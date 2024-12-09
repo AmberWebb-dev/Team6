@@ -8965,6 +8965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveTimer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3993596695096002216, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4112367237063940359, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_IsActive
       value: 0
