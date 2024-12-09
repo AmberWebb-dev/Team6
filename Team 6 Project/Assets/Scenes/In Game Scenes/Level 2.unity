@@ -8782,6 +8782,14 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 711881165}
+    - target: {fileID: 5235747505718514542, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505718514547, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9490196
+      objectReference: {fileID: 0}
     - target: {fileID: 5235747506182973463, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8878,7 +8886,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5235747505718514542, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
 --- !u!114 &278877445 stripped
 MonoBehaviour:
