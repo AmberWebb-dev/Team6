@@ -56,6 +56,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     void Update()
     {
+        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+
         if (playerInRange && !CanSeePlayer())
         {
             if (!isRoaming && agent.remainingDistance < 0.05f)
@@ -70,12 +72,12 @@ public class SpecialEnemy : MonoBehaviour, IDamage
                 StartCoroutine(Roam());
             }
         }
-        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
     }
 
     IEnumerator Roam()
     {
         isRoaming = true;
+        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
         yield return new WaitForSeconds(roamTimer);
 
         agent.stoppingDistance = 0;
@@ -90,6 +92,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
         }
 
         isRoaming = false;
+        anim.SetBool("isWalking", false);
     }
     bool CanSeePlayer()
     {

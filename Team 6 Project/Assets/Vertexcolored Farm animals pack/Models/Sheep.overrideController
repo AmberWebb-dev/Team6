@@ -7,13 +7,11 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sheep
-  m_Controller: {fileID: 9100000, guid: c33d198cb1f32c147a0af4364ffc0441, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9ed7468074159544ba662187573b1b7d, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
-  - m_OriginalClip: {fileID: 7400002, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
-    m_OverrideClip: {fileID: 7400002, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
-  - m_OriginalClip: {fileID: 7400004, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
+  - m_OriginalClip: {fileID: 7400004, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
     m_OverrideClip: {fileID: 7400004, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
-  - m_OriginalClip: {fileID: 7400006, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
-    m_OverrideClip: {fileID: 7400006, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+  - m_OriginalClip: {fileID: 7400002, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+    m_OverrideClip: {fileID: 7400002, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
