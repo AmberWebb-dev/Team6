@@ -250,6 +250,19 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         
     }
 
+    public void HealAmount(int amount)
+    {
+        if (HP + amount > HPOriginal)
+        {
+            HP = HPOriginal;
+        }
+        else
+        {
+            HP = HP + amount;
+        }
+        UpdatePlayerUI();
+    }
+
     public void UpdatePlayerUI()
     {
         GameManager.Instance.playerHPBar.fillAmount = (float)HP / HPOriginal;
