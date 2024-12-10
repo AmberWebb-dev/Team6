@@ -2682,6 +2682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916819392}
+  - component: {fileID: 916819396}
   - component: {fileID: 916819395}
   - component: {fileID: 916819394}
   - component: {fileID: 916819393}
@@ -2710,7 +2711,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 333, y: 13.184}
-  m_SizeDelta: {x: 515.9949, y: 180}
+  m_SizeDelta: {x: 515.9949, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916819393
 MonoBehaviour:
@@ -2806,6 +2807,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916819391}
   m_CullTransparentMesh: 1
+--- !u!114 &916819396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916819391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e7f1d4d7a4b4742970e0e937c42bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprite: {fileID: 21300000, guid: 40d402146917d134d9eb271c82077ecb, type: 3}
+  hoverSprite: {fileID: 21300000, guid: 2c54a1c681318ec4b852e065cac0a028, type: 3}
 --- !u!1 &1003756104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,6 +4109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583256252}
+  - component: {fileID: 1583256256}
   - component: {fileID: 1583256255}
   - component: {fileID: 1583256254}
   - component: {fileID: 1583256253}
@@ -4122,7 +4138,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -350, y: 13.184}
-  m_SizeDelta: {x: 515.9949, y: 180}
+  m_SizeDelta: {x: 515.9949, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583256253
 MonoBehaviour:
@@ -4230,6 +4246,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583256251}
   m_CullTransparentMesh: 1
+--- !u!114 &1583256256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583256251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e7f1d4d7a4b4742970e0e937c42bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprite: {fileID: 21300000, guid: 5eb9b622342754246b0f82c1d6f7721f, type: 3}
+  hoverSprite: {fileID: 21300000, guid: a64ffb0e2ef7ff140909c7f290e16319, type: 3}
 --- !u!1 &1595812893
 GameObject:
   m_ObjectHideFlags: 0
