@@ -9245,11 +9245,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121800, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235747505551232861, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_text
       value: 'Wave:
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505718514546, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505718514549, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5235747506182973463, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_IsActive
@@ -9270,6 +9282,14 @@ PrefabInstance:
     - target: {fileID: 5415505954768236390, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490110830479704700, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874516292771307441, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
