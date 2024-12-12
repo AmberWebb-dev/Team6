@@ -26,12 +26,16 @@ public class TankyEnemy : MonoBehaviour, IDamage
     private bool isAttacking;
     bool isKnockedback;
 
+    float originalSpeed;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         materialOrig = GetComponentInChildren<Renderer>().material.color;
         GameManager.Instance.GameGoal(1);
         animator = GetComponent<Animator>();
+
+        originalSpeed = agent.speed;
 
         UpdateTargetCrop();
     }
@@ -43,6 +47,15 @@ public class TankyEnemy : MonoBehaviour, IDamage
         if (currentTargetCrop == null)
         {
             UpdateTargetCrop();
+        }
+
+        if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
+        {
+            agent.speed = originalSpeed / 4;
+        }
+        else
+        {
+            agent.speed = originalSpeed;
         }
 
         if (currentTargetCrop != null)

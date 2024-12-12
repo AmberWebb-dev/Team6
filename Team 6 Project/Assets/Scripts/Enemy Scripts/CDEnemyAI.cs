@@ -27,6 +27,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     private bool isKnockedback;
     private bool inRange;
 
+    private float originalSpeed;
+
     [SerializeField] Material flashRedMaterial;
     private Material[] originalMaterials;
     Color materialOrig;
@@ -41,6 +43,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         //originalMaterials = model.materials;
         GameManager.Instance.GameGoal(1);
 
+        originalSpeed = agent.speed;
+
         // Set initial target crop
         UpdateTargetCrop();
     }
@@ -52,6 +56,15 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
         if (currentTargetCrop == null)
         {
             UpdateTargetCrop();
+        }
+
+        if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
+        {
+            agent.speed = originalSpeed / 4;
+        }
+        else
+        {
+            agent.speed = originalSpeed;
         }
 
         if (currentTargetCrop != null)

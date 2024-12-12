@@ -34,6 +34,8 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     bool isRoaming;
     bool isKnockedback;
 
+    private float originalSpeed;
+
     Vector3 playerDir;
     Vector3 startPosition;
 
@@ -49,6 +51,9 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         materialOrig = GetComponentInChildren<Renderer>().material.color;
         anim = GetComponent<Animator>();
         GameManager.Instance.GameGoal(1);
+
+        originalSpeed = agent.speed;
+
         startPosition = transform.position;
         stoppingDistanceOrig = agent.stoppingDistance;
     }
@@ -57,6 +62,15 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     void Update()
     {
         anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+
+        if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
+        {
+            agent.speed = originalSpeed / 4;
+        }
+        else
+        {
+            agent.speed = originalSpeed;
+        }
 
         if (playerInRange && !CanSeePlayer())
         {
