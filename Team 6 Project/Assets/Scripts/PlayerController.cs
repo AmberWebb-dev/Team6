@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] float shootRate;
     [SerializeField] int shootDistance;
     [SerializeField] Animator crossbowAnimator;
+    [SerializeField] GameObject crossbowPowerupParticles;
     [Header("----- Shovel Stats -----")]
     bool hasShovel;
     bool isSwinging;
@@ -79,6 +80,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         Sprint();
         Interact();
         UpdateActivePowerups();
+
+        crossbowPowerupParticles.SetActive(ContainsPowerup(PowerupType.Boost));
     }
 
     // Setter for jumpCount private variable
@@ -417,7 +420,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         }
     }
 
-    public enum PowerupType { Speed, Freeze }
+    public enum PowerupType { Speed, Freeze, Boost }
     [System.Serializable]
     public class ActivePowerup
     {
