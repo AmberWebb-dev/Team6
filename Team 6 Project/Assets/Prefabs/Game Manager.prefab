@@ -4131,7 +4131,6 @@ GameObject:
   - component: {fileID: 5235747505718514546}
   - component: {fileID: 5235747505718514544}
   - component: {fileID: 5235747505718514547}
-  - component: {fileID: 5235747505718514542}
   - component: {fileID: 5235747505718514545}
   m_Layer: 5
   m_Name: Blindness
@@ -4198,22 +4197,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &5235747505718514542
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5235747505718514549}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 8c7e61341fb239e479ba172e641b733f, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 8c7e61341fb239e479ba172e641b733f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!82 &5235747505718514545
 AudioSource:
   m_ObjectHideFlags: 0
