@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] int shootDistance;
     [SerializeField] Animator crossbowAnimator;
     [SerializeField] GameObject crossbowPowerupParticles;
+    [SerializeField] GameObject boostHitEffect;
     [Header("----- Shovel Stats -----")]
     bool hasShovel;
     bool isSwinging;
@@ -188,15 +189,20 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
             IDamage dmg = hit.collider.GetComponent<IDamage>();
 
-            // If damage is not null set damage amount to shoot damage
-            if(dmg != null )
+            if (ContainsPowerup(PowerupType.Boost))
             {
-                dmg.TakeDamage(shootDamage);
+                Instantiate(boostHitEffect, hit.point, Quaternion.identity);
+            }
+
+            // If damage is not null set damage amount to shoot damage
+            if (dmg != null )
+            {
+                dmg.TakeDamage(shootDamage * (ContainsPowerup(PowerupType.Boost) ? 2 : 1));
             }
         }
 
         // Wait for duration of the shooting rate and set isShooting back to false
-        yield return new WaitForSeconds(shootRate);
+        yield return new WaitForSeconds(shootRate / (ContainsPowerup(PowerupType.Boost) ? 2 : 1));
 
         crossbowAnimator.SetBool("Fire", true);
 
