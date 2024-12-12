@@ -19,6 +19,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
     [SerializeField] int scoreValue;
 
+    [SerializeField] Animator animator;
+
     private GameObject currentTargetCrop;
     private Color colourOriginal;
     private bool isAttacking;
@@ -29,6 +31,7 @@ public class TankyEnemy : MonoBehaviour, IDamage
         agent = GetComponent<NavMeshAgent>();
         materialOrig = GetComponentInChildren<Renderer>().material.color;
         GameManager.Instance.GameGoal(1);
+        animator = GetComponent<Animator>();
 
         UpdateTargetCrop();
     }
@@ -47,6 +50,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
             Vector3 cropDirection = currentTargetCrop.transform.position - headPosition.position;
             agent.SetDestination(currentTargetCrop.transform.position);
 
+            animator.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 FaceTarget(cropDirection);
@@ -60,6 +65,7 @@ public class TankyEnemy : MonoBehaviour, IDamage
         else
         {
             agent.ResetPath();
+            animator.SetBool("isWalking", false);
         }
     }
 
@@ -135,6 +141,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
     {
         isAttacking = true;
 
+        animator.SetBool("isAttacking", true);
+
         CropDamage cropDamage = currentTargetCrop.GetComponent<CropDamage>();
         if (cropDamage != null)
         {
@@ -142,6 +150,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
         }
 
         yield return new WaitForSeconds(attackRate);
+
+        animator.SetBool("isAttacking", false);
         isAttacking = false;
     }
 

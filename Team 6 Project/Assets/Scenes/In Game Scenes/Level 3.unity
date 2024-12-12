@@ -10880,6 +10880,10 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: molePrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -10895,6 +10899,10 @@ PrefabInstance:
       propertyPath: molePrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 9008777840376650599, guid: 5808cee0cc69b5e48b56dfcffcb01fa7, type: 3}
+    - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
+      propertyPath: molePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1751422190737065289, guid: 55f7b6b25059e9f4c9742485f81c8105, type: 3}
     - target: {fileID: 5235747505205121799, guid: 33a299a11497dbd4e95ffa4c9f930c5c, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 

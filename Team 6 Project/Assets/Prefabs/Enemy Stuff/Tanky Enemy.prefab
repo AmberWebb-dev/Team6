@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751422188869590906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49000168, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.023, y: 0.739, z: 2.234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751422189332587577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.092, y: -0.25, z: 0.612}
+  m_LocalPosition: {x: -0.009, y: 0.63, z: 2.593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 1751422190737065289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1751422188869590907}
@@ -134,11 +134,12 @@ MonoBehaviour:
   model: {fileID: 0}
   agent: {fileID: 1751422190737065395}
   headPosition: {fileID: 1751422188869590907}
-  faceTargetSpeed: 60
-  HP: 10
+  faceTargetSpeed: 20
+  HP: 6
   attackDamage: 3
   attackRate: 4
   scoreValue: 250
+  animator: {fileID: 5987107402981726430}
 --- !u!195 &1751422190737065395
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -153,7 +154,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -172,8 +173,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 3.5}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 2, y: 1.6, z: 2.7}
+  m_Center: {x: 0, y: 1, z: 0.4}
 --- !u!135 &1751422190737065393
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -185,8 +186,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!95 &5987107402981726430
 Animator:
   serializedVersion: 5
@@ -221,6 +222,18 @@ PrefabInstance:
     - target: {fileID: 400008, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 603d47fe8c56c6d4da81d474fb50fbdb, type: 3}
       propertyPath: m_LocalPosition.x
