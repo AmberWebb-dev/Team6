@@ -10,4 +10,9 @@ public class toSettings : MonoBehaviour
         SceneManager.LoadScene("Settings");
 
     }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
