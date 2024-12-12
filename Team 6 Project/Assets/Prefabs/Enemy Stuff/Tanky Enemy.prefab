@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerupChances:
   - powerupPrefab: {fileID: 1585244409280556259, guid: cd72bf2d46044044a87790c33cd19634, type: 3}
-    chanceToSpawn: 0.5
+    chanceToSpawn: 0.4
   - powerupPrefab: {fileID: 5396034891819432386, guid: 799186921f011834ebed7580b77115b1, type: 3}
     chanceToSpawn: 0.2
   - powerupPrefab: {fileID: 2276042260435846925, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
@@ -132,6 +132,8 @@ MonoBehaviour:
   - powerupPrefab: {fileID: 6980165443505485755, guid: 9070164e9e54fd343ac1eba92c2192bb, type: 3}
     chanceToSpawn: 0.1
   - powerupPrefab: {fileID: 5473162376398089814, guid: 64dfeb52c78f7ed44a006567ba63548f, type: 3}
+    chanceToSpawn: 0.1
+  - powerupPrefab: {fileID: 4802853399942709398, guid: 86ba8102d1c22924abe46824aa9b3a27, type: 3}
     chanceToSpawn: 0.1
   model: {fileID: 0}
   agent: {fileID: 1751422190737065395}
