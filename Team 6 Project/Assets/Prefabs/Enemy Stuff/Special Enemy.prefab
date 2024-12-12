@@ -91,7 +91,9 @@ MonoBehaviour:
   - powerupPrefab: {fileID: 2276042260435846925, guid: 70ee66e7338e9984ca80f97e8e46bc3c, type: 3}
     chanceToSpawn: 0.1
   - powerupPrefab: {fileID: 6980165443505485755, guid: 9070164e9e54fd343ac1eba92c2192bb, type: 3}
-    chanceToSpawn: 0.3
+    chanceToSpawn: 0.1
+  - powerupPrefab: {fileID: 5473162376398089814, guid: 64dfeb52c78f7ed44a006567ba63548f, type: 3}
+    chanceToSpawn: 0.1
   model: {fileID: 0}
   agent: {fileID: 9008777840376650598}
   headPos: {fileID: 9008777840259966056}
