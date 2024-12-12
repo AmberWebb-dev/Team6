@@ -9,6 +9,8 @@ public class VolumeControl : MonoBehaviour
     public AudioMixer audioMixer; 
     public Slider volumeSlider;
 
+    private float savedVolume;
+
     private void Awake()
     {
         if (FindObjectsOfType<AudioManager>().Length > 1)
@@ -29,21 +31,42 @@ public class VolumeControl : MonoBehaviour
         if (volumeSlider != null)
         {
             volumeSlider.value = savedVolume;
-            volumeSlider.onValueChanged.AddListener(SetVolume);
+            volumeSlider.onValueChanged.AddListener(ApplyTemporaryVolume);
         }
-        
-        SetVolume(savedVolume);
+
+        ApplyVolumeToMixer(savedVolume);
     }
 
-    
-
-    public void SetVolume(float volume)
+    public void ApplyTemporaryVolume(float volume)
     {
-        // Adjust the volume on the AudioMixer (convert linear value to decibels)
+        // Temporarily apply the volume to the AudioMixer
+        ApplyVolumeToMixer(volume);
+    }
+    private void ApplyVolumeToMixer(float volume)
+    {
+        // Convert linear slider value to decibels (-80 to 0)
         float dbVolume = Mathf.Log10(volume) * 20;
         audioMixer.SetFloat("Master Volume", dbVolume);
+    }
 
-        // Save the volume setting
-        PlayerPrefs.SetFloat("Master Volume", volume);
+    public void Accept()
+    {
+        // Save the current slider value permanently
+        float volumeToSave = volumeSlider.value;
+        PlayerPrefs.SetFloat("Master Volume", volumeToSave);
+        PlayerPrefs.Save(); // Force save to disk
+        savedVolume = volumeToSave; // Update the saved volume reference
+        Debug.Log("Settings saved!");
+    }
+
+    public void Cancel()
+    {
+        // Revert the slider and AudioMixer to the saved value
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = savedVolume;
+        }
+        ApplyVolumeToMixer(savedVolume);
+        Debug.Log("Settings reverted!");
     }
 }
