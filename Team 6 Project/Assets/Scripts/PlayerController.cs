@@ -426,7 +426,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         }
     }
 
-    public enum PowerupType { Speed, Freeze, Boost }
+    public enum PowerupType { Speed, Freeze, Boost, Shield }
     [System.Serializable]
     public class ActivePowerup
     {
