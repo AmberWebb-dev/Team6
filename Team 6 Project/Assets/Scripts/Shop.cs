@@ -9,6 +9,9 @@ public class Shop : MonoBehaviour, IInteract
     [SerializeField] private string shopPopupText;
     [SerializeField] private int cost;
     [SerializeField] private GameObject shovelPickupPatch;
+    [SerializeField] ParticleSystem seedParticles;
+    [SerializeField] ParticleSystem sellCropsParticles;
+    [SerializeField] ParticleSystem shovelParticles;
 
     [Header("----- Shop Text -----")]
     [SerializeField] TMPro.TMP_Text shopText;
@@ -60,6 +63,7 @@ public class Shop : MonoBehaviour, IInteract
                         if (GameManager.Instance.GetCoinCount() >= cost)
                         {
                             Debug.Log("BOUGHT SEEDS");
+                            seedParticles.Play();
                             GameManager.Instance.AddCoins(-cost);
                             GameManager.Instance.playerScript.currentSeedsInInventory = GameManager.Instance.playerScript.maxSeedsInInventory;
                             GameManager.Instance.UpdateSeedInventory(GameManager.Instance.playerScript.maxSeedsInInventory);
@@ -73,6 +77,7 @@ public class Shop : MonoBehaviour, IInteract
                         if (GameManager.Instance.GetCoinCount() >= cost && shovelPickup == null)
                         {
                             Debug.Log("BOUGHT SHOVEL");
+                            shovelParticles.Play();
                             GameManager.Instance.AddCoins(-cost);
                             shovelPickup = Instantiate(shovelPickupPrefab, shovelPickupPatch.transform.position + Vector3.up, Quaternion.identity);
                         }
@@ -83,6 +88,7 @@ public class Shop : MonoBehaviour, IInteract
                         break;
                     case ShopType.SellShop:
                         Debug.Log($"{GameManager.Instance.playerScript.currentCropsInInventory} crops sold!");
+                        sellCropsParticles.Play();
                         GameManager.Instance.AddCoins(GameManager.Instance.playerScript.currentCropsInInventory * cost);
                         GameManager.Instance.playerScript.currentCropsInInventory = 0;
                         GameManager.Instance.UpdateCropInventory(0);
