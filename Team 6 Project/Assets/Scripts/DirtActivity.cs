@@ -22,7 +22,7 @@ public class DirtActivity : MonoBehaviour
         {
             PlantSeeds();
         }
-        else if(inRange && hasCrop)
+        else if(hasCrop && inRange || GameManager.Instance.playerScript.currentSeedsInInventory <= 0)
         {
             GameManager.Instance.RemoveControlPopup("Plant Crop");
         }
@@ -60,7 +60,7 @@ public class DirtActivity : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.RemoveControlPopup("Plant Seed");
+            GameManager.Instance.RemoveControlPopup("Plant Crop");
             inRange = false;
         }
     }
