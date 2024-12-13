@@ -6,9 +6,10 @@ public class FlashLightPickup : MonoBehaviour
 {
 
     public Light playerLight;
+
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player touched the flashlight
+        // Check if the player touched the flashlight object
         if (other.CompareTag("Player"))
         {
             // Enable the player's light
