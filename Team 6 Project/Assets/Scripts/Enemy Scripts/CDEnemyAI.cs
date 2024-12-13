@@ -53,6 +53,15 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     {
         if (isKnockedback) { return; }
 
+        if (!isAttacking && agent.remainingDistance > agent.stoppingDistance && agent.velocity.magnitude > 0.1f)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+
         if (currentTargetCrop == null)
         {
             UpdateTargetCrop();
@@ -72,8 +81,6 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
             Vector3 cropDirection = currentTargetCrop.transform.position - headPosition.position;
             agent.SetDestination(currentTargetCrop.transform.position);
 
-            anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
-            //Debug.Log($"isWalking: {anim.GetBool("isWalking")}");
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -169,8 +176,7 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     {
         isAttacking = true;
 
-        Debug.Log("Starting attack on crop: " + currentTargetCrop.name);
-
+        anim.SetBool("isWalking", false);
         anim.SetBool("isAttacking", true);
 
         CropDamage cropDamage = currentTargetCrop.GetComponent<CropDamage>();
