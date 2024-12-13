@@ -41,6 +41,10 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] float knockbackStunDuration;
     [SerializeField] int shovelDist;
     [SerializeField] private GameObject shovelHitParticles;
+    [SerializeField] private Material goldenShovelMaterial;
+    [SerializeField] private ShovelStats defaultShovel;
+    private Material shovelOriginalMaterial;
+    bool hasGoldenShovel = false;
 
     [SerializeField] public int maxCropInInventory;
     public int currentCropsInInventory;
@@ -83,6 +87,24 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         UpdateActivePowerups();
 
         crossbowPowerupParticles.SetActive(ContainsPowerup(PowerupType.Boost));
+
+        if (!hasGoldenShovel && ContainsPowerup(PowerupType.GoldenShovel))
+        {
+            if (shovelList.Count == 0)
+            {
+                GetShovelStats(defaultShovel);
+            }
+
+            hasGoldenShovel = true;
+            shovelOriginalMaterial = shovelModel.GetComponent<MeshRenderer>().material;
+            shovelModel.GetComponent<MeshRenderer>().material = goldenShovelMaterial;
+        }
+        if (hasGoldenShovel && !ContainsPowerup(PowerupType.GoldenShovel))
+        {
+            hasGoldenShovel = false;
+            shovelModel.GetComponent<MeshRenderer>().material = shovelOriginalMaterial;
+            shovelOriginalMaterial = null;
+        }
     }
 
     // Setter for jumpCount private variable
@@ -349,7 +371,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
             IDamage dmg = hitCollider.GetComponent<IDamage>();
             if (dmg != null)
             {
-                dmg.TakeDamage(shovelDMG);
+                dmg.TakeDamage(ContainsPowerup(PowerupType.GoldenShovel) ? 9999 : shovelDMG);
             }
 
             IKnockback knockback = hitCollider.GetComponent<IKnockback>();
@@ -364,7 +386,10 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
 
         if (enemiesHit > 0)
         {
-            shovelDurability--;
+            if (!ContainsPowerup(PowerupType.GoldenShovel))
+            {
+                shovelDurability--;
+            }
             AudioManager.Instance.shovelHitSound.PlayOnPlayer();
         }
         Debug.Log("Shovel durability: " + shovelDurability);
@@ -385,6 +410,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         shovelDist = 0;
         swingRate = 0;
         shovelModel.SetActive(false);
+
+        shovelList.RemoveAt(shovelList.Count - 1);
 
         GameManager.Instance.RemoveControlPopup("Shovel");
 
@@ -426,7 +453,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
         }
     }
 
-    public enum PowerupType { Speed, Freeze, Boost, Shield }
+    public enum PowerupType { Speed, Freeze, Boost, Shield, GoldenShovel }
     [System.Serializable]
     public class ActivePowerup
     {

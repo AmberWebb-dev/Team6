@@ -286,6 +286,8 @@ MonoBehaviour:
   knockbackStunDuration: 0
   shovelDist: 0
   shovelHitParticles: {fileID: 8186149131180772835, guid: daf553d3fea289b4bb50bd9d2c3092c2, type: 3}
+  goldenShovelMaterial: {fileID: 2100000, guid: 08bd4a8493a7e5c4f87fbd5abdbde41a, type: 2}
+  defaultShovel: {fileID: 11400000, guid: bd7f8b0f55f183343a61e2c4da8e4ddc, type: 2}
   maxCropInInventory: 3
   currentCropsInInventory: 0
   maxSeedsInInventory: 5
