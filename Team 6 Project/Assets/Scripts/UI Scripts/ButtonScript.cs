@@ -16,6 +16,8 @@ public class ButtonScript : MonoBehaviour
     }
     public void MainMenu()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
     }
     public void Quit()
@@ -36,6 +38,14 @@ public class ButtonScript : MonoBehaviour
         }
 
         SceneManager.LoadScene(nextSceneIndex);
+        GameManager.Instance.StateUnpause();
+    }
+
+    public void Credits()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Credits");
         GameManager.Instance.StateUnpause();
     }
 

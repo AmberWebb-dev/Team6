@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     [SerializeField] Button nextLevelButton;
+    [SerializeField] Button creditsButton;
     [Header("----- Popups -----")]
     [SerializeField] Transform controlPopupTransform;
     [SerializeField] GameObject controlPopupPrefab;
@@ -241,10 +242,14 @@ public class GameManager : MonoBehaviour
                 // Set Win UI Stuff
                 if (currentLevel + 1 > totalLevelCount)
                 {
+                    creditsButton.gameObject.SetActive(true);
+                    nextLevelButton.gameObject.SetActive(false);
                     nextLevelButton.interactable = false;
                 }
                 else
                 {
+                    creditsButton.gameObject.SetActive(false);
+                    nextLevelButton.gameObject.SetActive(true);
                     nextLevelButton.interactable = true;
                 }
 
