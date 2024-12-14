@@ -43,10 +43,13 @@ public class ButtonScript : MonoBehaviour
 
     public void Credits()
     {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StateUnpause();
+        }
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Credits");
-        GameManager.Instance.StateUnpause();
     }
 
     public void DeleteSaveData()
