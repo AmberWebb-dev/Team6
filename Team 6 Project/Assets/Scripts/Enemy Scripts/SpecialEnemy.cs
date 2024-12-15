@@ -91,7 +91,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     IEnumerator Roam()
     {
         isRoaming = true;
-        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+        anim.SetBool("isWalking", agent.velocity.magnitude > 0.05f); // Lower threshold slightly
         yield return new WaitForSeconds(roamTimer);
 
         agent.stoppingDistance = 0;

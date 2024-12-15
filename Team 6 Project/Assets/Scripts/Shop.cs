@@ -67,10 +67,12 @@ public class Shop : MonoBehaviour, IInteract
                             GameManager.Instance.AddCoins(-cost);
                             GameManager.Instance.playerScript.currentSeedsInInventory = GameManager.Instance.playerScript.maxSeedsInInventory;
                             GameManager.Instance.UpdateSeedInventory(GameManager.Instance.playerScript.maxSeedsInInventory);
+                            AudioManager.Instance.buyItemSound.Play();
                         }
                         else
                         {
                             Debug.Log("CANNOT AFFORD SEEDS");
+                            AudioManager.Instance.declineBuySound.Play();
                         }
                         break;
                     case ShopType.ShovelShop:
@@ -80,15 +82,25 @@ public class Shop : MonoBehaviour, IInteract
                             shovelParticles.Play();
                             GameManager.Instance.AddCoins(-cost);
                             shovelPickup = Instantiate(shovelPickupPrefab, shovelPickupPatch.transform.position + Vector3.up, Quaternion.identity);
+                            AudioManager.Instance.buyItemSound.Play();
                         }
                         else
                         {
                             Debug.Log("CANNOT AFFORD SHOVEL");
+                            AudioManager.Instance.declineBuySound.Play();
                         }
                         break;
                     case ShopType.SellShop:
-                        Debug.Log($"{GameManager.Instance.playerScript.currentCropsInInventory} crops sold!");
-                        sellCropsParticles.Play();
+                        if (GameManager.Instance.playerScript.currentCropsInInventory > 0)
+                        {
+                            AudioManager.Instance.sellItemSound.Play();
+                            Debug.Log($"{GameManager.Instance.playerScript.currentCropsInInventory} crops sold!");
+                            sellCropsParticles.Play();
+                        }
+                        else
+                        {
+                            AudioManager.Instance.declineBuySound.Play();
+                        }
                         GameManager.Instance.AddCoins(GameManager.Instance.playerScript.currentCropsInInventory * cost);
                         GameManager.Instance.playerScript.currentCropsInInventory = 0;
                         GameManager.Instance.UpdateCropInventory(0);

@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 9008777840376650598}
   - component: {fileID: 9008777840376650607}
   - component: {fileID: 9008777840376650606}
-  - component: {fileID: 6365686501779731355}
+  - component: {fileID: 7519033640097159886}
   m_Layer: 6
   m_Name: Special Enemy
   m_TagString: Enemy
@@ -277,7 +277,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 15
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!95 &6365686501779731355
+--- !u!95 &7519033640097159886
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -358,6 +358,31 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 9ed7468074159544ba662187573b1b7d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+--- !u!1 &8007064093058420958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+  m_PrefabInstance: {fileID: 8007064093058520600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8052957139035401188
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007064093058420958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9ed7468074159544ba662187573b1b7d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &8007064093058911422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}

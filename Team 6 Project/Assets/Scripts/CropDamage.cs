@@ -57,6 +57,7 @@ public class CropDamage : MonoBehaviour, IDamage
         Destroy(gameObject);
         GameManager.Instance.RemoveControlPopup("Pick Up");
         Debug.Log($"Crop added to inventory");
+        AudioManager.Instance.harvestCropSound.PlayAtPoint(transform.position);
     }
 
     private void OnTriggerEnter(Collider other)

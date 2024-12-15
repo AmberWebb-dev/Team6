@@ -16,6 +16,12 @@ public class ButtonScript : MonoBehaviour
     }
     public void MainMenu()
     {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StateUnpause();
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
     }
     public void Quit()
@@ -37,6 +43,17 @@ public class ButtonScript : MonoBehaviour
 
         SceneManager.LoadScene(nextSceneIndex);
         GameManager.Instance.StateUnpause();
+    }
+
+    public void Credits()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StateUnpause();
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Credits");
     }
 
     public void DeleteSaveData()
