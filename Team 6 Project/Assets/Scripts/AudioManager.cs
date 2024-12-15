@@ -33,6 +33,10 @@ public class AudioManager : MonoBehaviour
     public AudioClipWrapper sellItemSound;
     public AudioClipWrapper powerupPickupSound;
     public AudioClipWrapper boostPowerupShootSound;
+    public AudioClipWrapper winSound;
+    public AudioClipWrapper loseSound;
+    public AudioClipWrapper harvestCropSound;
+    public AudioClipWrapper plantCropSound;
 
     private void Awake()
     {

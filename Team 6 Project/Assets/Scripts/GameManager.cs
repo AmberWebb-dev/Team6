@@ -201,6 +201,8 @@ public class GameManager : MonoBehaviour
         menuActive = menuLose;
         menuActive.SetActive(true);
 
+        AudioManager.Instance.loseSound.Play();
+
         waveCountLoseText.text = $"Wave: {waveCount}";
 
         if (isEndlessMode)
@@ -236,6 +238,9 @@ public class GameManager : MonoBehaviour
                 StatePause();
                 menuActive = menuWin;
                 menuActive.SetActive(true);
+
+                AudioManager.Instance.winSound.Play();
+
                 string starKey = $"Level_{currentLevel}_Star";
                 PlayerPrefs.SetInt(starKey, 1); // 1 indicates a star earned
                 PlayerPrefs.Save();

@@ -20,6 +20,7 @@ public class ItemDrop : MonoBehaviour
             switch (dropType)
             {
                 case ItemDropType.Coin:
+                    AudioManager.Instance.sellItemSound.PlayOnPlayer();
                     GameManager.Instance.AddCoins(value);
                     break;
                 case ItemDropType.Health:
