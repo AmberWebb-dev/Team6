@@ -18,6 +18,7 @@ public class Powerup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.playerScript.AddPowerup(type, duration);
+            AudioManager.Instance.powerupPickupSound.PlayOnPlayer();
             Destroy(gameObject);
         }
     }

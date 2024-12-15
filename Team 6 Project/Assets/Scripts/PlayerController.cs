@@ -199,7 +199,14 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     {
         isShooting = true;
 
-        AudioManager.Instance.shootSound.PlayOnPlayer();
+        if (ContainsPowerup(PowerupType.Boost))
+        {
+            AudioManager.Instance.boostPowerupShootSound.PlayOnPlayer();
+        }
+        else
+        {
+            AudioManager.Instance.shootSound.PlayOnPlayer();
+        }
 
         crossbowAnimator.SetBool("Fire", false);
 

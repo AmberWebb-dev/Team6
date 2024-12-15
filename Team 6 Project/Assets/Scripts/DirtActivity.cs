@@ -73,6 +73,7 @@ public class DirtActivity : MonoBehaviour
         newCropPos.y = prefab.transform.position.y;
         newCrop = Instantiate(prefab, newCropPos, Quaternion.identity);
         GameManager.Instance.AddCropToArray(newCrop);
+        AudioManager.Instance.plantCropSound.PlayAtPoint(newCropPos);
     }
 
 }
