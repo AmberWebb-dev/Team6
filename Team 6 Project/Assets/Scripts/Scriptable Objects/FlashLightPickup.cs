@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class FlashLightPickup : MonoBehaviour
 {
-
     public Light playerLight;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player touched the flashlight object
+        Debug.Log("Trigger detected with: " + other.name);
+
         if (other.CompareTag("Player"))
         {
-            // Enable the player's light
+            Debug.Log("Player triggered the flashlight!");
+
             if (playerLight != null)
             {
-                playerLight.enabled = true;
+                playerLight.gameObject.SetActive(false); // Force refresh
+                playerLight.gameObject.SetActive(true);  // Re-enable the light
+            }
+            else
+            {
+                Debug.LogError("Player Light is not assigned in the Inspector!");
             }
 
-            // Destroy the flashlight object after it's picked up
-            Destroy(gameObject);
+            Destroy(gameObject); // Remove flashlight pickup object
         }
     }
 }
