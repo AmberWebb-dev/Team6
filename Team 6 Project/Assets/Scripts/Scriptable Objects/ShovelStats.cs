@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-
+[CreateAssetMenu(fileName = "Shovel Stats", menuName = "Scriptables/Shovel Stats", order = 2)]
 public class ShovelStats : ScriptableObject
 {
     public GameObject shovelModel;
