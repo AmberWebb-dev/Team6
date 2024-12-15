@@ -28,6 +28,11 @@ public class AudioManager : MonoBehaviour
     public AudioClipWrapper enemyShootSound;
     public AudioClipWrapper cropHitSound;
     public AudioClipWrapper cropDeathSound;
+    public AudioClipWrapper buyItemSound;
+    public AudioClipWrapper declineBuySound;
+    public AudioClipWrapper sellItemSound;
+    public AudioClipWrapper powerupPickupSound;
+    public AudioClipWrapper boostPowerupShootSound;
 
     private void Awake()
     {

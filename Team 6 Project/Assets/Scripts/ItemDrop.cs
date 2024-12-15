@@ -23,6 +23,7 @@ public class ItemDrop : MonoBehaviour
                     GameManager.Instance.AddCoins(value);
                     break;
                 case ItemDropType.Health:
+                    AudioManager.Instance.healSound.PlayOnPlayer();
                     GameManager.Instance.playerScript.HealAmount(value);
                     break;
             }

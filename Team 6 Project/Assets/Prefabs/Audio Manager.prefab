@@ -112,6 +112,26 @@ MonoBehaviour:
     audioClips:
     - {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
     volume: 0.2
+  buyItemSound:
+    audioClips:
+    - {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    volume: 0.5
+  declineBuySound:
+    audioClips:
+    - {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
+    volume: 0.5
+  sellItemSound:
+    audioClips:
+    - {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
+    volume: 0.5
+  powerupPickupSound:
+    audioClips:
+    - {fileID: 8300000, guid: 7a9de5c4d998126449cf964a6b27a8b0, type: 3}
+    volume: 0.5
+  boostPowerupShootSound:
+    audioClips:
+    - {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
+    volume: 0.35
 --- !u!82 &245121424329218589
 AudioSource:
   m_ObjectHideFlags: 0
