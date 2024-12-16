@@ -56219,6 +56219,10 @@ MonoBehaviour:
   timeOfDay: 0
   clouds: {fileID: 1076244498}
   isDaytime: 0
+  playerFlashlight: {fileID: 2129693136}
+  flashlightPrefab: {fileID: 184049239}
+  mapMinBounds: {x: 0, y: 0, z: 0}
+  mapMaxBounds: {x: 10, y: 0, z: 10}
 --- !u!1001 &1699904554
 PrefabInstance:
   m_ObjectHideFlags: 0

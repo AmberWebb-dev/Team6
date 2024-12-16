@@ -13,9 +13,18 @@ public class SceneLightsManager : MonoBehaviour
 
     [SerializeField] private bool isDaytime;
 
+    [SerializeField] private Light playerFlashlight;
+    public GameObject flashlightPrefab;
+    private GameObject spawnedFlashlight;
+    public Vector3 mapMinBounds;
+    public Vector3 mapMaxBounds;
+
     // Update is called once per frame
     void Update()
     {
+
+        bool wasDaytime = isDaytime;
+
         if (lightSettings == null)
         { return; }
         
@@ -30,6 +39,20 @@ public class SceneLightsManager : MonoBehaviour
             clouds.SetActive(true);
         }
 
+        if (wasDaytime != isDaytime)
+        {
+            if (isDaytime)
+            {
+                
+                TurnOffPlayerFlashlight(); // Use this instead
+                DestroyFlashlight();
+            }
+            else
+            {
+                SpawnFlashlight(); // Spawn flashlight at night
+            }
+        }
+
         if (Application.isPlaying)
         {
             float time = Time.deltaTime / 4;
@@ -42,7 +65,53 @@ public class SceneLightsManager : MonoBehaviour
             UpdateLights(timeOfDay / 24f);
         }
     }
-    
+
+    private void SpawnFlashlight()
+    {
+        Debug.Log("Attempting to spawn flashlight...");
+
+        // Clean up any previous flashlight if it exists
+        if (spawnedFlashlight != null)
+        {
+            Destroy(spawnedFlashlight);
+            spawnedFlashlight = null;
+        }
+
+        // Generate a random position within map bounds
+        Vector3 randomPosition = GetRandomMapPosition();
+
+        // Spawn the flashlight prefab
+        spawnedFlashlight = Instantiate(flashlightPrefab, randomPosition, Quaternion.identity);
+        Debug.Log($"Flashlight spawned at: {randomPosition}");
+    }
+
+    private void DestroyFlashlight()
+    {
+        if (spawnedFlashlight != null) // Clean up the flashlight
+        {
+            if (spawnedFlashlight != null)
+            {
+                Debug.Log("DestroyFlashlight() called, destroying flashlight...");
+                Destroy(spawnedFlashlight);
+                spawnedFlashlight = null;
+            }
+            else
+            {
+                Debug.Log("DestroyFlashlight() called, but no flashlight exists.");
+            }
+        }
+    }
+
+    private Vector3 GetRandomMapPosition()
+    {
+        // Generate a random position within the map bounds
+        float x = Random.Range(mapMinBounds.x, mapMaxBounds.x);
+        float z = Random.Range(mapMinBounds.z, mapMaxBounds.z);
+        float y = mapMinBounds.y; // Keep the Y consistent for ground level
+
+        return new Vector3(x, y, z);
+    }
+
     private void UpdateLights(float timePercent)
     {
         RenderSettings.ambientLight = lightSettings.ambientColour.Evaluate(timePercent);
@@ -72,6 +141,24 @@ public class SceneLightsManager : MonoBehaviour
                 directionalLight = light;
                 return;
             }
+        }
+    }
+
+    private void TurnOffPlayerFlashlight()
+    {
+        if (playerFlashlight != null)
+        {
+            playerFlashlight.enabled = false;
+            Debug.Log("Player's flashlight turned OFF for the day.");
+        }
+    }
+
+    private void TurnOnPlayerFlashlight()
+    {
+        if (playerFlashlight != null)
+        {
+            playerFlashlight.enabled = true;
+            Debug.Log("Player's flashlight turned ON for the night.");
         }
     }
 }
