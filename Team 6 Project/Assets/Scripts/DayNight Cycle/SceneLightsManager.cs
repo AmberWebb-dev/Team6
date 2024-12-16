@@ -13,7 +13,6 @@ public class SceneLightsManager : MonoBehaviour
 
     [SerializeField] private bool isDaytime;
 
-    [SerializeField] private Light playerFlashlight;
     public GameObject flashlightPrefab;
     private GameObject spawnedFlashlight;
     public Vector3 mapMinBounds;
@@ -43,9 +42,10 @@ public class SceneLightsManager : MonoBehaviour
         {
             if (isDaytime)
             {
-                
+                GameObject[] flashlights = GameObject.FindGameObjectsWithTag("FlashLight");
                 TurnOffPlayerFlashlight(); // Use this instead
-                DestroyFlashlight();
+                foreach(GameObject lights in flashlights)
+                    Destroy(lights);
             }
             else
             {
@@ -69,13 +69,6 @@ public class SceneLightsManager : MonoBehaviour
     private void SpawnFlashlight()
     {
         Debug.Log("Attempting to spawn flashlight...");
-
-        // Clean up any previous flashlight if it exists
-        if (spawnedFlashlight != null)
-        {
-            Destroy(spawnedFlashlight);
-            spawnedFlashlight = null;
-        }
 
         // Generate a random position within map bounds
         Vector3 randomPosition = GetRandomMapPosition();
@@ -146,19 +139,6 @@ public class SceneLightsManager : MonoBehaviour
 
     private void TurnOffPlayerFlashlight()
     {
-        if (playerFlashlight != null)
-        {
-            playerFlashlight.enabled = false;
-            Debug.Log("Player's flashlight turned OFF for the day.");
-        }
-    }
-
-    private void TurnOnPlayerFlashlight()
-    {
-        if (playerFlashlight != null)
-        {
-            playerFlashlight.enabled = true;
-            Debug.Log("Player's flashlight turned ON for the night.");
-        }
+        GameManager.Instance.playerScript.flashlight.SetActive(false);
     }
 }

@@ -65,6 +65,8 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     //public GameObject ShieldOverlay;
     //end of shield
 
+    [SerializeField] public GameObject flashlight;
+
     // Start is called before the first frame update
     void Start()
     {
