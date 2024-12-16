@@ -44,7 +44,7 @@ public class SceneLightsManager : MonoBehaviour
             if (isDaytime)
             {
                 
-                TurnOffPlayerFlashlight();
+                TurnOffPlayerFlashlight(); // Use this instead
                 DestroyFlashlight();
             }
             else
@@ -68,20 +68,19 @@ public class SceneLightsManager : MonoBehaviour
 
     private void SpawnFlashlight()
     {
+        Debug.Log("Attempting to spawn flashlight...");
+
+        // Clean up any previous flashlight if it exists
         if (spawnedFlashlight != null)
         {
-            Debug.Log("Flashlight already spawned, skipping spawn.");
-            return;
+            Destroy(spawnedFlashlight);
+            spawnedFlashlight = null;
         }
 
         // Generate a random position within map bounds
-        float randomX = Random.Range(mapMinBounds.x, mapMaxBounds.x);
-        float randomZ = Random.Range(mapMinBounds.z, mapMaxBounds.z);
-        float randomY = mapMinBounds.y; // Ensure consistent ground height
+        Vector3 randomPosition = GetRandomMapPosition();
 
-        Vector3 randomPosition = new Vector3(randomX, randomY, randomZ);
-
-        // Spawn the flashlight prefab at the random position
+        // Spawn the flashlight prefab
         spawnedFlashlight = Instantiate(flashlightPrefab, randomPosition, Quaternion.identity);
         Debug.Log($"Flashlight spawned at: {randomPosition}");
     }
