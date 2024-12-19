@@ -55,6 +55,10 @@ public class Shop : MonoBehaviour, IInteract
 
         if (isHovered)
         {
+            Vector3 lookVec = Camera.main.transform.position + 10 * Camera.main.transform.forward;
+            lookVec.y = Camera.main.transform.position.y;
+            textCanvas.transform.LookAt(lookVec);
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 switch(shopType)
