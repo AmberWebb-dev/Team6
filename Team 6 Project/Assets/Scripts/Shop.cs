@@ -66,12 +66,20 @@ public class Shop : MonoBehaviour, IInteract
                     case ShopType.SeedShop:
                         if (GameManager.Instance.GetCoinCount() >= cost)
                         {
-                            Debug.Log("BOUGHT SEEDS");
-                            seedParticles.Play();
-                            GameManager.Instance.AddCoins(-cost);
-                            GameManager.Instance.playerScript.currentSeedsInInventory = GameManager.Instance.playerScript.maxSeedsInInventory;
-                            GameManager.Instance.UpdateSeedInventory(GameManager.Instance.playerScript.maxSeedsInInventory);
-                            AudioManager.Instance.buyItemSound.Play();
+                            if (GameManager.Instance.GetSeedCount() >= 1)
+                            {
+                                Debug.Log("CAN NOT BUY MORE SEEDS");
+                                AudioManager.Instance.declineBuySound.Play();
+                            }
+                            else
+                            {
+                                Debug.Log("BOUGHT SEEDS");
+                                seedParticles.Play();
+                                GameManager.Instance.AddCoins(-cost);
+                                GameManager.Instance.playerScript.currentSeedsInInventory = GameManager.Instance.playerScript.maxSeedsInInventory;
+                                GameManager.Instance.UpdateSeedInventory(GameManager.Instance.playerScript.maxSeedsInInventory);
+                                AudioManager.Instance.buyItemSound.Play();
+                            }
                         }
                         else
                         {

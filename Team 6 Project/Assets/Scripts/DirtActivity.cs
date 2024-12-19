@@ -16,7 +16,7 @@ public class DirtActivity : MonoBehaviour
 
     Vector3 newCropPos;
 
-    public bool plantCooldown = false;
+    private bool plantCooldown = false;
 
     private void Update()
     {

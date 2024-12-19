@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     int enemyCount;
     Coroutine waveTimer;
     private int coins;
+    private int seedCount;
 
     //endless mode
     [SerializeField] bool isEndlessMode;
@@ -301,6 +302,7 @@ public class GameManager : MonoBehaviour
     public void UpdateSeedInventory(int amount)
     {
         seedInventoryText.text = $"{amount} / {playerScript.maxSeedsInInventory}";
+        seedCount = amount;
     }
 
     public IEnumerator ApplyBlindEffect()
@@ -493,6 +495,11 @@ public class GameManager : MonoBehaviour
     public int GetCoinCount()
     {
         return coins;
+    }
+
+    public int GetSeedCount()
+    {
+        return seedCount;
     }
 
     //endless mode
