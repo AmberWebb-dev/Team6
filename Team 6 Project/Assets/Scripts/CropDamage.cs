@@ -13,7 +13,7 @@ public class CropDamage : MonoBehaviour, IDamage
     public int timeBetweenStages;
     public int maxGrowth;
 
-    public int currentProgression;
+    public int currentProgression = 1;
 
     bool inRange;
     bool fullInventory;
@@ -25,7 +25,6 @@ public class CropDamage : MonoBehaviour, IDamage
     {
         colourOriginal = model.material.color;
         GameManager.Instance.UpdateCrop(1);
-        currentProgression = 1;
         InvokeRepeating("PlantGrowth", timeBetweenStages, timeBetweenStages);
     }
 
