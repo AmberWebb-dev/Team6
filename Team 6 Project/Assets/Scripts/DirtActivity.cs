@@ -16,13 +16,15 @@ public class DirtActivity : MonoBehaviour
 
     Vector3 newCropPos;
 
+    public bool plantCooldown = false;
+
     private void Update()
     {
         if (inRange && !hasCrop && Input.GetButtonDown("Plant Crop") && GameManager.Instance.playerScript.currentSeedsInInventory > 0)
         {
             PlantSeeds();
         }
-        else if(hasCrop && inRange || GameManager.Instance.playerScript.currentSeedsInInventory <= 0)
+        else if (hasCrop && inRange || GameManager.Instance.playerScript.currentSeedsInInventory <= 0)
         {
             GameManager.Instance.RemoveControlPopup("Plant Crop");
         }
@@ -67,13 +69,23 @@ public class DirtActivity : MonoBehaviour
 
     private void PlantSeeds()
     {
-        Debug.Log("Placing Seed");
-        GameManager.Instance.playerScript.PlaceCrop();
-        newCropPos = gameObject.transform.position;
-        newCropPos.y = prefab.transform.position.y;
-        newCrop = Instantiate(prefab, newCropPos, Quaternion.identity);
-        GameManager.Instance.AddCropToArray(newCrop);
-        AudioManager.Instance.plantCropSound.PlayAtPoint(newCropPos);
+        if (!plantCooldown)
+        {
+            Debug.Log("Placing Seed");
+            GameManager.Instance.playerScript.PlaceCrop();
+            newCropPos = gameObject.transform.position;
+            newCropPos.y = prefab.transform.position.y;
+            newCrop = Instantiate(prefab, newCropPos, Quaternion.identity);
+            GameManager.Instance.AddCropToArray(newCrop);
+            AudioManager.Instance.plantCropSound.PlayAtPoint(newCropPos);
+
+            plantCooldown = true;
+            Invoke("PlantCooldown", 5.0f);
+        }
     }
 
+    void PlantCooldown()
+    {
+        plantCooldown = false;
+    }
 }
