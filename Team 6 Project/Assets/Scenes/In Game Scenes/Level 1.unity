@@ -60134,18 +60134,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5091046342775362187, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091046342775362187, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091046342775362187, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091046342775362187, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.5
       objectReference: {fileID: 0}
@@ -60188,10 +60176,6 @@ PrefabInstance:
     - target: {fileID: 5091046342775362188, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
       propertyPath: m_Name
       value: Floor
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091046342775362188, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113d27b4e903aeb449d0495285482c6c, type: 3}

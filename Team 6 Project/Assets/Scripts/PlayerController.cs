@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
     [SerializeField] Animator crossbowAnimator;
     [SerializeField] GameObject crossbowPowerupParticles;
     [SerializeField] GameObject boostHitEffect;
+    [SerializeField] GameObject arrowHitEffect;
     [Header("----- Shovel Stats -----")]
     bool hasShovel;
     bool isSwinging;
@@ -223,6 +224,10 @@ public class PlayerController : MonoBehaviour, IDamage, IHealth
             if (ContainsPowerup(PowerupType.Boost))
             {
                 Instantiate(boostHitEffect, hit.point, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(arrowHitEffect, hit.point, Quaternion.identity);
             }
 
             // If damage is not null set damage amount to shoot damage

@@ -277,6 +277,7 @@ MonoBehaviour:
   crossbowAnimator: {fileID: 2955231418028671640}
   crossbowPowerupParticles: {fileID: 8572100225212993920}
   boostHitEffect: {fileID: 4584513196245091810, guid: bd8952da142211d4eb99c5c5e9094635, type: 3}
+  arrowHitEffect: {fileID: 5238538877814813142, guid: 47096eff328e11a418ace7db2d72aa97, type: 3}
   shovelModel: {fileID: 4147119902415996896}
   shovelList: []
   shovelDMG: 0
@@ -293,6 +294,7 @@ MonoBehaviour:
   maxSeedsInInventory: 5
   currentSeedsInInventory: 0
   isShielded: 0
+  flashlight: {fileID: 0}
 --- !u!143 &5067409458042033822
 CharacterController:
   m_ObjectHideFlags: 0
