@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 
 public class SceneLightsManager : MonoBehaviour
 {
@@ -18,6 +18,11 @@ public class SceneLightsManager : MonoBehaviour
     public Vector3 mapMinBounds;
     public Vector3 mapMaxBounds;
 
+
+    private void Start()
+    {
+        timeOfDay = 7.0f;
+    }
     // Update is called once per frame
     void Update()
     {
