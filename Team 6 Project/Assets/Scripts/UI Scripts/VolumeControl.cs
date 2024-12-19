@@ -46,6 +46,7 @@ public class VolumeControl : MonoBehaviour
     {
         // Convert linear slider value to decibels (-80 to 0)
         float dbVolume = Mathf.Log10(volume) * 20;
+        if (volume == 0) { dbVolume = -80.0f; }
         audioMixer.SetFloat("Master Volume", dbVolume);
     }
 
