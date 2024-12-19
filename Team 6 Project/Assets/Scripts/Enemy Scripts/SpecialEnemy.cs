@@ -22,6 +22,8 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     [SerializeField] int roamDistance;
     [SerializeField] int roamTimer;
 
+    [SerializeField] GameObject iceParticles;
+
     [SerializeField] int scoreValue;
 
     bool playerInRange;
@@ -65,10 +67,12 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
         {
-            agent.speed = originalSpeed / 4;
+            iceParticles.SetActive(true);
+            agent.speed = 0;
         }
         else
         {
+            iceParticles.SetActive(false);
             agent.speed = originalSpeed;
         }
 

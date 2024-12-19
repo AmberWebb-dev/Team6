@@ -19,6 +19,8 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
     [SerializeField] public int attackDamage = 10;
     [SerializeField] float attackRate;
 
+    [SerializeField] GameObject iceParticles;
+
     [SerializeField] int scoreValue;
 
     private GameObject currentTargetCrop;
@@ -69,10 +71,12 @@ public class CDEnemyAI : MonoBehaviour, IDamage, IKnockback
 
         if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
         {
-            agent.speed = originalSpeed / 4;
+            iceParticles.SetActive(true);
+            agent.speed = 0;
         }
         else
         {
+            iceParticles.SetActive(false);
             agent.speed = originalSpeed;
         }
 

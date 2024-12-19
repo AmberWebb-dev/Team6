@@ -19,6 +19,8 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
 
+    [SerializeField] GameObject iceParticles;
+
     [SerializeField] int roamDistance;
     [SerializeField] int roamTimer;
 
@@ -65,10 +67,12 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
 
         if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
         {
-            agent.speed = originalSpeed / 4;
+            iceParticles.SetActive(true);
+            agent.speed = 0;
         }
         else
         {
+            iceParticles.SetActive(false);
             agent.speed = originalSpeed;
         }
 

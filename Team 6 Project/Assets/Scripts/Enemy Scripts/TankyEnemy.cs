@@ -19,6 +19,8 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
     [SerializeField] int scoreValue;
 
+    [SerializeField] GameObject iceParticles;
+
     [SerializeField] Animator animator;
 
     private GameObject currentTargetCrop;
@@ -51,10 +53,12 @@ public class TankyEnemy : MonoBehaviour, IDamage
 
         if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
         {
-            agent.speed = originalSpeed / 4;
+            iceParticles.SetActive(true);
+            agent.speed = 0;
         }
         else
         {
+            iceParticles.SetActive(false);
             agent.speed = originalSpeed;
         }
 
