@@ -87,6 +87,8 @@ public class GameManager : MonoBehaviour
     private float speedScale;
     private float damageScale;
 
+    [SerializeField] public GameObject flashlightText;
+
     void Awake()
     {
         Instance = this;

@@ -19,6 +19,7 @@ public class SceneLightsManager : MonoBehaviour
     public Vector3 mapMaxBounds;
 
 
+
     private void Start()
     {
         timeOfDay = 7.0f;
@@ -31,8 +32,16 @@ public class SceneLightsManager : MonoBehaviour
 
         if (lightSettings == null)
         { return; }
-        
-        if(timeOfDay <= 5.3f || timeOfDay >= 18.6)
+        if (timeOfDay >= 18.5 && timeOfDay <= 19)
+        {
+            GameManager.Instance.flashlightText.SetActive(true);
+        }
+        else
+        {
+            GameManager.Instance.flashlightText.SetActive(false);
+        }
+
+        if (timeOfDay <= 5.3f || timeOfDay >= 18.6)
         {
             isDaytime = false;
             clouds.SetActive(false);
@@ -60,7 +69,7 @@ public class SceneLightsManager : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            float time = Time.deltaTime / 4;
+            float time = Time.deltaTime / 4f;
             timeOfDay += time;
             timeOfDay %= 24f;
             UpdateLights(timeOfDay / 24f);
