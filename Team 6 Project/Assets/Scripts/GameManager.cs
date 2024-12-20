@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform controlPopupTransform;
     [SerializeField] GameObject controlPopupPrefab;
     private Dictionary<string, GameObject> controlPopups = new Dictionary<string, GameObject>();
+    [SerializeField] GameObject tutorialPopup;
+    [SerializeField] Image tutorialTimer;
+    float tutorialLength = 0.0f;
     [Header("----- Text -----")]
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text highscoreText;
@@ -115,6 +118,18 @@ public class GameManager : MonoBehaviour
 
         SetCoins(0);
 
+        if (PlayerPrefs.GetInt("TutorialComplete", 0) == 1)
+        {
+            tutorialPopup.SetActive(false);
+        }
+        else
+        {
+            tutorialPopup.SetActive(true);
+            PlayerPrefs.SetInt("TutorialComplete", 1);
+            PlayerPrefs.Save();
+            tutorialLength = 15.0f;
+        }
+
         waveTimerText.text = "--";
         StartNextWave();
     }
@@ -174,6 +189,16 @@ public class GameManager : MonoBehaviour
             {
                 StateUnpause();
             }
+        }
+
+        if (tutorialLength <= 0)
+        {
+            tutorialPopup.SetActive(false);
+        }
+        else
+        {
+            tutorialTimer.fillAmount = tutorialLength / 15.0f;
+            tutorialLength -= Time.deltaTime;
         }
 
         UpdatePowerupIcons();
