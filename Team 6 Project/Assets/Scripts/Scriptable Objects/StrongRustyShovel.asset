@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shovelModel: {fileID: 1000011881196238, guid: beb87db6153f69442821a348e08035ab, type: 3}
   shovelDMG: 5
-  shovelDist: 5
+  shovelDist: 6
   swingRate: 3.5
   shovelKnockback: 5
   knockbackStunDuration: 1.5
