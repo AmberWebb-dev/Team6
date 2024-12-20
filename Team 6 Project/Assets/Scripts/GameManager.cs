@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         cropArrayCount = cropsArray.Count;
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") || Input.GetKeyDown(KeyCode.P))
         {
             if (menuActive == null)
             {
