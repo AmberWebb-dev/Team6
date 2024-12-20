@@ -8,6 +8,9 @@ TagManager:
   - Crop
   - Dirt
   - cropStuff
+  - Quit Button
+  - MMPlayButton
+  - MMSettingsButton
   layers:
   - Default
   - TransparentFX

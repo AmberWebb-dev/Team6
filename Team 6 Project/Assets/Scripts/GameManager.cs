@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+       
         Instance = this;
         Time.timeScale = 1;
         timeScaleOrig = Time.timeScale;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1641,7 +1641,7 @@ GameObject:
   - component: {fileID: 708225214}
   m_Layer: 5
   m_Name: Settings
-  m_TagString: Untagged
+  m_TagString: MMSettingsButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2690,7 +2690,7 @@ GameObject:
   - component: {fileID: 916819393}
   m_Layer: 5
   m_Name: Quit Button
-  m_TagString: Untagged
+  m_TagString: Quit Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4510,7 +4510,7 @@ GameObject:
   - component: {fileID: 1583256253}
   m_Layer: 5
   m_Name: Play Button
-  m_TagString: Untagged
+  m_TagString: MMPlayButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4532,7 +4532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 13.184}
+  m_AnchoredPosition: {x: -350, y: 13}
   m_SizeDelta: {x: 515.9949, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583256253
