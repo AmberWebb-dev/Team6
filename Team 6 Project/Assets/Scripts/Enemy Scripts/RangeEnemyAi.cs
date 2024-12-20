@@ -161,6 +161,10 @@ public class RangeEnemyAi : MonoBehaviour, IDamage
         {
             playerInRange = false;
             agent.stoppingDistance = 0;
+
+            // Ensure animations reset properly
+            anim.SetBool("isAttacking", false);
+            anim.SetBool("isWalking", false);
         }
     }
 
