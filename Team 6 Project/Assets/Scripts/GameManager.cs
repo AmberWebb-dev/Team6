@@ -462,8 +462,45 @@ public class GameManager : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
 
             Animator anim = enemy.GetComponentInChildren<Animator>();
+            anim.Rebind();
+            anim.Update(0);
+            Animator prefabAnimator = enemyPrefab.GetComponentInChildren<Animator>();
+
+            if (anim != null && prefabAnimator != null)
+            {
+                anim.runtimeAnimatorController = prefabAnimator.runtimeAnimatorController; // Force controller match
+            }
+            else
+            {
+                Debug.LogError("Animator missing on prefab or clone!");
+            }
+
+            // Force sheep-specific logic
+            if (enemy.name.Contains("Sheep"))
+            {
+                anim.Play("walking", 0, 0); // Forces "walking" animation
+                anim.Update(0); // Refresh it immediately
+                anim.cullingMode = AnimatorCullingMode.AlwaysAnimate; // Prevent culling
+            }
+
+
             if (anim != null)
             {
+                if (enemy.name.Contains("Sheep"))
+                {
+                    Animator anima = enemy.GetComponentInChildren<Animator>();
+
+                    // Force it to WALK immediately—skip all checks
+                    anima.Play("walking", 0, 0); // Forces "walking" animation
+                    anima.Update(0); // Refresh it NOW
+                    anima.cullingMode = AnimatorCullingMode.AlwaysAnimate; // No culling allowed
+
+                    Debug.Log($"Forced animation: {anim.GetCurrentAnimatorStateInfo(0).IsName("walking")}");
+                }
+
+                RuntimeAnimatorController defaultController = enemyPrefab.GetComponentInChildren<Animator>().runtimeAnimatorController;
+                anim.runtimeAnimatorController = defaultController; // Ensure it’s the same as the prefab
+
                 anim.Rebind(); // Force rebinding the skeleton
                 anim.Update(0); // Apply first frame immediately
                 anim.cullingMode = AnimatorCullingMode.AlwaysAnimate; // Stop culling issues
@@ -473,6 +510,8 @@ public class GameManager : MonoBehaviour
             {
                 Debug.LogError($"No Animator found on {enemy.name}!");
             }
+
+
 
             //checking for endless mode
             if (isEndlessMode)

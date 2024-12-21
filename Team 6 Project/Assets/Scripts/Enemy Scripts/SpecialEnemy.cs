@@ -71,7 +71,30 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
     void Update()
     {
-        anim.SetBool("isWalking", agent.velocity.magnitude > 0.1f);
+        bool isWalking = agent.velocity.magnitude > 0.1f;
+
+        var clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+        if (clipInfo.Length > 0)
+        {
+            Debug.Log($"Current Clip: {clipInfo[0].clip.name}");
+        }
+        else
+        {
+            Debug.Log("No Clip Playing!");
+        }
+
+        // Debug Logs to check what's happening
+        Debug.Log($"Animator Parameter isWalking: {anim.GetBool("isWalking")}");
+        Debug.Log($"NavMesh Speed: {agent.velocity.magnitude}");
+
+        // Update the parameter
+        anim.SetBool("isWalking", isWalking);
+
+        // Force walking animation for testing
+        if (isWalking)
+        {
+            anim.Play("walking"); // Force walking animation
+        }
 
         if (GameManager.Instance.playerScript.ContainsPowerup(PlayerController.PowerupType.Freeze))
         {

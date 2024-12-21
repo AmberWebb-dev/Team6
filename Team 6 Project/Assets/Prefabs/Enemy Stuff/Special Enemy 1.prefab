@@ -19633,7 +19633,7 @@ MonoBehaviour:
   iceParticles: {fileID: 5901702345636594818}
   scoreValue: 150
   flashRedMaterial: {fileID: 2100000, guid: 5dfd42b3eb8f70a4a9f5c8a3210b3e88, type: 2}
-  anim: {fileID: 7080902489127119370}
+  anim: {fileID: 0}
 --- !u!33 &8106524558798936708
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24723,9 +24723,109 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8106524558798936711}
     m_Modifications:
+    - target: {fileID: 100000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100040, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
       propertyPath: m_RootOrder
@@ -24774,14 +24874,14 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 9ed7468074159544ba662187573b1b7d, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
       propertyPath: m_CullingMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
@@ -24790,28 +24890,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
   m_PrefabInstance: {fileID: 7105410050016319478}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7105410050016350512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100038, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
-  m_PrefabInstance: {fileID: 7105410050016319478}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7080902489127119370
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7105410050016350512}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 23e3a5236c00ace4fb6efc5788169e2e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9ed7468074159544ba662187573b1b7d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
