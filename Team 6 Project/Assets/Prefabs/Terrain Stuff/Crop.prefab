@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 3898229860069760914}
-  HP: 2
+  HP: 4
   prefab: {fileID: 6133415621640478050}
   timeBetweenStages: 5
   maxGrowth: 3
