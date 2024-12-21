@@ -8,6 +8,7 @@ public class VolumeControl : MonoBehaviour
 {
     public AudioMixer audioMixer; 
     public Slider volumeSlider;
+    [SerializeField] GameObject acceptButton;
 
     private float savedVolume;
 
@@ -41,6 +42,7 @@ public class VolumeControl : MonoBehaviour
     {
         // Temporarily apply the volume to the AudioMixer
         ApplyVolumeToMixer(volume);
+        acceptButton.SetActive(true);
     }
     private void ApplyVolumeToMixer(float volume)
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,7 +195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0021362305, y: -0.0010070801}
+  m_AnchoredPosition: {x: -0.0021362305, y: -0.0009765625}
   m_SizeDelta: {x: 18.300049, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &79035926
@@ -250,11 +250,11 @@ GameObject:
   - component: {fileID: 129962457}
   m_Layer: 5
   m_Name: Accept
-  m_TagString: Untagged
+  m_TagString: MMSettingsAccept
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &129962456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1418,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 806124ddcc8ba6c418e607cbbf10df73, type: 2}
   volumeSlider: {fileID: 254717821}
+  acceptButton: {fileID: 129962455}
 --- !u!4 &1883620208
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ TagManager:
   - Quit Button
   - MMPlayButton
   - MMSettingsButton
+  - FlashLight
+  - MMSettingsAccept
   layers:
   - Default
   - TransparentFX
