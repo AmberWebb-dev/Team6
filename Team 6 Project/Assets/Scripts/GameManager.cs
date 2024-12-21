@@ -97,6 +97,8 @@ public class GameManager : MonoBehaviour
     private float blackoutTimer = 0f;
     private bool isBlinding = false;
 
+
+
     void Awake()
     {
        
@@ -458,6 +460,20 @@ public class GameManager : MonoBehaviour
             GameObject enemyPrefab = molePrefabs[Random.Range(0, molePrefabs.Count)];
             //initiate enemy prefab to spawn point
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+            Animator anim = enemy.GetComponentInChildren<Animator>();
+            if (anim != null)
+            {
+                anim.Rebind(); // Force rebinding the skeleton
+                anim.Update(0); // Apply first frame immediately
+                anim.cullingMode = AnimatorCullingMode.AlwaysAnimate; // Stop culling issues
+                Debug.Log($"Animator initialized for {enemy.name} - State: {anim.GetCurrentAnimatorStateInfo(0).IsName("idle")}");
+            }
+            else
+            {
+                Debug.LogError($"No Animator found on {enemy.name}!");
+            }
+
             //checking for endless mode
             if (isEndlessMode)
             {

@@ -51,7 +51,11 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+        if (anim == null)
+        {
+            Debug.LogError("Animator not found!");
+        }
         materialOrig = GetComponentInChildren<Renderer>().material.color;
         audioSource = GetComponent<AudioSource>();
         GameManager.Instance.GameGoal(1);
@@ -60,6 +64,9 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
         startPosition = transform.position;
         stoppingDistanceOrig = agent.stoppingDistance;
+
+        anim.Rebind();
+        anim.Update(0);
     }
 
     void Update()
@@ -96,7 +103,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     IEnumerator Roam()
     {
         isRoaming = true;
-        anim.SetBool("isWalking", agent.velocity.magnitude > 0.05f); // Lower threshold slightly
+        anim.SetBool("isWalking", true);
         yield return new WaitForSeconds(roamTimer);
 
         agent.stoppingDistance = 0;
