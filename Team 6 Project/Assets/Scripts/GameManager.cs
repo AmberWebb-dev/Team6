@@ -93,6 +93,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public GameObject flashlightText;
 
+    private Coroutine blackoutCoroutine;
+    private float blackoutTimer = 0f;
+    private bool isBlinding = false;
+
     void Awake()
     {
        
@@ -331,15 +335,37 @@ public class GameManager : MonoBehaviour
         seedCount = amount;
     }
 
-    public IEnumerator ApplyBlindEffect()
+    public void ApplyBlindEffect(float duration = 3.5f)
     {
+        // Extend the blackout timer by adding the new duration
+        blackoutTimer = Mathf.Max(blackoutTimer, Time.time + duration);
+
+        // Start the effect if it isn’t already running
+        if (!isBlinding)
+        {
+            StartCoroutine(HandleBlindEffect());
+        }
+    }
+
+    private IEnumerator HandleBlindEffect()
+    {
+        isBlinding = true;
+
         if (effectBlind != null)
         {
             effectBlind.SetActive(true);
-            yield return new WaitForSeconds(3.5f);
+
+            while (Time.time < blackoutTimer) // Keeps checking if blackout should continue
+            {
+                yield return null; // Waits until the next frame
+            }
+
             effectBlind.SetActive(false);
         }
+
+        isBlinding = false; // Reset the flag when the blackout ends
     }
+
 
     public IEnumerator ApplyShieldEffect(float duration)
     {

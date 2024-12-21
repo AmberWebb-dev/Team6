@@ -47,6 +47,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
     Color materialOrig;
     [SerializeField] Animator anim;
 
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -199,7 +200,7 @@ public class SpecialEnemy : MonoBehaviour, IDamage
 
             if (hit.CompareTag("Player") && GameManager.Instance != null)
             {
-                GameManager.Instance.StartCoroutine(GameManager.Instance.ApplyBlindEffect());
+                GameManager.Instance.ApplyBlindEffect(3.5f);
             }
         }
 
